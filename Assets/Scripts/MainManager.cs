@@ -199,11 +199,11 @@ public class MainManager : MonoBehaviour
         for (int i = 0; i < pois.Length; i++)
         {
             float distance = OnlineMapsUtils.DistanceBetweenPoints(pois[i].coordinatesPoint, OnlineMapsLocationService.instance.position).magnitude;
-            bool isUnlocked = i < UnlockNextPart.partsUnlocked.Count || i == 0;
+            bool isUnlocked = i <= /*UnlockNextPart.partsUnlocked*/saveData.unlockedPoints.Count || i == 0;
 
             poiMarker[i].enabled = isUnlocked;
 
-            if (distance < 0.1f && i<=UnlockNextPart.partsUnlocked.Count)
+            if (distance < 0.1f && i<= saveData.unlockedPoints.Count)
             {
                 Debug.Log("first info: " + pois[i].name + " distance: " + distance + " i: " + i);
 
@@ -254,6 +254,7 @@ public class MainManager : MonoBehaviour
                 #endregion
 
                 Debug.Log("Unlock Part: " + UnlockNextPart.partsUnlocked);
+                
             }
         }
 
