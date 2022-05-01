@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -7,27 +8,43 @@ using TMPro;
 public class UnlockNextPart : MonoBehaviour
 {
     public int totalParts = 5;
-    public static int partsUnlocked = 5; //to turn it back makeit to 1!
+    public static List<PointsToVisit> partsUnlocked = new List<PointsToVisit>();
 
     public Text numOfPartsText;
 
     public Button[] buttonStoryParts; // = new Buttons[totalParts];
 
-    public Text[] bookTitlesText; 
+    public Text[] bookTitlesText;
+
+    private string saveFile;
+    private SaveData saveData;
 
     // Start is called before the first frame update
     void Start()
     {
       // PlayerPrefs.SetInt("Parts Unlocked", 1); // used to reset back to 1
 
-        // get player pref value 
-        partsUnlocked = PlayerPrefs.GetInt("Parts Unlocked");
+        if (File.Exists(saveFile))
+        {
+            // get player pref value 
+            string fileContents = File.ReadAllText(saveFile);
+            saveData = JsonUtility.FromJson<SaveData>(fileContents);
+            partsUnlocked = saveData.unlockedPoints;
+        }
+		else
+		{
+            Debug.Log("Save file: " + saveFile + " does not exist!");
+            //File doesn't exist so create it.
+            saveData = new SaveData();
+            string jsonString = JsonUtility.ToJson(saveData);
+            File.WriteAllText(saveFile, jsonString);
+		}
 
-        if (partsUnlocked == 0)
+        /*if (partsUnlocked == 0)
         {
             PlayerPrefs.SetInt("Parts Unlocked", 1); // used for first time so not 0
             partsUnlocked = PlayerPrefs.GetInt("Parts Unlocked");
-        }
+        }*/
 
 
         // set UI text
@@ -38,21 +55,27 @@ public class UnlockNextPart : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+	private void Awake()
+	{
+        saveFile = Application.persistentDataPath + "/save.json";
+        //DontDestroyOnLoad(this.gameObject);
+	}
+	// Update is called once per frame
+	void Update()
     {
         
     }
 
-    public void UnlockNewPart()
+    public void UnlockNewPart(PointsToVisit newPart)
     {
-        if (partsUnlocked < totalParts)
+        if (partsUnlocked.Count < totalParts && !partsUnlocked.Contains(newPart))
         {
             // increment unlocked variable 
-            partsUnlocked++;
+            partsUnlocked.Add(newPart);
 
-            // update player pref value
-            PlayerPrefs.SetInt("Parts Unlocked", partsUnlocked);
+            saveData.unlockedPoints = partsUnlocked;
+            string jsonString = JsonUtility.ToJson(saveData);
+            File.WriteAllText(saveFile, jsonString);
 
             // show user updated
             setUIText();
@@ -64,11 +87,9 @@ public class UnlockNextPart : MonoBehaviour
 
     void setUIText()
     {
-     
-
         numOfPartsText.text = partsUnlocked.ToString() + " / " + totalParts;
 
-        if (partsUnlocked == 0)
+        if (partsUnlocked.Count == 0)
         {
             numOfPartsText.text = 1.ToString() + " / " + totalParts;
 
@@ -78,7 +99,7 @@ public class UnlockNextPart : MonoBehaviour
     void enableButtons()
     {
         // using parts unlocked to see which to enable 
-        for(int i = 0; i < partsUnlocked; i++)
+        for(int i = 0; i < partsUnlocked.Count; i++)
         {
             buttonStoryParts[i].interactable = true;
 
@@ -90,8 +111,7 @@ public class UnlockNextPart : MonoBehaviour
 
     public void Reset()
     {
-        PlayerPrefs.SetInt("Parts Unlocked", 1); // used to reset back to 1
-        partsUnlocked = PlayerPrefs.GetInt("Parts Unlocked");
+        File.Delete(saveFile);
 
         setUIText();
 
@@ -105,6 +125,10 @@ public class UnlockNextPart : MonoBehaviour
             bookTitlesText[i].color = new Color32(144,144,144,255);
 
         }
+
+
+
+
     }
 
 }

@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.IO;
 
 public class MainManager : MonoBehaviour
 {
@@ -43,10 +44,31 @@ public class MainManager : MonoBehaviour
     public OnlineMapsMarker userMarker;
 
     public PlayMusic pm;
+
+    //Private member variables
+    private string saveFile;
+    private SaveData saveData;
+
     #region UnityMethods
     public void Awake()
     {
         LoadFiles("pois/");
+        saveFile = Application.persistentDataPath + "/save.json";
+
+        if (File.Exists(saveFile))
+        {
+            // get player pref value 
+            string fileContents = File.ReadAllText(saveFile);
+            saveData = JsonUtility.FromJson<SaveData>(fileContents);
+        }
+        else
+        {
+            Debug.Log("Save file: " + saveFile + " does not exist!");
+            //File doesn't exist so create it.
+            saveData = new SaveData();
+            string jsonString = JsonUtility.ToJson(saveData);
+            File.WriteAllText(saveFile, jsonString);
+        }
         //PlayerPrefs.DeleteAll();
     }
 
@@ -158,6 +180,7 @@ public class MainManager : MonoBehaviour
             }
         }
 
+
         Debug.Log("Is not within constraints");
         return false;
     }
@@ -166,29 +189,33 @@ public class MainManager : MonoBehaviour
         userMarker.position = position;
         OnlineMaps.instance.Redraw();
     }
-
     public void OnLocationChanged(Vector2 position)
     {
         SetMarkerOnUserPosition(position);
         OnlineMaps.instance.SetPositionAndZoom(position.x, position.y, OnlineMaps.MAXZOOM);
-        //CheckUserPosition();
+        CheckUserPosition();
 
         DisableAll();
         for (int i = 0; i < pois.Length; i++)
         {
             float distance = OnlineMapsUtils.DistanceBetweenPoints(pois[i].coordinatesPoint, OnlineMapsLocationService.instance.position).magnitude;
-            bool isUnlocked = i < UnlockNextPart.partsUnlocked || i == 0;
+            bool isUnlocked = i < UnlockNextPart.partsUnlocked.Count || i == 0;
 
             poiMarker[i].enabled = isUnlocked;
 
-            if (distance < 0.1f && i<=UnlockNextPart.partsUnlocked)
+            if (distance < 0.1f && i<=UnlockNextPart.partsUnlocked.Count)
             {
                 Debug.Log("first info: " + pois[i].name + " distance: " + distance + " i: " + i);
 
-                
-                if (i == 0)
+                UnlockNewPart(pois[i]);
+                poiMarker[i].enabled = true;
+
+                //TODO: In the comment below we have a warning panel for point 0. Should we keep that just for the first
+                //or do it everytime?
+
+                #region Not_Used
+                /*if (i == 0)
                 {
-                    
                     pnlWarning.SetActive(true);
                     warningMainText.text = "You need to walk " + (distance * 1000).ToString("f4") + " km, for the next clue.";
                     UnlockNextPart.partsUnlocked = 1;
@@ -223,17 +250,26 @@ public class MainManager : MonoBehaviour
                     UnlockNextPart.partsUnlocked = 5;
                     PlayerPrefs.SetInt("Parts Unlocked", 5);
                     
-                }
+                }*/
+                #endregion
+
                 Debug.Log("Unlock Part: " + UnlockNextPart.partsUnlocked);
-                
             }
-
-
-            
         }
 
     }
 
+    public void UnlockNewPart(PointsToVisit newPart)
+    {
+        if (saveData.unlockedPoints.Count < pois.Length && !saveData.unlockedPoints.Contains(newPart))
+        {
+            // increment unlocked variable 
+            saveData.unlockedPoints.Add(newPart);
+
+            string jsonString = JsonUtility.ToJson(saveData);
+            File.WriteAllText(saveFile, jsonString);
+        }
+    }
     private void CreateUserMarker()
     {
         // Remove Marker
