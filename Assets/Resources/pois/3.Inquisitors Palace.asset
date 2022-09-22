@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 3.Inquisitors Palace
   m_EditorClassIdentifier: 
   nameOfPoint: Inquisitor's Palace
-  coordinatesPoint: {x: 14.520271, y: 35.88724}
+  coordinatesPoint: {x: 14.52027, y: 35.88724}
   mainInfo: I should visit the convent in Valletta even though I am not sure where
     it is anymore.
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}

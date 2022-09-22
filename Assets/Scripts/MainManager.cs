@@ -74,7 +74,6 @@ public class MainManager : MonoBehaviour
 
     private void Start()
     {
-
         pnlMainInfo.SetActive(false);
         poiMarker = new OnlineMapsMarker[pois.Length]; //we want same length when creating markers same as the array of our instruments
         
@@ -89,10 +88,11 @@ public class MainManager : MonoBehaviour
             poiMarker[i].scale = 0.5f;
 
         }
-
+        
         SubscribeToButtons();
         SubscribeToEvents();
         CreateUserMarker();
+        
         //DisableAll();
     }
 
@@ -168,10 +168,11 @@ public class MainManager : MonoBehaviour
     }
     public bool IsWithinConstraints()
     {
-
+        
         for (int i = 0; i < pois.Length; i++)
         {
             float distance = OnlineMapsUtils.DistanceBetweenPoints(pois[i].coordinatesPoint, OnlineMapsLocationService.instance.position).magnitude;
+         
             if (distance < 0.1f)
             {
                 Debug.Log("first info: " + pois[i].name + " distance: " + distance + " i: " + i);
@@ -180,17 +181,18 @@ public class MainManager : MonoBehaviour
             }
         }
 
-
+        
         Debug.Log("Is not within constraints");
         return false;
     }
     private void SetMarkerOnUserPosition(Vector2 position)
-    {
+    {        
         userMarker.position = position;
         OnlineMaps.instance.Redraw();
     }
     public void OnLocationChanged(Vector2 position)
     {
+        
         SetMarkerOnUserPosition(position);
         OnlineMaps.instance.SetPositionAndZoom(position.x, position.y, OnlineMaps.MAXZOOM);
         CheckUserPosition();
