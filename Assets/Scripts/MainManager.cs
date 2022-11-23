@@ -27,6 +27,7 @@ public class MainManager : MonoBehaviour
     [Space]
     [Header("Variables")]
     public string nameOfLevel;
+    public string nameOfARLevel;
     
 
     [Space]
@@ -48,6 +49,10 @@ public class MainManager : MonoBehaviour
     //Private member variables
     private string saveFile;
     private SaveData saveData;
+
+    [Space]
+    [Header("AR Elements")]
+    public Button btnARScene;
 
     #region UnityMethods
     public void Awake()
@@ -109,7 +114,7 @@ public class MainManager : MonoBehaviour
         btnClose.onClick.AddListener(ClosePanels);
         btnCloseWarning.onClick.AddListener(ClosePanels);
         btnBackMain.onClick.AddListener(() => OpenScene(nameOfLevel));
-        
+        btnARScene.onClick.AddListener(() => OpenScene(nameOfARLevel));
     }
     void SubscribeToEvents()
     {
