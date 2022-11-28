@@ -15,21 +15,21 @@ public class spawnCars : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		timer -= Time.deltaTime;
 
 		if (timer <= 0) {
-		
-			Vector3 carPos = new Vector3(Random.Range (-maxPos, maxPos), parentRect.transform.position.y, transform.position.z);
-			int objectToSpawn = Random.Range (0, car.Length);
 
-			GameObject spawnedObject = Instantiate (car[objectToSpawn],new Vector3(carPos.x,parentRect.transform.position.y,0), Quaternion.identity);
+			Vector3 carPos = new Vector3(Random.Range(-maxPos, maxPos), transform.position.y, transform.position.z);
+			int objectToSpawn = Random.Range(0, car.Length);
+
+			GameObject spawnedObject = Instantiate(car[objectToSpawn], carPos, transform.rotation) as GameObject;
 
 			// make the parent the spawner so hierarchy doesn't get super messy
-			spawnedObject.transform.parent = parentRect.transform;
-		
+			spawnedObject.transform.parent = gameObject.transform;
+
 			timer = delay;
-			Debug.Log("Position: "+carPos +" maxPos: "+maxPos);
+			Debug.Log("Position: "+car[objectToSpawn].transform.position.x +" maxPos: "+maxPos);
 		}
 	}
 }
