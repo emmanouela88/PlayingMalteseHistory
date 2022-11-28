@@ -20,14 +20,14 @@ public class spawnCars : MonoBehaviour {
 
 		if (timer <= 0) {
 
-			Vector3 carPos = new Vector3(Random.Range(-maxPos, maxPos), transform.position.y, transform.position.z);
+			Vector3 carPos = new Vector3(0, Random.Range(-maxPos, maxPos), transform.position.z);
 			int objectToSpawn = Random.Range(0, car.Length);
 
-			GameObject spawnedObject = Instantiate(car[objectToSpawn], carPos, transform.rotation) as GameObject;
-
+			GameObject spawnedObject = Instantiate(car[objectToSpawn], carPos, Quaternion.identity) as GameObject;
+			
 			// make the parent the spawner so hierarchy doesn't get super messy
-			spawnedObject.transform.parent = gameObject.transform;
-
+			//spawnedObject.transform.parent = gameObject.transform;
+			spawnedObject.transform.SetParent(parentRect,false);
 			timer = delay;
 			Debug.Log("Position: "+car[objectToSpawn].transform.position.x +" maxPos: "+maxPos);
 		}
