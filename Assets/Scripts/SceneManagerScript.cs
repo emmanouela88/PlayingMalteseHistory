@@ -36,6 +36,11 @@ public class SceneManagerScript : MonoBehaviour
         else SceneManager.LoadScene(sceneNum);
     }
 
+    public void ChangeSceneAfterDelay(int sceneNum, int delay)
+	{
+        StartCoroutine(WaitUntilChangeScene(delay, sceneNum));
+	}
+
     IEnumerator WaitUntilChangeScene(int seconds, int sceneNum)
     {
         yield return new WaitForSeconds(seconds);
