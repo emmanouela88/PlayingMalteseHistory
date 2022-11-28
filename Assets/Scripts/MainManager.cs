@@ -54,10 +54,31 @@ public class MainManager : MonoBehaviour
     [Header("AR Elements")]
     public Button btnARScene;
 
+    private enum SceneState { isPoverty, isQuarantine, isJewish };
+
     #region UnityMethods
     public void Awake()
     {
-        LoadFiles("pois/");
+        var choiceScene = SceneState.isPoverty;
+
+        switch (choiceScene)
+        {
+            case SceneState.isPoverty:
+                LoadFiles("pois/PovertyPois");
+                break;
+            case SceneState.isQuarantine:
+                LoadFiles("pois/QuarantinePois");
+                break;
+            case SceneState.isJewish:
+                LoadFiles("pois/JewishPois");
+                break;
+            default:
+                LoadFiles("pois/");
+                break;
+        }
+        
+                
+        //LoadFiles("pois/");
         saveFile = Application.persistentDataPath + "/save.json";
 
         if (File.Exists(saveFile))
