@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ARSceneQuarantine.unity
     guid: 4b7919db25470664f9be8091e59c31b6
   - enabled: 1
+    path: Assets/Scenes/WhackTheMerchantMinigame.unity
+    guid: 7b3863ad55ee65047ae268298a5ebd47
+  - enabled: 1
     path: Assets/Scenes/PlagueMiniGame.unity
     guid: c7f05f8e04a83b84d988271f94a62373
   - enabled: 1
