@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1061,7 +1061,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1379,25 +1379,31 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Burn the Witch by Bewitched Mitches was created for the Cultural Heritage
-    Game Jam 2021.
+  m_Text: 'Playing Maltese History.
+
+
 
 
     The team consisted of:
 
-    Aphrodite Andreou
+    Aphrodite
+    Andreou
 
-    Krista
-    Bonello Rutter Giappone
+    Krista Bonello Rutter Giappone
 
     Yannis Brellas
 
-    Lara Caruana Montaldo
+    Lara Caruana
+    Montaldo
 
-    Emmanuela
-    Marla
+    Emmanuela Marla
 
     Renata Ntelia
+
+    Daniel Vella
+
+    Naomi
+    Cutajar
 
 '
 --- !u!222 &1801391980
@@ -1445,8 +1451,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000016689, y: -1394.4354}
-  m_SizeDelta: {x: 803.8732, y: 807.5829}
+  m_AnchoredPosition: {x: -0.000016689, y: -1488.6381}
+  m_SizeDelta: {x: 803.8732, y: 995.9882}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1847295244
 MonoBehaviour:
@@ -1468,28 +1474,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Burn the Witch by Bewitched Mitches was created for the Cultural Heritage
-    Game Jam 2021.
-
-
-    The team consisted of:
-
-    Aphrodite Andreou
-
-    Krista
-    Bonello Rutter Giappone
-
-    Yannis Brellas
-
-    Lara Caruana Montaldo
-
-    Emmanuela
-    Marla
-
-    Renata Ntelia
-
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ee87e681215b6147a44021cf30db039, type: 3}
-  m_Name: Biblioteca
+  m_Name: 3.Hastings Garden
   m_EditorClassIdentifier: 
-  nameOfPoint: Biblioteca
-  coordinatesPoint: {x: 35.898365, y: 14.513638}
-  mainInfo: Biblioteca, this is the starting point
+  nameOfPoint: Hastings Garden
+  coordinatesPoint: {x: 14.508116, y: 35.8978}
+  mainInfo: "\"Hastings Garden (overlook to Manoel Island) - Learn about the quarantine,
+    and Antonio Borg\u2019s escape \" "
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}

@@ -16,6 +16,7 @@ public class MainManager : MonoBehaviour
     public TextMeshProUGUI txtMainInfo;
     public Image imgInstrument;
     public Button btnClose;
+    public string poisFolder;
 
 
     [Space]
@@ -27,8 +28,9 @@ public class MainManager : MonoBehaviour
     [Space]
     [Header("Variables")]
     public string nameOfLevel;
-    public string nameOfARLevel;
-    
+    public string nameOfARLevel;//we need to make it as a list since we are having more than one ar level to load
+    public string nameOfMiniGameLevel; //we need to make it as a list since we are having more than one minigame level to load
+
 
     [Space]
     [Header("UI Elements general")]
@@ -37,6 +39,7 @@ public class MainManager : MonoBehaviour
     public TextMeshProUGUI warningMainText;
     public Button btnCloseWarning;
     public Button btnBackMain;
+    public Button btnMiniGame;
     
 
     [Space]
@@ -54,31 +57,12 @@ public class MainManager : MonoBehaviour
     [Header("AR Elements")]
     public Button btnARScene;
 
-    private enum SceneState { isPoverty, isQuarantine, isJewish };
+    
 
     #region UnityMethods
     public void Awake()
-    {
-        var choiceScene = SceneState.isPoverty;
-
-        switch (choiceScene)
-        {
-            case SceneState.isPoverty:
-                LoadFiles("pois/PovertyPois");
-                break;
-            case SceneState.isQuarantine:
-                LoadFiles("pois/QuarantinePois");
-                break;
-            case SceneState.isJewish:
-                LoadFiles("pois/JewishPois");
-                break;
-            default:
-                LoadFiles("pois/");
-                break;
-        }
-        
-                
-        //LoadFiles("pois/");
+    {                
+        LoadFiles(poisFolder);
         saveFile = Application.persistentDataPath + "/save.json";
 
         if (File.Exists(saveFile))
@@ -136,6 +120,7 @@ public class MainManager : MonoBehaviour
         btnCloseWarning.onClick.AddListener(ClosePanels);
         btnBackMain.onClick.AddListener(() => OpenScene(nameOfLevel));
         btnARScene.onClick.AddListener(() => OpenScene(nameOfARLevel));
+        btnMiniGame.onClick.AddListener(() => OpenScene(nameOfMiniGameLevel));
     }
     void SubscribeToEvents()
     {
@@ -168,7 +153,24 @@ public class MainManager : MonoBehaviour
                     //sourceCam.clip = pois[i].clip;
                     /*btnPlaySound.onClick.AddListener(() => PlaySound(sourceCam.clip));
                     btnPauseSound.onClick.AddListener(PauseSound);*/
+                    if (pois[i].nameOfPoint == "City Gate" || pois[i].nameOfPoint== "Marsamxett" || pois[i].nameOfPoint == "Archbishop's Palace"|| pois[i].nameOfPoint == "Ondina's Residency")
+                    {
+                        btnARScene.gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        btnARScene.gameObject.SetActive(false);
+                    }
 
+                    if (pois[i].nameOfPoint == "Nix Mangiare steps" || pois[i].nameOfPoint == "Merchants Street" || pois[i].nameOfPoint == "Hastings Garden"
+                        || pois[i].nameOfPoint == "Wells Street" || pois[i].nameOfPoint == "227 St Paul’s Street " || pois[i].nameOfPoint == "Ondina's Residency")
+                    {
+                        btnMiniGame.gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        btnMiniGame.gameObject.SetActive(false);
+                    }
                 }
 
             }
@@ -199,7 +201,7 @@ public class MainManager : MonoBehaviour
         {
             float distance = OnlineMapsUtils.DistanceBetweenPoints(pois[i].coordinatesPoint, OnlineMapsLocationService.instance.position).magnitude;
          
-            if (distance < 0.1f)
+            if (distance < 0.01f)
             {
                 Debug.Log("first info: " + pois[i].name + " distance: " + distance + " i: " + i);
 
@@ -230,7 +232,6 @@ public class MainManager : MonoBehaviour
             bool isUnlocked = i <= /*UnlockNextPart.partsUnlocked*/saveData.unlockedPoints.Count || i == 0;
 
             poiMarker[i].enabled = isUnlocked;
-
             if (distance < 0.1f && i<= saveData.unlockedPoints.Count)
             {
                 Debug.Log("first info: " + pois[i].name + " distance: " + distance + " i: " + i);
@@ -238,6 +239,7 @@ public class MainManager : MonoBehaviour
                 UnlockNewPart(pois[i]);
                 poiMarker[i].enabled = true;
 
+                
                 //TODO: In the comment below we have a warning panel for point 0. Should we keep that just for the first
                 //or do it everytime?
 
