@@ -1432,14 +1432,7 @@ MonoBehaviour:
   - {fileID: 928061853}
   - {fileID: 1388491202}
   - {fileID: 1475091858}
-  - {fileID: 0}
-  - {fileID: 0}
-  bookTitlesText:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  bookTitlesText: []
 --- !u!114 &628410421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1456,14 +1449,10 @@ MonoBehaviour:
   - {fileID: 1278785325}
   - {fileID: 1710545662}
   - {fileID: 750879864}
-  - {fileID: 1144264381}
-  - {fileID: 48176978}
   btnClose:
   - {fileID: 1395008422}
   - {fileID: 1643723311}
   - {fileID: 1617912511}
-  - {fileID: 457425772}
-  - {fileID: 1550096564}
   pm: {fileID: 628410423}
 --- !u!114 &628410422
 MonoBehaviour:
@@ -4400,7 +4389,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1388491203}
   m_OnClick:
     m_PersistentCalls:
@@ -4835,7 +4824,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1475091859}
   m_OnClick:
     m_PersistentCalls:
