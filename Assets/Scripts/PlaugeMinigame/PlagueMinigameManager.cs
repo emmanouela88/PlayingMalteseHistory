@@ -14,6 +14,7 @@ public class PlagueMinigameManager : MonoBehaviour
     void Start()
     {
         m_sceneManager = GetComponent<SceneManagerScript>();
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
     }
 
     public void ResetMinigame()

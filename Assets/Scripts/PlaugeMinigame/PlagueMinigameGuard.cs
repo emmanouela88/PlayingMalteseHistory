@@ -8,7 +8,7 @@ public class PlagueMinigameGuard : MonoBehaviour
     [SerializeField] private Transform m_point1;
     [SerializeField] private Transform m_point2;
 	[SerializeField] private float m_lerpTime;
-	[SerializeField] private PlagueMinigameManager m_manager;
+	//[SerializeField] private PlagueMinigameManager m_manager;
 
     void Start()
     {
@@ -39,12 +39,12 @@ public class PlagueMinigameGuard : MonoBehaviour
 		StopAllCoroutines();
 	}
 
-	private void OnTriggerEnter2D(Collider2D collision)
+	/*private void OnTriggerEnter2D(Collider2D collision)
 	{
 		Debug.Log("COLLIDEAD!");
 		if (collision.tag == "Player")
 		{
 			m_manager.ResetMinigame();
 		}
-	}
+	}*/
 }

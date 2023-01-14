@@ -16,12 +16,16 @@ public class PlagueMinigameArea : MonoBehaviour
 		}
     }
 
-   
-    private void MovePlayerToArea(Vector3 targetPosition)
+	private void OnMouseDown()
+	{
+		MovePlayerToArea(transform.position);
+	}
+
+	private void MovePlayerToArea(Vector3 targetPosition)
 	{
         if (m_player != null)
 		{
-            m_player.StartMovingToPosition(targetPosition);
+            m_player.StartMovingToPosition(targetPosition, this);
 		}
 	}
 }
