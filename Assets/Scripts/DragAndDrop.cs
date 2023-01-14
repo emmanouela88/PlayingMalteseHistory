@@ -9,11 +9,13 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
     public Transform rectTransform;
     private CanvasGroup canvasGroup;
+    public GameObject draggedObject;
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+        draggedObject = this.gameObject;
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
