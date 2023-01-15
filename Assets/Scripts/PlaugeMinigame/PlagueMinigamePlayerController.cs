@@ -6,6 +6,8 @@ public class PlagueMinigamePlayerController : MonoBehaviour
 {
 	[SerializeField] private float m_lerpTime = 4.0f;
 	[SerializeField] private PlagueMinigameArea m_startingArea = null;
+	[SerializeField] private PlagueMinigameArea m_targetArea = null;
+	[SerializeField] private PlagueMinigameManager m_manager;
 
 	private bool m_moving = false;
 	private Vector3 m_startingPosition;
@@ -49,6 +51,11 @@ public class PlagueMinigamePlayerController : MonoBehaviour
 			}
 			m_moving = false;
 			m_currentArea = area;
+
+			if (m_currentArea == m_targetArea)
+			{
+				m_manager.ResetMinigame(true);
+			}
 		}
 	}
 

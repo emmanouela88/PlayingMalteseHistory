@@ -7,6 +7,7 @@ public class PlagueMinigameArea : MonoBehaviour
 {
     [SerializeField] private Button m_areatButton;
     [SerializeField] private PlagueMinigamePlayerController m_player;
+	[SerializeField] private PlagueMinigameManager m_manager;
 
     void Start()
     {
@@ -18,7 +19,10 @@ public class PlagueMinigameArea : MonoBehaviour
 
 	private void OnMouseDown()
 	{
-		MovePlayerToArea(transform.position);
+		if (!m_manager.HasGameEnded())
+		{
+			MovePlayerToArea(transform.position);
+		}
 	}
 
 	private void MovePlayerToArea(Vector3 targetPosition)
