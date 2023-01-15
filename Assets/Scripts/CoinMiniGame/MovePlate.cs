@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class MovePlate : MonoBehaviour
 {
-    float speed = 0.5F;
     Rigidbody rb;
 
     public float plateSpeed = 1f;
@@ -19,15 +18,17 @@ public class MovePlate : MonoBehaviour
 
 	void Update()
 	{
-	    if (Input.GetKey(KeyCode.LeftArrow))
-	    {
-	        if (gameObject.transform.position.x > -1.9f) gameObject.transform.position -= new Vector3(plateSpeed * 0.1f, 0f, 0f);
-	    }
-	    else if (Input.GetKey(KeyCode.RightArrow))
-	    {
-	        if (gameObject.transform.position.x < 1.9f) gameObject.transform.position += new Vector3(plateSpeed * 0.1f, 0f, 0f);
-	    }
-
+        if (CreateObjects.m_playing)
+        {
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                if (gameObject.transform.position.x > -1.9f) gameObject.transform.position -= new Vector3(plateSpeed * 0.1f, 0f, 0f);
+            }
+            else if (Input.GetKey(KeyCode.RightArrow))
+            {
+                if (gameObject.transform.position.x < 1.9f) gameObject.transform.position += new Vector3(plateSpeed * 0.1f, 0f, 0f);
+            }
+        }
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
@@ -38,12 +39,21 @@ public class MovePlate : MonoBehaviour
         Destroy(collision.gameObject);
 
         // TODO Add score depending on which gameobject it is !
+        GameObject objectCollected = collision.gameObject;
+
+        if(objectCollected.GetComponent<MoveScript>() != null)
+        {
+            int value = objectCollected.GetComponent<MoveScript>().m_score;
+
+
+            // Debug.LogError("SCORE " + CreateObjects.m_currentScore);
+
+            CreateObjects.m_currentScore += value;
+            m_scoreText.text = CreateObjects.m_currentScore.ToString();
+
+        }
 
 
 
-        CreateObjects.m_currentScore += 1;
-      //  Debug.LogError("SCORE " + CreateObjects.m_currentScore);
-
-        m_scoreText.text = CreateObjects.m_currentScore.ToString();
     }
 }

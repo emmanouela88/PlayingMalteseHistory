@@ -6,7 +6,6 @@ public class BoxScript : MonoBehaviour // Used to move the plate on device
 {
     float startPosX;
     float startPosY;
-    bool isBeingHeld = false;
 
     private Vector3 position;
     private float width;
@@ -18,23 +17,26 @@ public class BoxScript : MonoBehaviour // Used to move the plate on device
         height = (float)Screen.height / 2.0f;
     }
 
-
     void Update()
     {
 
 #if !UNITY_EDITOR
-        Touch touch = Input.GetTouch(0);
 
-        // Move the cube if the screen has the finger moving.
-        if (touch.phase == TouchPhase.Moved)
+        if (CreateObjects.m_playing)
         {
-            Vector2 pos = touch.position;
-            pos.x = (pos.x - width) / width;
-            pos.y = (pos.y - height) / height;
-            position = new Vector3(pos.x, transform.position.y, 0.0f);
+            Touch touch = Input.GetTouch(0);
 
-            // Position the plate
-            transform.position = position;
+            // Move the plate if the screen has the finger moving.
+            if (touch.phase == TouchPhase.Moved)
+            {
+                Vector2 pos = touch.position;
+                pos.x = (pos.x - width) / width;
+                pos.y = (pos.y - height) / height;
+                position = new Vector3(pos.x, transform.position.y, 0.0f);
+
+                // Position the plate
+                transform.position = position;
+            }
         }
 #endif
     }

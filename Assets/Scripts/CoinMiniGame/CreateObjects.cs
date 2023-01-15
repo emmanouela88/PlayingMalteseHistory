@@ -44,7 +44,7 @@ public class CreateObjects : MonoBehaviour
     void InstantiateCoin()
     {
         float randomPos = Random.Range(-1.0f, 1.0f); 
-        float y = 7f; 
+        float y = 2.25f; 
 
         int randomCoin = Random.Range(0, m_coinGameObjects.Length);
         Instantiate(m_coinGameObjects[randomCoin], new Vector3(randomPos, y, 0), Quaternion.identity);

@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: b7037fe2ec1bdb240875bf2b2f1df394, type: 3}
-  m_Color: {r: 0.7169812, g: 0.6691825, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,8 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.8
-  m_scoreTextGameObject: {fileID: 0}
-  m_scoreText: {fileID: 0}
+  m_score: 1
 --- !u!58 &5222378807238434773
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ARSceneJewish 2.unity
     guid: 8ea64830b2bff6046ad368bec17b4723
   - enabled: 0
+    path: Assets/Scenes/CollectCoinsMiniGame.unity
+    guid: 56d55db3035b99748bc3ca16febf31df
+  - enabled: 0
     path: Assets/Scenes/Credits.unity
     guid: 31c3c01deeb39e24bb3c42867ce206a9
   m_configObjects:
