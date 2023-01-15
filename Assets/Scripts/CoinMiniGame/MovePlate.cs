@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class MovePlate : MonoBehaviour
 {
-    float speed = 0.5F;
     Rigidbody rb;
 
     public float plateSpeed = 1f;
@@ -19,15 +18,17 @@ public class MovePlate : MonoBehaviour
 
 	void Update()
 	{
-	    if (Input.GetKey(KeyCode.LeftArrow))
-	    {
-	        if (gameObject.transform.position.x > -1.9f) gameObject.transform.position -= new Vector3(plateSpeed * 0.1f, 0f, 0f);
-	    }
-	    else if (Input.GetKey(KeyCode.RightArrow))
-	    {
-	        if (gameObject.transform.position.x < 1.9f) gameObject.transform.position += new Vector3(plateSpeed * 0.1f, 0f, 0f);
-	    }
-
+        if (CreateObjects.m_playing)
+        {
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                if (gameObject.transform.position.x > -1.9f) gameObject.transform.position -= new Vector3(plateSpeed * 0.1f, 0f, 0f);
+            }
+            else if (Input.GetKey(KeyCode.RightArrow))
+            {
+                if (gameObject.transform.position.x < 1.9f) gameObject.transform.position += new Vector3(plateSpeed * 0.1f, 0f, 0f);
+            }
+        }
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
