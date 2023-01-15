@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MoveScript : MonoBehaviour // Move Coin
 {
     public float speed = 3f;
-  //  public int m_coinScore = 0f; // TODO
+    public int m_score = 0; 
 
     void Update()
     {

@@ -39,12 +39,21 @@ public class MovePlate : MonoBehaviour
         Destroy(collision.gameObject);
 
         // TODO Add score depending on which gameobject it is !
+        GameObject objectCollected = collision.gameObject;
+
+        if(objectCollected.GetComponent<MoveScript>() != null)
+        {
+            int value = objectCollected.GetComponent<MoveScript>().m_score;
+
+
+            // Debug.LogError("SCORE " + CreateObjects.m_currentScore);
+
+            CreateObjects.m_currentScore += value;
+            m_scoreText.text = CreateObjects.m_currentScore.ToString();
+
+        }
 
 
 
-        CreateObjects.m_currentScore += 1;
-      //  Debug.LogError("SCORE " + CreateObjects.m_currentScore);
-
-        m_scoreText.text = CreateObjects.m_currentScore.ToString();
     }
 }

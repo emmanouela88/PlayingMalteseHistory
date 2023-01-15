@@ -558,6 +558,8 @@ MonoBehaviour:
   - {fileID: 3599739507839339302, guid: b58c824eb9a8adb45889faf3a063784d, type: 3}
   - {fileID: 3599739507839339302, guid: d3948fbf2f620e042bb7d9703299bfa3, type: 3}
   - {fileID: 3599739507839339302, guid: 6d0d521274b01a74fb2a4165a79413c1, type: 3}
+  - {fileID: 3599739507839339302, guid: 3551e77cf98aeaa48acf5c0133e21c3d, type: 3}
+  - {fileID: 3599739507839339302, guid: 32ea971a6def2754bb440f85e1e74dd3, type: 3}
   m_timerText: {fileID: 710048640}
   m_timer: 20
 --- !u!4 &534716096
