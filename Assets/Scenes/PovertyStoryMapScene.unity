@@ -2665,7 +2665,7 @@ MonoBehaviour:
     latitude: 0
     longitude: 0
     _scale: 1
-    expand: 1
+    expand: 0
     align: 7
     locked: 0
     markerColliderRect:
