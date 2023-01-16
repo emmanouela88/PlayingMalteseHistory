@@ -103,7 +103,7 @@ public class MainManager : MonoBehaviour
         SubscribeToEvents();
         CreateUserMarker();
         
-        //DisableAll();
+        DisableAll();
     }
 
     private void Update()
@@ -231,56 +231,60 @@ public class MainManager : MonoBehaviour
             float distance = OnlineMapsUtils.DistanceBetweenPoints(pois[i].coordinatesPoint, OnlineMapsLocationService.instance.position).magnitude;
             bool isUnlocked = i <= /*UnlockNextPart.partsUnlocked*/saveData.unlockedPoints.Count || i == 0;
 
-            poiMarker[i].enabled = isUnlocked;
+            poiMarker[i].enabled = !isUnlocked;
             if (distance < 0.1f && i<= saveData.unlockedPoints.Count)
             {
                 Debug.Log("first info: " + pois[i].name + " distance: " + distance + " i: " + i);
 
-                UnlockNewPart(pois[i]);
-                poiMarker[i].enabled = true;
+                UnlockNewPart(pois[0]);//if we put pois[i] will unlock all the points in-game. Is good for testing not for final development
+                poiMarker[0].enabled = true;//same as above. On 0 we only unlock the first poi
 
-                
+
                 //TODO: In the comment below we have a warning panel for point 0. Should we keep that just for the first
                 //or do it everytime?
 
                 #region Not_Used
-                /*if (i == 0)
+                /**/
+                switch (i)
                 {
-                    pnlWarning.SetActive(true);
-                    warningMainText.text = "You need to walk " + (distance * 1000).ToString("f4") + " km, for the next clue.";
-                    UnlockNextPart.partsUnlocked = 1;
-                    PlayerPrefs.SetInt("Parts Unlocked", 1);
-                    
+                    case 0:
+                        UnlockNewPart(pois[1]);
+                        pnlWarning.SetActive(true);
+                        warningMainText.text = "You need to walk " + (distance * 1000).ToString("f4") + " km, for the next clue.";
+                        poiMarker[0].enabled = true;
+                        UnlockNextPart.partsUnlocked.Where(pm => pm.name == pois[0].name);
+                        PlayerPrefs.SetInt("Parts Unlocked", 1);
+                        break;
+                    case 1:
+                        UnlockNewPart(pois[2]);
+                        poiMarker[1].enabled = true;
+                        UnlockNextPart.partsUnlocked.Where(pm => pm.name == pois[1].name);
+                        PlayerPrefs.SetInt("Parts Unlocked", 2);
+                        break;
+                    case 2:
+                        UnlockNewPart(pois[3]);
+                        poiMarker[2].enabled = true;
+                        UnlockNextPart.partsUnlocked.Where(pm => pm.name == pois[2].name);
+                        PlayerPrefs.SetInt("Parts Unlocked", 3);
+                        break;
+                    case 3:
+                        UnlockNewPart(pois[4]);
+                        poiMarker[3].enabled = true;
+                        poiMarker[4].enabled = true;
+                        UnlockNextPart.partsUnlocked.Where(pm => pm.name == pois[3].name);
+                        PlayerPrefs.SetInt("Parts Unlocked", 5);
+                        break;
+                    case 4:
+                        UnlockNewPart(pois[5]);
+                        poiMarker[5].enabled = true;
+                        UnlockNextPart.partsUnlocked.Where(pm => pm.name == pois[5].name);
+                        PlayerPrefs.SetInt("Parts Unlocked", 5);
+                        break;
+                    default:
+                        Debug.Log("info: " + pois[i].name + " distance: " + distance + " i: " + i);
+                        break;
                 }
-                else if (i == 1)
-                {
-                    poiMarker[i].enabled = true;
-                    UnlockNextPart.partsUnlocked = 2;
-                    PlayerPrefs.SetInt("Parts Unlocked", 2);
-                    
-                }
-                else if (i == 2)
-                {
-                    poiMarker[i].enabled = true;
-                    UnlockNextPart.partsUnlocked = 3;
-                    PlayerPrefs.SetInt("Parts Unlocked", 3);
-                    
-                }
-                else if (i == 3)
-                {
-                    poiMarker[i].enabled = true;
-                    poiMarker[4].enabled = true;
-                    UnlockNextPart.partsUnlocked = 5;
-                    PlayerPrefs.SetInt("Parts Unlocked", 5);
-                    
-                }
-                else if (i == 4)
-                {
-                    poiMarker[i].enabled = true;
-                    UnlockNextPart.partsUnlocked = 5;
-                    PlayerPrefs.SetInt("Parts Unlocked", 5);
-                    
-                }*/
+                
                 #endregion
 
                 Debug.Log("Unlock Part: " + UnlockNextPart.partsUnlocked);
