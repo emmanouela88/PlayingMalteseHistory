@@ -17,3 +17,4 @@ MonoBehaviour:
   mainInfo: 'Boat docking Place '
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
+  nameOfStory: Poverty

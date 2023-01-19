@@ -17,4 +17,7 @@ public class PointsToVisit : ScriptableObject
 
     [Tooltip("Image for POI")]
     public Sprite imgMain;
+
+    [Tooltip("In which story is the POI assigned")]
+    public string nameOfStory;
 }

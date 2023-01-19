@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.IO;
+using System.Collections.Generic;
 
+public enum LOCATIONSCENES { Poverty, Quarantine, Jewish };
 public class MainManager : MonoBehaviour
 {
     public PointsToVisit[] pois;
@@ -30,7 +32,7 @@ public class MainManager : MonoBehaviour
     public string nameOfLevel;
     public string nameOfARLevel;//we need to make it as a list since we are having more than one ar level to load
     public string nameOfMiniGameLevel; //we need to make it as a list since we are having more than one minigame level to load
-
+    public LOCATIONSCENES currentLocationScene;
 
     [Space]
     [Header("UI Elements general")]
@@ -49,15 +51,15 @@ public class MainManager : MonoBehaviour
 
     public PlayMusic pm;
 
-    //Private member variables
-    private string saveFile;
-    private SaveData saveData;
-
     [Space]
     [Header("AR Elements")]
     public Button btnARScene;
 
-    
+    //Private member variables
+    private string saveFile;
+    private SaveData saveData;
+
+    private List<PointsToVisit> currentStorySavedPoints = new List<PointsToVisit>();
 
     #region UnityMethods
     public void Awake()
@@ -84,6 +86,19 @@ public class MainManager : MonoBehaviour
 
     private void Start()
     {
+        switch (currentLocationScene)
+        {
+            case LOCATIONSCENES.Poverty:
+                currentStorySavedPoints = saveData.unlockedPointsPoverty;
+                break;
+            case LOCATIONSCENES.Quarantine:
+                currentStorySavedPoints = saveData.unlockedPointsQuarantine;
+                break;
+            case LOCATIONSCENES.Jewish:
+                currentStorySavedPoints = saveData.unlockedPointsJewish;
+                break;
+        }
+
         pnlMainInfo.SetActive(false);
         poiMarker = new OnlineMapsMarker[pois.Length]; //we want same length when creating markers same as the array of our instruments
         
@@ -225,26 +240,31 @@ public class MainManager : MonoBehaviour
         OnlineMaps.instance.SetPositionAndZoom(position.x, position.y, OnlineMaps.MAXZOOM);
         CheckUserPosition();
 
-        DisableAll();
+        
+        //DisableAll();
         for (int i = 0; i < pois.Length; i++)
         {
             float distance = OnlineMapsUtils.DistanceBetweenPoints(pois[i].coordinatesPoint, OnlineMapsLocationService.instance.position).magnitude;
-            bool isUnlocked = i <= /*UnlockNextPart.partsUnlocked*/saveData.unlockedPoints.Count || i == 0;
+            
+            
+            bool isUnlocked = i <= /*UnlockNextPart.partsUnlocked*/currentStorySavedPoints.Count || i == 0;
 
-            poiMarker[i].enabled = !isUnlocked;
-            if (distance < 0.1f && i<= saveData.unlockedPoints.Count)
+            poiMarker[i].enabled = isUnlocked;
+            if (distance < 0.1f && i<= currentStorySavedPoints.Count)
             {
                 Debug.Log("first info: " + pois[i].name + " distance: " + distance + " i: " + i);
 
-                UnlockNewPart(pois[0]);//if we put pois[i] will unlock all the points in-game. Is good for testing not for final development
-                poiMarker[0].enabled = true;//same as above. On 0 we only unlock the first poi
+                pnlWarning.SetActive(true);
+                warningMainText.text = "You need to walk " + (distance * 1000).ToString("f4") + " km, for the next clue.";
+                UnlockNewPart(pois[i]);//if we put pois[i] will unlock all the points in-game. Is good for testing not for final development
+                poiMarker[i].enabled = true;//same as above. On 0 we only unlock the first poi
 
 
                 //TODO: In the comment below we have a warning panel for point 0. Should we keep that just for the first
                 //or do it everytime?
 
                 #region Not_Used
-                /**/
+                /*
                 switch (i)
                 {
                     case 0:
@@ -252,60 +272,60 @@ public class MainManager : MonoBehaviour
                         pnlWarning.SetActive(true);
                         warningMainText.text = "You need to walk " + (distance * 1000).ToString("f4") + " km, for the next clue.";
                         poiMarker[0].enabled = true;
-                        UnlockNextPart.partsUnlocked.Where(pm => pm.name == pois[0].name);
-                        PlayerPrefs.SetInt("Parts Unlocked", 1);
+                        //UnlockNextPart.partsUnlocked.Where(pm => pm.name == pois[0].name);
+                        //PlayerPrefs.SetInt("Parts Unlocked", 1);
                         break;
                     case 1:
                         UnlockNewPart(pois[2]);
                         poiMarker[1].enabled = true;
-                        UnlockNextPart.partsUnlocked.Where(pm => pm.name == pois[1].name);
-                        PlayerPrefs.SetInt("Parts Unlocked", 2);
+                        //UnlockNextPart.partsUnlocked.Where(pm => pm.name == pois[1].name);
+                        //PlayerPrefs.SetInt("Parts Unlocked", 2);
                         break;
                     case 2:
                         UnlockNewPart(pois[3]);
                         poiMarker[2].enabled = true;
-                        UnlockNextPart.partsUnlocked.Where(pm => pm.name == pois[2].name);
-                        PlayerPrefs.SetInt("Parts Unlocked", 3);
+                        //UnlockNextPart.partsUnlocked.Where(pm => pm.name == pois[2].name);
+                        //PlayerPrefs.SetInt("Parts Unlocked", 3);
                         break;
                     case 3:
                         UnlockNewPart(pois[4]);
                         poiMarker[3].enabled = true;
                         poiMarker[4].enabled = true;
-                        UnlockNextPart.partsUnlocked.Where(pm => pm.name == pois[3].name);
-                        PlayerPrefs.SetInt("Parts Unlocked", 5);
+                        //UnlockNextPart.partsUnlocked.Where(pm => pm.name == pois[3].name);
+                        //PlayerPrefs.SetInt("Parts Unlocked", 5);
                         break;
                     case 4:
                         UnlockNewPart(pois[5]);
                         poiMarker[5].enabled = true;
-                        UnlockNextPart.partsUnlocked.Where(pm => pm.name == pois[5].name);
-                        PlayerPrefs.SetInt("Parts Unlocked", 5);
+                        //UnlockNextPart.partsUnlocked.Where(pm => pm.name == pois[5].name);
+                        //PlayerPrefs.SetInt("Parts Unlocked", 5);
                         break;
                     default:
                         Debug.Log("info: " + pois[i].name + " distance: " + distance + " i: " + i);
                         break;
                 }
-                
+                */
                 #endregion
 
-                Debug.Log("Unlock Part: " + UnlockNextPart.partsUnlocked);
-                
             }
         }
 
     }
 
+  
     public void UnlockNewPart(PointsToVisit newPart)
     {
-        if (saveData.unlockedPoints.Count < pois.Length && !saveData.unlockedPoints.Contains(newPart))
+        if (currentStorySavedPoints.Count < pois.Length && !currentStorySavedPoints.Contains(newPart))
         {
             // increment unlocked variable 
-            saveData.unlockedPoints.Add(newPart);
+            currentStorySavedPoints.Add(newPart);
 
             string jsonString = JsonUtility.ToJson(saveData);
             File.WriteAllText(saveFile, jsonString);
+                      
         }
     }
-    private void CreateUserMarker()
+    private void CreateUserMarker() 
     {
         // Remove Marker
         if (userMarker != null)
@@ -372,7 +392,7 @@ public class MainManager : MonoBehaviour
     {
         pois = Resources.LoadAll(fileName, typeof(PointsToVisit)).Cast<PointsToVisit>().ToArray();
 
-        Debug.Log("Folder Name Audio: " + fileName);
+        Debug.Log("Folder Name: " + fileName);
     }
     #endregion
 }

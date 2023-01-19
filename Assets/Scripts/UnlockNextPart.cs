@@ -29,7 +29,7 @@ public class UnlockNextPart : MonoBehaviour
             // get player pref value 
             string fileContents = File.ReadAllText(saveFile);
             saveData = JsonUtility.FromJson<SaveData>(fileContents);
-            partsUnlocked = saveData.unlockedPoints;
+            //partsUnlocked = saveData.unlockedPoints;
         }
 		else
 		{
@@ -73,7 +73,7 @@ public class UnlockNextPart : MonoBehaviour
             // increment unlocked variable 
             partsUnlocked.Add(newPart);
 
-            saveData.unlockedPoints = partsUnlocked;
+            //saveData.unlockedPoints = partsUnlocked;
             string jsonString = JsonUtility.ToJson(saveData);
             File.WriteAllText(saveFile, jsonString);
 
