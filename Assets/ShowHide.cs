@@ -26,12 +26,12 @@ public class ShowHide : MonoBehaviour
 
         if (timer <= 0)
         {
-            imgFather.color = Color.Lerp(Color.blue,Color.white,delay);
+            imgFather.color = Color.Lerp(Color.blue,Color.white,timer);
             timer = delay;
         }
         else
         {
-            imgFather.color = Color.Lerp(Color.white, Color.blue, timer);
+            imgFather.color = Color.Lerp(Color.white, Color.blue, delay);
         }
         
     }

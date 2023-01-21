@@ -2643,9 +2643,10 @@ MonoBehaviour:
   poisFolder: pois/QuarantinePois
   pnlGps: {fileID: 695395210}
   btnGPS: {fileID: 1183895883}
-  nameOfLevel: MainMenu
-  nameOfARLevel: ARSceneTest
-  nameOfMiniGameLevel: PlagueMiniGame
+  nameOfLevel: OverviewBibliotecaScene
+  nameOfARLevel: ARSceneQuarantine
+  nameOfMiniGameLevel: WhackTheMerchantMinigame
+  currentLocationScene: 1
   pnlWarning: {fileID: 2084858604}
   warningText: {fileID: 505887772}
   warningMainText: {fileID: 257192736}

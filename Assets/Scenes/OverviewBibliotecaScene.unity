@@ -1426,7 +1426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6bceac3c0630d4bb45b492d96eb9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalParts: 5
+  totalParts: 3
   numOfPartsText: {fileID: 1685887722}
   buttonStoryParts:
   - {fileID: 928061853}

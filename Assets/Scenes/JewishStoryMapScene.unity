@@ -2498,9 +2498,10 @@ MonoBehaviour:
   poisFolder: pois/JewishPois
   pnlGps: {fileID: 695395210}
   btnGPS: {fileID: 1183895883}
-  nameOfLevel: MainMenu
-  nameOfARLevel: ARSceneTest
+  nameOfLevel: OverviewBibliotecaScene
+  nameOfARLevel: ARSceneJewish1
   nameOfMiniGameLevel: MiniGameJewishForTest
+  currentLocationScene: 2
   pnlWarning: {fileID: 2084858604}
   warningText: {fileID: 505887772}
   warningMainText: {fileID: 257192736}
