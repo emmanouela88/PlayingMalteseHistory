@@ -11,7 +11,7 @@ public class PlagueMinigameLineOfSight : MonoBehaviour
         Debug.Log("COLLIDEAD!");
         if (collision.tag == "Player")
         {
-            m_manager.ResetMinigame(false);
+            m_manager.EndMiniGame(false);
         }
     }
 }

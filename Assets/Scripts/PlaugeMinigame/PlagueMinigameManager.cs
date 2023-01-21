@@ -8,7 +8,7 @@ public class PlagueMinigameManager : MonoBehaviour
 {
     [SerializeField] private RectTransform m_victoryMessage;
     [SerializeField] private RectTransform m_defeatMessage;
-    [SerializeField] private Button m_FTUEMessage;
+    [SerializeField] private RectTransform m_FTUEMessage;
     [SerializeField] private PlagueMinigamePlayerController m_player;
     [SerializeField] private List<PlagueMinigameGuard> m_guards;
 
@@ -19,38 +19,47 @@ public class PlagueMinigameManager : MonoBehaviour
     {
         m_victoryMessage.gameObject.SetActive(false);
         m_defeatMessage.gameObject.SetActive(false);
-        m_FTUEMessage.transform.parent.gameObject.SetActive(true);
+        m_FTUEMessage.gameObject.SetActive(true);
         m_sceneManager = GetComponent<SceneManagerScript>();
         Screen.orientation = ScreenOrientation.LandscapeLeft;
         Time.timeScale = 0f; //Start the game as paused
-        m_FTUEMessage.onClick.AddListener(() => StartMiniGame());
         m_ended = true; //start as true to avoid clicking through the blocker
     }
 
-    private void StartMiniGame()
+    public void StartMiniGame()
 	{
         Time.timeScale = 1f;
         m_ended = false;
-        m_FTUEMessage.transform.parent.gameObject.SetActive(false);
+        m_FTUEMessage.gameObject.SetActive(false);
 	}
 
-    public void ResetMinigame(bool victory)
+    public void EndMiniGame(bool victory)
 	{
         m_ended = true;
         if (victory)
-		{
+        {
             m_victoryMessage.gameObject.SetActive(true);
-		}
-		else
-		{
+        }
+        else
+        {
             m_defeatMessage.gameObject.SetActive(true);
         }
         m_player.ResetPlayer();
-        foreach(PlagueMinigameGuard guard in m_guards)
-		{
+        foreach (PlagueMinigameGuard guard in m_guards)
+        {
             guard.ResetGuard();
-		}
-        ReloadSceneAfterDelay(3);
+        }
+    }
+
+    public void ResetMinigame(bool victory)
+	{
+        m_sceneManager.ChangeScene(SceneManager.GetActiveScene().buildIndex);
+	}
+
+    public void RestoreOrientationAndChangeScene(int sceneIndex)
+	{
+        Screen.orientation = ScreenOrientation.AutoRotation;
+        m_sceneManager.ChangeScene(sceneIndex);
 	}
 
     private void ReloadSceneAfterDelay(int delay)

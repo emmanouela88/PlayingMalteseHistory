@@ -54,7 +54,7 @@ public class PlagueMinigamePlayerController : MonoBehaviour
 
 			if (m_currentArea == m_targetArea)
 			{
-				m_manager.ResetMinigame(true);
+				m_manager.EndMiniGame(true);
 			}
 		}
 	}

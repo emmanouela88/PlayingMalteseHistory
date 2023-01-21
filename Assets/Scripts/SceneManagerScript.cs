@@ -32,8 +32,10 @@ public class SceneManagerScript : MonoBehaviour
 
     public void ChangeScene(int sceneNum)
     {
-        if (sceneNum == 9) Application.Quit(); // quit
-        else SceneManager.LoadScene(sceneNum);
+       /* if (sceneNum == 9) 
+            Application.Quit(); // quit
+        else */
+            SceneManager.LoadScene(sceneNum);
     }
 
     public void ChangeSceneAfterDelay(int sceneNum, int delay)
