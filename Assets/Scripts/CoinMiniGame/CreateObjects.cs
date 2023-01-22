@@ -1,21 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CreateObjects : MonoBehaviour
 {
+    [SerializeField] private RectTransform m_victoryMessage;
+    [SerializeField] private RectTransform m_defeatMessage;
+    [SerializeField] private RectTransform m_FTUEMessage;
     public GameObject[] m_coinGameObjects;
     public Text m_timerText;
     public float m_timer = 30f;
+    public int m_targetScore = 10;
 
     public static int m_currentScore = 0;
-    public static bool m_playing = true;
+    public static bool m_playing = false;
 
+    private SceneManagerScript m_sceneManager;
 
-    void Start()
+    private void Start()
+	{
+        m_victoryMessage.gameObject.SetActive(false);
+        m_defeatMessage.gameObject.SetActive(false);
+        m_FTUEMessage.gameObject.SetActive(true);
+        m_sceneManager = GetComponent<SceneManagerScript>();
+        m_playing = false;
+        m_currentScore = 0;
+        Time.timeScale = 0f;
+    }
+
+	public void StartMiniGame()
     {
+        Time.timeScale = 1f;
+        m_FTUEMessage.gameObject.SetActive(false);
+        m_playing = true;
         InstantiateCoin();
+    }
+    public void ResetMinigame()
+    {
+        m_sceneManager.ChangeScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void Update()
@@ -26,19 +50,29 @@ public class CreateObjects : MonoBehaviour
             int milliseconds = Mathf.FloorToInt((m_timer * 100F) % 100F);
             m_timerText.text = seconds.ToString("00") + ":" + milliseconds.ToString("00");
 
-            if (m_timer >= 0f)
+            m_timer -= Time.deltaTime;
+            if (m_timer <= 0f)
             {
-                m_timer -= Time.deltaTime;
-            }
-            else
-            {
-                m_playing = false;
                 m_timer = 0f;
                 m_timerText.text = m_timer.ToString();
+                GameOver(m_currentScore >= m_targetScore);
             }
-
         }
 
+    }
+
+    private void GameOver(bool victory)
+    {
+        m_playing = false;
+        // Show the message.
+        if (!victory)
+        {
+            m_defeatMessage.gameObject.SetActive(true);
+        }
+        else
+        {
+            m_victoryMessage.gameObject.SetActive(true);
+        }
     }
 
     void InstantiateCoin()

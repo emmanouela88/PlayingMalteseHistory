@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class spawnCars : MonoBehaviour {
 
+	[SerializeField] private RectTransform m_victoryMessage;
+	[SerializeField] private RectTransform m_defeatMessage;
+	[SerializeField] private RectTransform m_FTUEMessage;
+
 	public GameObject[] car;
 	public float maxPos;
 	public float delay;
@@ -14,22 +18,24 @@ public class spawnCars : MonoBehaviour {
 	private float timeLimitStart;
 	private float timeLimitRemain;
 
-	public GameObject pnlWinLose;
 	public TMP_Text infoTxt;
 	public TMP_Text timerTxt;
 
-	public Button btnStart;
 	bool isStarted = false;
+
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
+		m_victoryMessage.gameObject.SetActive(false);
+		m_defeatMessage.gameObject.SetActive(false);
+		m_FTUEMessage.gameObject.SetActive(true);
+
+		Time.timeScale = 0f;
 		timer = delay;
 		
 		infoTxt.text = "Blow as many torches as you can without the father seeing you!";
-		pnlWinLose.SetActive(true);
 		timeLimitStart = 20.0f;
-		btnStart.gameObject.SetActive(true);
 		timeLimitRemain = timeLimitStart;
-		//StartGame();
 	}
 	
 	// Update is called once per frame
@@ -41,10 +47,8 @@ public class spawnCars : MonoBehaviour {
 
         if (isStarted)
         {
-			StartGame();
 			if (timer <= 0)
 			{
-
 				Vector3 carPos = new Vector3(0, Random.Range(-maxPos, maxPos), transform.position.z);
 				int objectToSpawn = Random.Range(0, car.Length);
 
@@ -56,26 +60,37 @@ public class spawnCars : MonoBehaviour {
 				timer = delay;
 				Debug.Log("Position: " + car[objectToSpawn].transform.position.x + " maxPos: " + maxPos);
 
-				if (timeLimitRemain == 0)
+				if (timeLimitRemain <= 0)
 				{
-					foreach (var item in car)
-					{
-						Time.timeScale = 0;
-						pnlWinLose.SetActive(true);
-						infoTxt.text = "Time is up! You manage to blow " + item + " torche(s)";
-					}
+					GameOver(true);
 				}
 			}
 		}
 		
 	}
 
-	void StartGame()
+	public void StartGame()
     {
-		btnStart.gameObject.SetActive(false);
-		pnlWinLose.SetActive(false);
+		m_FTUEMessage.gameObject.SetActive(false);
 		isStarted = true;
 		Time.timeScale = 1;
+	}
+
+	public void GameOver(bool victory)
+	{
+		Time.timeScale = 0f;
+		isStarted = false;
+		// Show the message.
+		if (!victory)
+		{
+			m_defeatMessage.gameObject.SetActive(true);
+		}
+		else
+		{
+			//TODO: Show the actual score here
+			infoTxt.text = "Time is up! You managed to blow " + 10 + " torche(s)";
+			m_victoryMessage.gameObject.SetActive(true);
+		}
 	}
 
 }

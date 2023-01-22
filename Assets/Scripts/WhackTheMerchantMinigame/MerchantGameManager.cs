@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MerchantGameManager : MonoBehaviour
 {
     [SerializeField] private List<MerchantController> m_merchants;
 
     [Header("UI objects")]
-    [SerializeField] private GameObject m_playButton;
-    [SerializeField] private GameObject m_gameUI;
-    [SerializeField] private GameObject m_outOfTimeText;
+    [SerializeField] private RectTransform m_victoryMessage;
+    [SerializeField] private RectTransform m_defeatMessage;
+    [SerializeField] private RectTransform m_FTUEMessage;
     [SerializeField] private TMPro.TextMeshProUGUI m_timeText;
     [SerializeField] private TMPro.TextMeshProUGUI m_scoreText;
+    [SerializeField] private int m_targetScore = 20;
 
     // Hardcoded variables you may want to tune.
     private float m_startingTime = 30f;
@@ -21,14 +23,21 @@ public class MerchantGameManager : MonoBehaviour
     private HashSet<MerchantController> m_currentMerchants = new HashSet<MerchantController>();
     private int m_score;
     private bool m_playing = false;
+    private SceneManagerScript m_sceneManager;
+    void Start()
+    {
+        m_victoryMessage.gameObject.SetActive(false);
+        m_defeatMessage.gameObject.SetActive(false);
+        m_FTUEMessage.gameObject.SetActive(true);
+        m_sceneManager = GetComponent<SceneManagerScript>();
+        Time.timeScale = 0f; //Start the game as paused
+    }
 
     // This is public so the play button can see it.
     public void StartGame()
     {
-        // Hide/show the UI elements we don't/do want to see.
-        m_playButton.SetActive(false);
-        m_outOfTimeText.SetActive(false);
-        m_gameUI.SetActive(true);
+        Time.timeScale = 1f;
+        m_FTUEMessage.gameObject.SetActive(false);
         // Hide all the visible moles.
         for (int i = 0; i < m_merchants.Count; i++)
         {
@@ -44,13 +53,22 @@ public class MerchantGameManager : MonoBehaviour
         m_playing = true;
     }
 
-    public void GameOver(int type)
+    public void ResetMinigame()
+    {
+        m_sceneManager.ChangeScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void GameOver(int type)
     {
         // Show the message.
         if (type == 0)
         {
-            m_outOfTimeText.SetActive(true);
+            m_defeatMessage.gameObject.SetActive(true);
         }
+        else if (type == 1)
+		{
+            m_victoryMessage.gameObject.SetActive(true);
+		}
         // Hide all moles.
         foreach (MerchantController merchant in m_merchants)
         {
@@ -58,7 +76,6 @@ public class MerchantGameManager : MonoBehaviour
         }
         // Stop the game and show the start UI.
         m_playing = false;
-        m_playButton.SetActive(true);
     }
 
     // Update is called once per frame
@@ -73,6 +90,10 @@ public class MerchantGameManager : MonoBehaviour
                 m_timeRemaining = 0;
                 GameOver(0);
             }
+            else if (m_score >= m_targetScore)
+			{
+                GameOver(1);
+			}
             m_timeText.text = $"{(int)m_timeRemaining / 60}:{(int)m_timeRemaining % 60:D2}";
             // Check if we need to start any more moles.
             if (m_currentMerchants.Count <= (m_score / 10))

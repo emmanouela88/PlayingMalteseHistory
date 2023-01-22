@@ -14,7 +14,7 @@ public class PlagueMinigameManager : MonoBehaviour
 
     private SceneManagerScript m_sceneManager;
     private bool m_ended = false;
-    // Start is called before the first frame update
+
     void Start()
     {
         m_victoryMessage.gameObject.SetActive(false);
@@ -51,16 +51,17 @@ public class PlagueMinigameManager : MonoBehaviour
         }
     }
 
-    public void ResetMinigame(bool victory)
+    public void ResetMinigame()
 	{
         m_sceneManager.ChangeScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
     public void RestoreOrientationAndChangeScene(int sceneIndex)
 	{
-        Screen.orientation = ScreenOrientation.AutoRotation;
+        Screen.orientation = ScreenOrientation.Portrait;    //Force a change to portrait so that it is 
         m_sceneManager.ChangeScene(sceneIndex);
-	}
+        Screen.orientation = ScreenOrientation.AutoRotation;
+    }
 
     private void ReloadSceneAfterDelay(int delay)
 	{
