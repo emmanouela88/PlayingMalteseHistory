@@ -55,7 +55,7 @@ public class MerchantGameManager : MonoBehaviour
 
     public void ResetMinigame()
     {
-        m_sceneManager.ChangeScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void GameOver(int type)

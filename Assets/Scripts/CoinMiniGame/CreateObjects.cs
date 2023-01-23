@@ -39,7 +39,7 @@ public class CreateObjects : MonoBehaviour
     }
     public void ResetMinigame()
     {
-        m_sceneManager.ChangeScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void Update()

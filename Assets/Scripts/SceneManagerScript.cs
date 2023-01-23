@@ -32,16 +32,26 @@ public class SceneManagerScript : MonoBehaviour
 
     public void ChangeScene(int sceneNum)
     {
-       /* if (sceneNum == 9) 
-            Application.Quit(); // quit
-        else */
-            SceneManager.LoadScene(sceneNum);
+        SceneManager.LoadScene(sceneNum);
+        PreviousSceneSaver.instance.m_prevScene = sceneNum;
     }
 
     public void ChangeSceneAfterDelay(int sceneNum, int delay)
 	{
         StartCoroutine(WaitUntilChangeScene(delay, sceneNum));
 	}
+
+    public void ChangeToPreviousScene()
+	{
+        if (PreviousSceneSaver.instance != null)
+        {
+            SceneManager.LoadScene(PreviousSceneSaver.instance.m_prevScene);
+        }
+		else
+		{
+            SceneManager.LoadScene(0);
+        }
+    }
 
     IEnumerator WaitUntilChangeScene(int seconds, int sceneNum)
     {

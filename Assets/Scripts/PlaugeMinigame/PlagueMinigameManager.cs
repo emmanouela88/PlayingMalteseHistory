@@ -53,13 +53,13 @@ public class PlagueMinigameManager : MonoBehaviour
 
     public void ResetMinigame()
 	{
-        m_sceneManager.ChangeScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
     public void RestoreOrientationAndChangeScene(int sceneIndex)
 	{
         Screen.orientation = ScreenOrientation.Portrait;    //Force a change to portrait so that it is 
-        m_sceneManager.ChangeScene(sceneIndex);
+        m_sceneManager.ChangeToPreviousScene();
         Screen.orientation = ScreenOrientation.AutoRotation;
     }
 

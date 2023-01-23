@@ -2,6 +2,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class spawnCars : MonoBehaviour {
 
@@ -93,4 +94,8 @@ public class spawnCars : MonoBehaviour {
 		}
 	}
 
+	public void ResetMinigame()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+	}
 }
