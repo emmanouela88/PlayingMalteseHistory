@@ -48,10 +48,10 @@ EditorBuildSettings:
     path: Assets/Scenes/MiniGameJewishForTest.unity
     guid: 6354ac7814793c94a9d074ba93491c30
   - enabled: 1
-    path: Assets/Scenes/ARSceneJewish 1.unity
+    path: Assets/Scenes/ARSceneJewish1.unity
     guid: f74d85432f7beb547b5b2ff605084a4a
   - enabled: 1
-    path: Assets/Scenes/ARSceneJewish 2.unity
+    path: Assets/Scenes/ARSceneJewish2.unity
     guid: 8ea64830b2bff6046ad368bec17b4723
   - enabled: 1
     path: Assets/Scenes/Credits.unity

@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.IO;
 using System.Collections.Generic;
-
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 public enum LOCATIONSCENES { Poverty, Quarantine, Jewish };
+
+
 public class MainManager : MonoBehaviour
 {
     public PointsToVisit[] pois;
@@ -29,10 +33,14 @@ public class MainManager : MonoBehaviour
 
     [Space]
     [Header("Variables")]
-    public string nameOfLevel;
-    public string nameOfARLevel;//we need to make it as a list since we are having more than one ar level to load
+    public string nameOfMainLevel;
+    public string nameOfARLevel;//we need to make it as a list since we are having more than one ar level to load    
+    public string nameOfARLevel2;//we need to make it as a list since we are having more than one ar level to load    
     public string nameOfMiniGameLevel; //we need to make it as a list since we are having more than one minigame level to load
+    public string nameOfMiniGameLevel2; //we need to make it as a list since we are having more than one minigame level to load
+    public string nameOfMiniGameLevel3; //we need to make it as a list since we are having more than one minigame level to load
     public LOCATIONSCENES currentLocationScene;
+    
 
     [Space]
     [Header("UI Elements general")]
@@ -42,6 +50,9 @@ public class MainManager : MonoBehaviour
     public Button btnCloseWarning;
     public Button btnBackMain;
     public Button btnMiniGame;
+    public Button btnMiniGame2;
+    public Button btnMiniGame3;
+    
     
 
     [Space]
@@ -54,6 +65,7 @@ public class MainManager : MonoBehaviour
     [Space]
     [Header("AR Elements")]
     public Button btnARScene;
+    public Button btnARScene2;
 
     //Private member variables
     private string saveFile;
@@ -62,6 +74,8 @@ public class MainManager : MonoBehaviour
     private List<PointsToVisit> currentStorySavedPoints = new List<PointsToVisit>();
 
     #region UnityMethods
+
+
     public void Awake()
     {                
         LoadFiles(poisFolder);
@@ -133,9 +147,13 @@ public class MainManager : MonoBehaviour
         btnGPS.onClick.AddListener(GameManager.Instance.androidManager.OpenNativeAndroidSettings);
         btnClose.onClick.AddListener(ClosePanels);
         btnCloseWarning.onClick.AddListener(ClosePanels);
-        btnBackMain.onClick.AddListener(() => OpenScene(nameOfLevel));
+        btnBackMain.onClick.AddListener(() => OpenScene(nameOfMainLevel));
         btnARScene.onClick.AddListener(() => OpenScene(nameOfARLevel));
+        btnARScene2.onClick.AddListener(() => OpenScene(nameOfARLevel2));
         btnMiniGame.onClick.AddListener(() => OpenScene(nameOfMiniGameLevel));
+        btnMiniGame2.onClick.AddListener(() => OpenScene(nameOfMiniGameLevel2));
+        btnMiniGame3.onClick.AddListener(() => OpenScene(nameOfMiniGameLevel3));
+        
     }
     void SubscribeToEvents()
     {
@@ -168,23 +186,46 @@ public class MainManager : MonoBehaviour
                     //sourceCam.clip = pois[i].clip;
                     /*btnPlaySound.onClick.AddListener(() => PlaySound(sourceCam.clip));
                     btnPauseSound.onClick.AddListener(PauseSound);*/
-                    if (pois[i].nameOfPoint == "City Gate" || pois[i].nameOfPoint== "Marsamxett" || pois[i].nameOfPoint == "Archbishop's Palace"|| pois[i].nameOfPoint == "Ondina's Residency")
+                    if (pois[i].nameOfPoint == "City Gate" || pois[i].nameOfPoint== "Marsamxett" || pois[i].nameOfPoint == "Archbishop's Palace")
                     {
                         btnARScene.gameObject.SetActive(true);
+                        btnARScene2.gameObject.SetActive(false);
+                    }
+                    else if(pois[i].nameOfPoint == "Ondina's Residency")
+                    {
+                        btnARScene.gameObject.SetActive(false);
+                        btnARScene2.gameObject.SetActive(true);
                     }
                     else
                     {
                         btnARScene.gameObject.SetActive(false);
+                        btnARScene2.gameObject.SetActive(false);
                     }
 
-                    if (pois[i].nameOfPoint == "Nix Mangiare steps" || pois[i].nameOfPoint == "Merchants Street" || pois[i].nameOfPoint == "Hastings Garden"
-                        || pois[i].nameOfPoint == "Wells Street" || pois[i].nameOfPoint == "227 St Paul’s Street " || pois[i].nameOfPoint == "Ondina's Residency")
+                    if (pois[i].nameOfPoint == "Nix Mangiare steps" || pois[i].nameOfPoint == "Hastings Garden"
+                        || pois[i].nameOfPoint == "Ondina's Residency")
                     {
                         btnMiniGame.gameObject.SetActive(true);
+                        btnMiniGame3.gameObject.SetActive(false);
+                        btnMiniGame2.gameObject.SetActive(false);
+                    }
+                    else if (pois[i].nameOfPoint == "Wells Street")
+                    {
+                        btnMiniGame.gameObject.SetActive(false);
+                        btnMiniGame2.gameObject.SetActive(true);
+                        btnMiniGame3.gameObject.SetActive(false);
+                    }
+                    else if (pois[i].nameOfPoint == "227 St Paul’s Street ")
+                    {
+                        btnMiniGame.gameObject.SetActive(false);
+                        btnMiniGame2.gameObject.SetActive(false);
+                        btnMiniGame3.gameObject.SetActive(true);
                     }
                     else
                     {
                         btnMiniGame.gameObject.SetActive(false);
+                        btnMiniGame2.gameObject.SetActive(false);
+                        btnMiniGame3.gameObject.SetActive(false);
                     }
                 }
 

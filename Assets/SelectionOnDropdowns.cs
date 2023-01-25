@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SelectionOnDropdowns : MonoBehaviour
 {
     public TMP_Dropdown[] rowDrpDowns;
+
     
     public void CompareValues(int whichRowWeCheck)
     {
@@ -50,12 +52,16 @@ public class SelectionOnDropdowns : MonoBehaviour
                 {
                     NonInteractableDropDowns();
                     Debug.Log("Second fifth");
+
                 }
                 break;
 
-
         }
-        
+        if (!rowDrpDowns[3].interactable && !rowDrpDowns[2].interactable && !rowDrpDowns[1].interactable&& !rowDrpDowns[0].interactable)
+        {
+            SceneManager.LoadScene(5);
+        }
+
     }
 
     private void NonInteractableDropDowns()
@@ -63,6 +69,7 @@ public class SelectionOnDropdowns : MonoBehaviour
         for (int i = 0; i < rowDrpDowns.Length; i++)
         {
             rowDrpDowns[i].interactable = false;
+            
         }
     }
 }
