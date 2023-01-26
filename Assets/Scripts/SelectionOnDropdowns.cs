@@ -9,6 +9,8 @@ public class SelectionOnDropdowns : MonoBehaviour
 {
     public TMP_Dropdown[] rowDrpDowns;
 
+    [HideInInspector]
+    public bool isDone = false;
     
     public void CompareValues(int whichRowWeCheck)
     {
@@ -23,46 +25,45 @@ public class SelectionOnDropdowns : MonoBehaviour
                 if (firstValue == 2 && secondValue == 1 & thirdValue == 3 && fourthValue == 0)
                 {
                     NonInteractableDropDowns();
-                    Debug.Log("FirstValue: " + firstValue.ToString() + " second: " + secondValue.ToString() + " third: " + thirdValue.ToString() + " fourth: " + fourthValue.ToString());
+                    isDone = true;
                 }
                 break;
             case 1:
                 if (firstValue == 3 && secondValue == 4 & thirdValue == 4 && fourthValue == 1)
                 {
                     NonInteractableDropDowns();
-                    Debug.Log("Second row");
+                    isDone = true;
                 }
                 break;
             case 2:
                 if (firstValue == 4 && secondValue == 0 & thirdValue == 2 && fourthValue == 2)
                 {
                     NonInteractableDropDowns();
-                    Debug.Log("Second third");
+                    isDone = true;
                 }
                 break;
             case 3:
                 if (firstValue == 0 && secondValue == 3 & thirdValue == 1 && fourthValue == 3)
                 {
                     NonInteractableDropDowns();
-                    Debug.Log("Second fourth");
+                    isDone = true;
+                    
                 }
                 break;
             case 4:
                 if (firstValue == 1 && secondValue == 2 & thirdValue == 0 && fourthValue == 4)
                 {
                     NonInteractableDropDowns();
-                    Debug.Log("Second fifth");
-
+                    isDone = true;
+                    
                 }
                 break;
+                
 
         }
-        if (!rowDrpDowns[3].interactable && !rowDrpDowns[2].interactable && !rowDrpDowns[1].interactable&& !rowDrpDowns[0].interactable)
-        {
-            SceneManager.LoadScene(5);
-        }
-
     }
+
+    
 
     private void NonInteractableDropDowns()
     {

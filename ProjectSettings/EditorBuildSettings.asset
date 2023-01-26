@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestScene/ARMenuForTest.unity
     guid: e13d57a96889d9b47aa2ecfd0da9d0c1
   - enabled: 0
