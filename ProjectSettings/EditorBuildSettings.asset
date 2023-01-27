@@ -14,46 +14,52 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MainMenuWithIntro.unity
     guid: a114e1c9e011bbf48a1a992dbbcfa3eb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/OverviewBibliotecaScene.unity
     guid: 74ee96e1e4605624f9163b7cb5f58271
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PovertyStoryMapScene.unity
     guid: e14969f21f0f3e14abb496c7966163c8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CollectCoinsMiniGame.unity
     guid: 56d55db3035b99748bc3ca16febf31df
   - enabled: 1
     path: Assets/Scenes/ARScenePoverty.unity
     guid: 690a06e011bf84244b19f89cd2d2e9ef
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/QuarantineStoryMapScene.unity
     guid: 924771599bfbd534187a1c08d900cc4b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MiniGameTracing.unity
     guid: bc58ce63e21f6864696c664fb07cd4cb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ARSceneQuarantine.unity
     guid: 4b7919db25470664f9be8091e59c31b6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/WhackTheMerchantMinigame.unity
     guid: 7b3863ad55ee65047ae268298a5ebd47
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlagueMiniGame.unity
     guid: c7f05f8e04a83b84d988271f94a62373
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/JewishStoryMapScene.unity
     guid: 3bc38a43951af614a903bc92e669ea65
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MiniGameJewishForTest.unity
     guid: 6354ac7814793c94a9d074ba93491c30
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ARSceneJewish1.unity
     guid: f74d85432f7beb547b5b2ff605084a4a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ARSceneJewish2.unity
     guid: 8ea64830b2bff6046ad368bec17b4723
-  - enabled: 1
+  - enabled: 0
+    path: Assets/Scenes/JournalScene.unity
+    guid: 62cbffc679a17474daf0d5aa48315b33
+  - enabled: 0
+    path: Assets/Scenes/GalleryScene.unity
+    guid: 7b8d1e064ac77d34781393408b1be85a
+  - enabled: 0
     path: Assets/Scenes/Credits.unity
     guid: 31c3c01deeb39e24bb3c42867ce206a9
   m_configObjects:

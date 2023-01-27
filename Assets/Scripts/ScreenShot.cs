@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+
+#if UNITY_EDITOR
 public class ScreenShot : MonoBehaviour
 {
     [MenuItem("Shot/Screenshot")]
@@ -15,3 +17,4 @@ public class ScreenShot : MonoBehaviour
 
     }
 }
+#endif
