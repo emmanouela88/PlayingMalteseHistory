@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee87e681215b6147a44021cf30db039, type: 3}
+  m_Name: 5.City Gate
+  m_EditorClassIdentifier: 
+  nameOfPoint: City Gate
+  coordinatesPoint: {x: 14.50905, y: 35.89612}
+  firstPartInfo: "I\u2019m interested in the bigger picture of poverty in Malta at
+    the time. Perhaps it might help to get a different perspective. Let me follow
+    in someone else\u2019s footsteps for a while..  Five years before Isidoro\u2019s
+    arrest, Teresa Dimech paced anxiously, working up the courage to enter the main
+    street of the city, through a gate that looked very different from the city\u2019s
+    entranceway today. She was here to lodge her plea - not the first time that she
+    would beg for her son\u2019s release. Her steps would eventually lead her to
+    the Palace but for now, the Gozitan woman is overwhelmed by the city bustle.
+    She has a letter, carefully prepared with the aid of a notary or clerk.  [link
+    to doc: Img 3]  Her letter explains: \u2018Your Petitioner having lately had
+    the misfortune of losing her Husband, was consequently thrown into the greatest
+    state of poverty, by living as she has done since her marriage, in the village
+    of Zebbug, Gozo, where she can scarcely obtain the common necessaries of life,
+    and to add to her distressing case, she has to provide for her young, and helpless
+    family which consists of 5 in number.\u2019 "
+  secondPartInfo: "Her son, Giuseppe Dimech, had been tried by the Court of Special
+    Commission [link to doc here: Imgs 4a and b], for the crime of Homicide, and
+    was serving a \u2018sentence of imprisonment for 20 years, with hard labour\u2019.
+    She desperately hopes her letter is deferential and formal enough to win a favourable
+    response. Sadly, the Chief Secretary to the Governor would disagree, finding
+    that: \u2018The case of this man has been repeatedly considered. There is no
+    additional reason stated here that might, in my opinion, justify a pardon for
+    the present.\u2019 [link to doc: Img 5]  I shall follow Teresa Dimech down Valletta\u2019s
+    main thoroughfare - the street the British renamed Kingsway - until I arrive
+    at the place where her son\u2019s case, and Isidoro Mifsud\u2019s, would have
+    been heard - a place I am still likely to meet judges to this day.  "
+  imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
+  imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
+  nameOfStory: Poverty
+  hintOfPOI: "It\u2019s easy! Just follow the lawyers with their suits and briefcases
+    as they rush in for a day\u2019s work."
+  solutionOfPOI: 

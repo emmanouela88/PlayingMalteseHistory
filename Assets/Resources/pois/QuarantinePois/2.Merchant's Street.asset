@@ -14,7 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfPoint: Merchants Street
   coordinatesPoint: {x: 14.513343, y: 35.89751}
-  mainInfo: '"Merchants Street - Where Antonio Borg was executed " '
+  firstPartInfo: "I look at the busy street full of passersby. It\u2019s hard to
+    imagine that a person was executed on this exact spot. Valletta has changed so
+    much in a few years, let alone in two centuries. There are hardly any locals
+    left, while many traditional shops are being closed down to be replaced by boutique
+    hotels and hip restos. At least, the jewellery shops still exists. The precious
+    stones provide a gleaming contrast to the scene that must have unfolded outside
+    these windows more than 200 years ago. A poor, destitute conveyor forced to break
+    quarantine to work and being punished for that. Was Borg really to blame? In
+    his defence, he stated that he did not know about the rules that came into force
+    on the first of August, as he\u2019d been in obligatory quarantine at the time.
+    {hyperlink to reference, Peresso, p. 31)."
+  secondPartInfo: "There is a specific place that the authorities had been using
+    as the main quarantine centre back in 1813. It\u2019s not that far from Valletta
+    - actually, you can even see it from its walls."
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
   nameOfStory: Quarantine
+  hintOfPOI: "(cat) I love lying around this place when it\u2019s sunny. I pick a
+    vantage point overlooking the sea and let visitors pet me - only if their hands
+    are clean, of course. When it sometimes rains, I visit the stone man reclining
+    on a bed at the centre of the gardens."
+  solutionOfPOI: "I\u2019ve heard humans call this stone man Lord Hastings."

@@ -14,7 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfPoint: Boat docking, from Vittoriosa (1867)
   coordinatesPoint: {x: 14.51346, y: 35.89451}
-  mainInfo: 'Boat docking Place '
+  firstPartInfo: "In December 1867, a small boat landed here, crossing the harbour
+    to bring a single prisoner to Valletta for trial - a seventeen-year-old boy called
+    Isidoro Mifsud, a baker\u2019s son. His crime was theft - two gold rings and
+    twelve Sicilian silver coins that he stole from the home of the Grech family
+    in Vittoriosa, with whom he lodged as a domestic servant.  In the boat with him
+    was Sergeant Major Giovanni Scicluna, tasked with bringing him to court. Later,
+    Scicluna recounted how, during the crossing, Isidoro Mifsud said, \u201C\u2018The
+    Devil made me err in judgement; that which I did, I did to aid my brother, who
+    I saw yesterday in great need.\u201D [link to doc: Img 1] \u201CMy brother\u201D,
+    he said, \u201Cwas in tears because he was so hungry.\u201D [link to doc Img
+    2]  This, it seems, was a crime that had its roots in poverty, and the desperation
+    it can cause. "
+  secondPartInfo: 'From here, Isidoro Mifsud would have been taken up into the city
+    - first to the police station, and later to the courts. But before that, his
+    steps would take him along a route where the sights of the city impressed themselves
+    upon any visitor.  Victoria Gate was still two decades away from being built.
+    At the time, there was an older gate, known as the Marina Gate, that granted
+    entry to the city from the harbour. There was one path from the harbour up to
+    the old gate that is of particular interest to me - a straight and narrow flight
+    of steps right between the towering city walls and the backs of the old warehouses.
+    That is the path I should take to return to the city. '
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
   nameOfStory: Poverty
+  hintOfPOI: "Oh yes, those steps\u2026that was one of the main paths that new arrivals
+    fresh off a ship would walk to go up into the city. If you\u2019re still standing
+    at the quay where the boat carrying Isidoro Muscat docked, you need to walk to
+    the left, towards the mouth of the harbour. Keep an eye out for the first flight
+    of steps you\u2019ll see on your left. Careful - they\u2019re easy to miss!"
+  solutionOfPOI: 

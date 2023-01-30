@@ -14,8 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfPoint: Hastings Garden
   coordinatesPoint: {x: 14.508116, y: 35.8978}
-  mainInfo: "\"Hastings Garden (overlook to Manoel Island) - Learn about the quarantine,
-    and Antonio Borg\u2019s escape \" "
+  firstPartInfo: "This garden holds a commemoration of the islands\u2019 British
+    rule. Lord Rawdon Hastings is buried here, a Governor of Malta - though that
+    was eight years after the plague epidemic of 1813.  Yet it is not for Lord Hastings
+    that I have come here. From this vantage point, I can look out across Marsamxett
+    Harbour to the west, onto Manoel Island. Just as this garden carries Lord Hastings\u2019
+    name, the island carries that of another colonial ruler - Antonio Manoel de Vilhena,
+    a Grand Master of the Knights of St John. So many places in Malta bear the names
+    of the men who laid claim to the island.   De Vilhena built a fort on the island
+    - I have a clear view of it from here. During the plague, its isolation made
+    it the ideal quarantine hospital. It was from there that Antonio Borg made his
+    escape. "
+  secondPartInfo: "When the plague came to Malta, Valletta was far more crowded than
+    it is now - a third of the island\u2019s hundred thousand residents lived within
+    and around its wall. Fertile ground for a disease to fester - and fester it did.
+    On the 9th of June 1813, less than two months after the first cases, the government
+    newspaper stopped reporting the names of the victims. Listing the names of all
+    the dead, we read, would leave no space in the newspaper for anything else. 
+    And there was one street that had the worst of it.  I have to cross the city,
+    heading for one of the shortest streets - a street whose name suggests dark and
+    stagnant depths.  Measures were introduced to limit the spread of the disease. 
+    By July, Valletta was divided into six districts that no-one could move between.
+    Even within those districts, only one person from each household could leave
+    to fetch provisions, and only between the hours of 6 and 10 in the morning. "
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
   nameOfStory: Quarantine
+  hintOfPOI: "Of course I know the street you mean! You have to go all the way to
+    the other side of Valletta, right behind the hospital built by the Knights of
+    St John - oh, yes, they weren\u2019t called the Knights Hospitaller for nothing!
+    It\u2019s a strange street - most of the city\u2019s streets follow a regular
+    grid pattern, but this one doesn\u2019t!"
+  solutionOfPOI: 

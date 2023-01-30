@@ -14,8 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfPoint: Wells Street
   coordinatesPoint: {x: 14.517546, y: 35.89833}
-  mainInfo: '"Wells Street - Site of the worst plague outbreak - learn about the
-    conditions of the plague " '
+  firstPartInfo: "These days, Wells Street is one of the few corners of Valletta
+    that still belongs primarily to the city\u2019s residents, and that hasn\u2019t
+    yet been touched by the wave of gentrification that has transformed the city\u2019s
+    main thoroughfares.   Standing on this quiet street, it\u2019s difficult to imagine
+    the horror that gripped this side of the city in 1813. Of course, the plague
+    reached every corner of Valletta, and even the towns and villages beyond its
+    walls were not safe from its reach. Yet nowhere did the epidemic take such a
+    toll as it did on this narrow street. The Government Gazette reports that, on
+    the 31st of May, five people fell ill on this street alone - the next day, two
+    of them were already dead. No wonder the newspaper referred to it as a \u201Cwretched\u201D
+    street at the time.  "
+  secondPartInfo: Yet a question remains. How did the plague get to Malta in the
+    first place, in 1813? The outbreak began a year earlier, far from these shores
+    - in Constantinople, to be precise. From there it spread to other ports in the
+    Ottoman Empire, including Alexandria in Egypt - but how did it make the leap
+    from there, to this corner of Valletta?
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
   nameOfStory: Quarantine
+  hintOfPOI: "(cat)  Oh the street you\u2019re looking for is named after a saint
+    the people love here in Valletta. His feast day is the 10th of February, and
+    I end up spending the day hiding under parked cars - those loud fireworks and
+    marching bands scare my nine lives out of me! "
+  solutionOfPOI: "St. Paul\u2019s street is what you\u2019re looking for. It\u2019s
+    named in honour of the church of St. Paul\u2019s Shipwreck - make your way there. "

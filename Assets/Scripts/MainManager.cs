@@ -22,6 +22,7 @@ public class MainManager : MonoBehaviour
     public TextMeshProUGUI txtMainInfo;
     public Image imgInstrument;
     public Button btnClose;
+    public Button btnNext;
     public string poisFolder;
 
 
@@ -182,7 +183,9 @@ public class MainManager : MonoBehaviour
                 {
                     txtName.text = pois[i].nameOfPoint;
                     imgInstrument.sprite = pois[i].imgMain;
-                    txtMainInfo.text = pois[i].mainInfo;
+                    txtMainInfo.text = pois[i].firstPartInfo;
+                    btnNext.onClick.AddListener(()=> Changetext(pois[i].secondPartInfo));
+                    
                     //sourceCam.clip = pois[i].clip;
                     /*btnPlaySound.onClick.AddListener(() => PlaySound(sourceCam.clip));
                     btnPauseSound.onClick.AddListener(PauseSound);*/
@@ -234,7 +237,10 @@ public class MainManager : MonoBehaviour
 
     }
 
-
+    private void Changetext(string newText)
+    {
+        txtMainInfo.text = newText;
+    }
 
     //to check if user is near the poi or not
     public void CheckUserPosition()

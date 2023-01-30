@@ -14,7 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfPoint: Biblioteca
   coordinatesPoint: {x: 14.51364, y: 35.89837}
-  mainInfo: Biblioteca, this is the starting point
+  firstPartInfo: 'Valletta is awash with lights and sounds; a brittle glamour that
+    dances off the walls and glances off the cracks in the stones. Gentrification
+    sticks to the surfaces with its price-tagged promise. I wonder how this city
+    of merchants with its flashy allure developed this veneer. The crevices in the
+    old stone, unreached by artificial lights, seem to have another story to tell
+    - shadows slipping into dilapidation.  I am at the Bibliotheca because I am determined
+    to pursue another side of Valletta, a side that this newfound extravagance has
+    tried its best to conceal - a history of poverty and hardship whose legacy lingers
+    beyond/behind the glitzy facades '
+  secondPartInfo: "In an article by Evelyn Pullicino [link to doc: https://www.um.edu.mt/library/oar/handle/123456789/18107],
+    I learn about a young thief who pleaded that poverty had led him to crime. The
+    article suggests that the law\u2019s attitude to poverty was, at best, ambivalent:
+    \u2018Poverty might have been perceived as a reasonable motivation for stealing
+    but it was not considered a redeeming excuse in the Maltese Criminal Court.\u2019
+    I am curious to learn the outcome of the case. The boy would have travelled from
+    Vittoriosa to Valletta by boat, where he would be formally questioned and charged.  
+    I need to go outside the city walls, through a gate that carries a queen\u2019s
+    name, and walk down to a quay overlooked by a church. "
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
   nameOfStory: Poverty
+  hintOfPOI: 'Archivist/Historian: The quay looks across at the city of Vittoriosa,
+    otherwise known as Birgu.'
+  solutionOfPOI: 

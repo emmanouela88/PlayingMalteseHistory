@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee87e681215b6147a44021cf30db039, type: 3}
+  m_Name: 4.Grandmaster's palace entrance
+  m_EditorClassIdentifier: 
+  nameOfPoint: "Grandmaster\u2019s palace entrance on Archbishop\u2019s Street"
+  coordinatesPoint: {x: 14.51404, y: 35.8996}
+  firstPartInfo: 'When Malta became a British colony in 1800, the palace of the Grandmasters
+    of the Knights of St John became the seat of the colonial governor. In this building,
+    all the power of the colonial state was concentrated - at the time, the building
+    also housed the police headquarters. When he was brought to Valletta by boat,
+    it is here that Isidoro Mifsud was taken to be questioned by Sgt Major Giovanni
+    Scicluna, and for his case to undergo the procedure of inquiry towards a formal
+    charge. The police obtained the testimonies of the Grech family members and other
+    people who knew the family and the accused, regarding the burglary, and built
+    up a case file.  How many others must he have brushed shoulders with, who were
+    driven to break the law out of desperation? '
+  secondPartInfo: 'What consequences would Isidoro Mifsud have been facing for his
+    crime? The prospect of imprisonment or forced labour was hard. Yet, he would
+    not be the only one who might have felt the weight of punishment. There were
+    other consequences, felt by the family of the convicted - especially if that
+    family was poor.  Apart from the accused being brought to the police station,
+    this building would also have seen another steady stream of arrivals: individuals
+    who wished to petition the governor, in the hope of their plea reaching the ear
+    of someone with the power to help. In some cases, these individuals would have
+    been pleading for the release of a family member from prison.  Where would these
+    individuals have entered the city? Through the same gate that most people arrive
+    in Valletta to this day - that is where I shall head next. '
+  imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
+  imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
+  nameOfStory: Poverty
+  hintOfPOI: "It\u2019s one of my favourite places to roam! It\u2019s a great place
+    to beg for treats from all the people just getting off the bus and walking into
+    Valletta. I also love to weave through the feet of the politicians walking into
+    Parliament and try to trip them up!"
+  solutionOfPOI: 

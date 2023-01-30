@@ -14,8 +14,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfPoint: "227 St Paul\u2019s Street "
   coordinatesPoint: {x: 14.515485, y: 35.898254}
-  mainInfo: "\"227 St Paul\u2019s Street - The family of Salvatore Borg - the first
-    plague cases \" "
+  firstPartInfo: "I manage to trace the first case: Salvatore Borg of St Paul\u2019s
+    Street showed symptoms on the 3rd of May 1813 and was transferred to quarantine.
+    Searching through the archives, I find out that Salvatore was registered as the
+    first plague case but was, actually, not the first to contract the disease. His
+    wife died prior to him, having caught the plague from their thirteen-year-old
+    daughter, who was the true first victim despite the doctor not naming her as
+    such. It seems that the Borg household was the epicentre of the pandemic spreading
+    throughout Valletta, and the rest of Malta afterwards. But how did they contract
+    the disease? Malta is sealocked, so the disease must have come via the sea. Salvatore
+    Borg was a shoemaker, so he had no apparent contact with the port. According
+    to testimonies of the time, Borg\u2019s last meeting was with two men who\u2019d
+    sold him contraband linen. Where did this linen come from? How did these men
+    come into possession of it?"
+  secondPartInfo: "The answer is obviously a ship. A ship must have arrived at the
+    shores of Malta carrying linen and the infectious disease. From then, it was
+    fairly straightforward for the plague to reach the mainland and spread throughout
+    the capital. But which ship was that and where did it dock? The port shouldn\u2019t
+    be far away from the quarantine centre since this would be used mostly for people
+    coming from outside Malta. Maybe I can reach another vantage point that will
+    allow me to take a look from Valletta over to where the pestilence-laden fateful
+    ship was to be docked. This time, though, I will not go high, but low. I will
+    descend to sea level, to where boats still dock - not to go to other lands, but
+    to take you to the town across the harbour."
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
   nameOfStory: Quarantine
+  hintOfPOI: "(perf) I know another place in Valletta where you can look over at
+    Fort Manoel. I tend to go there with my friends and drink Cisk with Kinnie. It\u2019s
+    very close to a canoe club."
+  solutionOfPOI: " It\u2019s a good spot to people-watch since it\u2019s right next
+    to where the Sliema Ferries dock."
