@@ -9,21 +9,51 @@ public class Shadows : MonoBehaviour
     public Animator m_animator3;
     public Animator m_animator4;
 
-
     public GameObject m_shadow1;
     public GameObject m_shadow2;
     public GameObject m_shadow3;
     public GameObject m_shadow4;
 
     private int m_mostRecentNumber = 0;
+    private float m_waitTime = 2f;
+    private bool m_once = true;
 
     void Start()
     {
         ChooseNextShadow();
+        StartCoroutine(ChooseNextShadowCoroutine());
+    }
 
-        StartCoroutine(ChooseNextShadowCoroutine(2f)); // TODO THEN PUT 1.75, 1.5? + speed up animators?
-           // e.g. m_animator2.speed = 2f; // TODO MAYBE PLAY WITH THIS?
-
+    void Update()
+    {
+        if (CreateObjects.m_timer < 1 && m_once)
+        {
+            Shadow1();
+            Shadow2();
+            Shadow3();
+            Shadow4();
+            m_once = false;
+        }
+        else if (CreateObjects.m_timer < 5)
+        {
+            m_waitTime = 0.25f;
+            ChangeAnimatorsSpeed(3f);
+        }
+        else if (CreateObjects.m_timer < 10)
+        {
+            m_waitTime = 0.5f;
+            ChangeAnimatorsSpeed(2.5f);
+        }
+        else if (CreateObjects.m_timer < 20)
+        {
+            m_waitTime = 1f;
+            ChangeAnimatorsSpeed(1.75f);
+        }
+        else if (CreateObjects.m_timer < 25)
+        {
+            m_waitTime = 1.5f;
+            ChangeAnimatorsSpeed(1.25f);
+        }
     }
 
     void ChooseNextShadow()
@@ -85,13 +115,20 @@ public class Shadows : MonoBehaviour
         m_shadow4.SetActive(true);
     }
 
-    private IEnumerator ChooseNextShadowCoroutine(float waitTime)
+    private IEnumerator ChooseNextShadowCoroutine()
     {
         while (CreateObjects.m_playing)
         {
-            yield return new WaitForSeconds(waitTime);
+            yield return new WaitForSeconds(m_waitTime);
             ChooseNextShadow();
         }
     }
-  
+
+    private void ChangeAnimatorsSpeed(float newSpeed)
+    {
+        m_animator1.speed = newSpeed;
+        m_animator2.speed = newSpeed;
+        m_animator3.speed = newSpeed;
+        m_animator4.speed = newSpeed;
+    }
 }

@@ -30,7 +30,7 @@ public class CreateObjects : MonoBehaviour
         m_FTUEMessage.gameObject.SetActive(true);
         m_coinInfoMessage.gameObject.SetActive(false);
         m_sceneManager = GetComponent<SceneManagerScript>();
-        m_playing = false;
+        m_playing = true; // If this is false the shadows were not working
         m_currentScore = 0;
         Time.timeScale = 0f;
     }
@@ -39,7 +39,7 @@ public class CreateObjects : MonoBehaviour
     {
         Time.timeScale = 1f;
         m_FTUEMessage.gameObject.SetActive(false);
-        m_playing = true;
+       // m_playing = true;
         InstantiateCoin();
     }
     public void ResetMinigame()
