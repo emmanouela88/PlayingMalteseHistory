@@ -19,7 +19,8 @@ public class MainManager : MonoBehaviour
     [Header("UI Elements to show Info")]
     public GameObject pnlMainInfo;
     public TextMeshProUGUI txtName;
-    public TextMeshProUGUI txtMainInfo;
+    public TextMeshProUGUI txtMainInfo1;
+    public TextMeshProUGUI txtMainInfo2;
     public Image imgInstrument;
     public Button btnClose;
     public Button btnNext;
@@ -74,6 +75,7 @@ public class MainManager : MonoBehaviour
 
     private List<PointsToVisit> currentStorySavedPoints = new List<PointsToVisit>();
 
+    private int counter=0;
     #region UnityMethods
 
 
@@ -183,9 +185,18 @@ public class MainManager : MonoBehaviour
                 {
                     txtName.text = pois[i].nameOfPoint;
                     imgInstrument.sprite = pois[i].imgMain;
-                    txtMainInfo.text = pois[i].firstPartInfo;
-                    btnNext.onClick.AddListener(()=> Changetext(pois[i].secondPartInfo));
-                    
+                    txtMainInfo1.text = pois[i].firstPartInfo;
+                    txtMainInfo2.gameObject.SetActive(false);                                            
+                    btnNext.onClick.AddListener(() => txtMainInfo1.gameObject.SetActive(false));
+                    btnNext.onClick.AddListener(() => txtMainInfo2.gameObject.SetActive(true));
+                    if (txtMainInfo2.gameObject.activeSelf)
+                    {
+                        //txtMainInfo2.gameObject.SetActive(true);
+                        Changetext(pois[i].secondPartInfo);
+                    }
+                   
+                   
+
                     //sourceCam.clip = pois[i].clip;
                     /*btnPlaySound.onClick.AddListener(() => PlaySound(sourceCam.clip));
                     btnPauseSound.onClick.AddListener(PauseSound);*/
@@ -239,7 +250,8 @@ public class MainManager : MonoBehaviour
 
     private void Changetext(string newText)
     {
-        txtMainInfo.text = newText;
+        //txtMainInfo2.gameObject.SetActive(true);
+        txtMainInfo2.text = newText;
     }
 
     //to check if user is near the poi or not
