@@ -1,17 +1,21 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class CreateObjects : MonoBehaviour
 {
     [SerializeField] private RectTransform m_victoryMessage;
+    [SerializeField] private TMP_Text m_victoryText;
     [SerializeField] private RectTransform m_defeatMessage;
     [SerializeField] private RectTransform m_FTUEMessage;
+    [SerializeField] private RectTransform m_coinInfoMessage;
+
     public GameObject[] m_coinGameObjects;
     public Text m_timerText;
-    public float m_timer = 30f;
+    public static float m_timer = 30f;
     public int m_targetScore = 10;
 
     public static int m_currentScore = 0;
@@ -24,6 +28,7 @@ public class CreateObjects : MonoBehaviour
         m_victoryMessage.gameObject.SetActive(false);
         m_defeatMessage.gameObject.SetActive(false);
         m_FTUEMessage.gameObject.SetActive(true);
+        m_coinInfoMessage.gameObject.SetActive(false);
         m_sceneManager = GetComponent<SceneManagerScript>();
         m_playing = false;
         m_currentScore = 0;
@@ -40,6 +45,16 @@ public class CreateObjects : MonoBehaviour
     public void ResetMinigame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void MoreCoinInfo()
+    {
+        m_coinInfoMessage.gameObject.SetActive(true);
+    }
+
+    public void CloseCoinInfo()
+    {
+        m_coinInfoMessage.gameObject.SetActive(false);
     }
 
     void Update()
@@ -65,13 +80,16 @@ public class CreateObjects : MonoBehaviour
     {
         m_playing = false;
         // Show the message.
-        if (!victory)
+        if (!victory) // NOT USED RN - Player always 'wins' 
         {
             m_defeatMessage.gameObject.SetActive(true);
         }
         else
         {
             m_victoryMessage.gameObject.SetActive(true);
+            m_victoryText.text = "You have managed to gather " + m_currentScore + " coins."
+                + "\nUnfortunately, most of these are ħabbiet."
+                + "\nIt’s barely enough to get you through another day, let alone your family.";
         }
     }
 
