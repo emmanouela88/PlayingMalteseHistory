@@ -6,7 +6,6 @@ public class MerchantController : MonoBehaviour
 {
     [Header("Graphics")]
     [SerializeField] private Sprite m_merchantSprite;
-    [SerializeField] private Sprite m_merchantHitSprite;
 
     [Header("GameManager")]
     [SerializeField] private MerchantGameManager m_gameManager;
@@ -56,7 +55,6 @@ public class MerchantController : MonoBehaviour
 
     private void CreateNext()
 	{
-        //TODO: Add logic for creating different types of moles/merchants
         m_merchantType = MerchantType.Standard;
         m_spriteRenderer.sprite = m_merchantSprite;
         m_lives = 1;
@@ -120,7 +118,6 @@ public class MerchantController : MonoBehaviour
             switch (m_merchantType)
             {
                 case MerchantType.Standard:
-                    m_spriteRenderer.sprite = m_merchantHitSprite;
                     m_gameManager.AddScore(m_merchantIndex);
                     //Stop the animation
                     StopAllCoroutines();
