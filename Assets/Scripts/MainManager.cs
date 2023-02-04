@@ -306,7 +306,7 @@ public class MainManager : MonoBehaviour
             float distance = OnlineMapsUtils.DistanceBetweenPoints(pois[i].coordinatesPoint, OnlineMapsLocationService.instance.position).magnitude;
             
             
-            bool isUnlocked = i <= /*UnlockNextPart.partsUnlocked*/currentStorySavedPoints.Count || i == 0;
+            bool isUnlocked = i < /*UnlockNextPart.partsUnlocked*/currentStorySavedPoints.Count || i == 0;
 
             poiMarker[i].enabled = isUnlocked;
             if (distance < 0.1f && i<= currentStorySavedPoints.Count)
