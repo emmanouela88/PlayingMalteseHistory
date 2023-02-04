@@ -28,6 +28,10 @@ public class PlagueMinigamePlayerController : MonoBehaviour
 	{
 		if (!m_moving)
 		{
+			Vector3 vectorToTarget = targetPosition - transform.position;
+			float angle = (Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg) - 90;
+			Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+
 			m_moving = true;
 			bool done = false;
 			Vector3 startingPosition = transform.position;
@@ -42,6 +46,7 @@ public class PlagueMinigamePlayerController : MonoBehaviour
 			while (!done)
 			{
 				transform.position = Vector3.Lerp(startingPosition, targetPosition, (elapsedTime / m_lerpTime));
+				transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * 10);
 				elapsedTime += Time.deltaTime;
 				if (elapsedTime >= m_lerpTime)
 				{
