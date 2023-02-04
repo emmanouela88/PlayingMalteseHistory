@@ -15,8 +15,19 @@ public class HyperlinkClicker : MonoBehaviour, IPointerClickHandler
         Debug.Log(linkIndex);
         if (linkIndex > -1)
         {
-            Application.OpenURL(txtMainInfo.textInfo.linkInfo[linkIndex].GetLinkID());
-            Debug.Log(txtMainInfo.textInfo.linkInfo[linkIndex].GetLinkID());
+            string linkID = txtMainInfo.textInfo.linkInfo[linkIndex].GetLinkID();
+            Debug.Log(linkID);
+
+            GameObject linkedObject = GameObject.Find(linkID);
+
+            if (linkedObject != null)
+			{
+                linkedObject.transform.GetChild(0).gameObject.SetActive(true);
+			}
+			else
+			{
+                Application.OpenURL(linkID);
+            }
         }
     }
 }
