@@ -8,7 +8,6 @@ public class PlagueMinigameLineOfSight : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("COLLIDEAD!");
         if (collision.tag == "Player")
         {
             m_manager.EndMiniGame(false);

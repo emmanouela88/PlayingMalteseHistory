@@ -615,7 +615,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1096.8, y: -790}
+  m_AnchoredPosition: {x: -1097.8, y: -824}
   m_SizeDelta: {x: 204.051, y: 95.71}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &336261918
@@ -712,6 +712,88 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 336261916}
   m_CullTransparentMesh: 1
+--- !u!1 &362756174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 362756175}
+  - component: {fileID: 362756176}
+  m_Layer: 0
+  m_Name: Highlight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &362756175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362756174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.774, y: -0.267, z: 0}
+  m_LocalScale: {x: 7.865376, y: 9.833286, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2111696034}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &362756176
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362756174}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.23137255}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &373246426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,7 +1359,7 @@ MonoBehaviour:
       - m_Target: {fileID: 820871310}
         m_TargetAssemblyTypeName: PlagueMinigameManager, Assembly-CSharp
         m_MethodName: ResetMinigame
-        m_Mode: 6
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3737,8 +3819,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.043006, y: -0.0000085831}
-  m_SizeDelta: {x: 821.246, y: 920.002}
+  m_AnchoredPosition: {x: 0.000013113, y: -0.0000061989}
+  m_SizeDelta: {x: 891.965, y: 990.721}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1322467031
 MonoBehaviour:
@@ -4059,7 +4141,7 @@ GameObject:
   - component: {fileID: 1593433817}
   - component: {fileID: 1593433816}
   m_Layer: 5
-  m_Name: lbl_defeat_message
+  m_Name: lbl_FTUE_message
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4081,8 +4163,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.8859863, y: 61.766}
-  m_SizeDelta: {x: -111.793, y: -311.628}
+  m_AnchoredPosition: {x: 3.3240051, y: 58.018982}
+  m_SizeDelta: {x: -126.424, y: -353.262}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1593433816
 MonoBehaviour:
@@ -4104,11 +4186,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tap on the coloured areas to move to them! Avoid getting spotted by the
-    roaming guards!
-
-    Try to reach the yellow area without getting caught! Good
-    luck!'
+  m_text: "Valletta has been divided into districts and patrols are in place to prevent
+    any transgressors. You\u2019re going to have to sneak your way across Valletta!
+    Tap on a district to move to it - but if a guard patrolling the borders between
+    the districts spots you, you\u2019ll be caught, so time your moves well!\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
   m_sharedMaterial: {fileID: 5366484808827389454, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
@@ -4135,13 +4216,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.8
+  m_fontSize: 32.3
   m_fontSizeBase: 37.64
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 32
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -5408,8 +5489,8 @@ GameObject:
   - component: {fileID: 2111696034}
   - component: {fileID: 2111696033}
   - component: {fileID: 2111696032}
-  - component: {fileID: 2111696036}
   - component: {fileID: 2111696035}
+  - component: {fileID: 2111696036}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5473,7 +5554,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 8e96007364423234cab8b5a42e93bf20, type: 3}
+  m_Sprite: {fileID: 6547564224133869301, guid: e882002189fa7754e9806b27f800eb09, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5492,9 +5573,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111696031}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.1615, y: -0.7464, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
-  m_Children: []
+  m_LocalPosition: {x: 4, y: -0.7, z: 0}
+  m_LocalScale: {x: 0.08513059, y: 0.0637253, z: 1}
+  m_Children:
+  - {fileID: 362756175}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5532,9 +5614,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.7038727, y: 0}
   serializedVersion: 2
-  m_Radius: 0.31999996
+  m_Radius: 3.4311275
 --- !u!1 &2146550696
 GameObject:
   m_ObjectHideFlags: 0
