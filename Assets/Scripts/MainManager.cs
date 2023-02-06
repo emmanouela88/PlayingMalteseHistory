@@ -275,7 +275,7 @@ public class MainManager : MonoBehaviour
         {
             float distance = OnlineMapsUtils.DistanceBetweenPoints(pois[i].coordinatesPoint, OnlineMapsLocationService.instance.position).magnitude;
          
-            if (distance < 0.01f)
+            if (distance < 0.005f)
             {
                 Debug.Log("first info: " + pois[i].name + " distance: " + distance + " i: " + i);
 
