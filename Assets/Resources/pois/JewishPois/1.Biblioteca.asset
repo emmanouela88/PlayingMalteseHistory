@@ -14,10 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfPoint: Biblioteca
   coordinatesPoint: {x: 14.51364, y: 35.898365}
-  firstPartInfo: 
-  secondPartInfo: 
+  firstPartInfo: "While looking for records about the Royal Hotel, which is now called
+    the Corinthia Hotel, I discover a photo of a friendly gathering between pharmacists.
+    Judging by the date it was taken, I assume that they have passed away by now,
+    I think nothing of it as I am scanning through the smiling faces, until I notice
+    one peeking through the shadows. Only half a face is visible, and the body is
+    engulfed among the men\u2019s broad figures. I go through the list of names underneath
+    the photo to reveal this shadowed person\u2019s identity; pharmacist Ondina V.
+    Tayar. Why is she so hidden?\r"
+  secondPartInfo: "I look through the rest of the box to find a hand-written receipt
+    for pharmaceutical goods.\r"
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
   nameOfStory: Jewish
-  hintOfPOI: 
-  solutionOfPOI: 
+  hintOfPOI: "Maybe Kingsway Pharmacy is still standing in St George\u2019s Square
+    and might have some information on past pharmacists."
+  solutionOfPOI: "There is a bar called Kingsway but no idea about a pharmacy. St
+    George\u2019s Square is a must-see either way. Go have a look there."

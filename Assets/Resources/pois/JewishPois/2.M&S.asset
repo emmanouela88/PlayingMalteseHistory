@@ -14,9 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfPoint: Marks and Spencer
   coordinatesPoint: {x: 14.513548, y: 35.898964}
-  mainInfo: 'Marks and Spencer: Where businesses of the Tayar family where situated.
-    Their latest was the Marks and Spencer which they had started negoting for in
-    the early 1950s. '
+  firstPartInfo: "This square is lined with shops on both ends, but none of them
+    are a pharmacy.\r\nOne of these shops must have replaced it, so I look up a brief
+    description of each of their histories until I find a connection with Marks and
+    Spencer to the Tayar name\r."
+  secondPartInfo: "Looking further into the history of this business, I discover
+    that a Tayar family member, Joseph Tayar, owned a leather goods business in St
+    George\u2019s Square. It was later handed down to his son, Jacob Tayar, who converted
+    it into a tailor\u2019s shop  called Tayar's Sportex and Tweed . Ondina and her
+    sister Margot Tayar then took over the shop after Jacob Tayar died until the
+    shop was bought by Marks and Spencer, which at the time was still under the name
+    St. Michael\u2019s.  Not only that, but Joseph Tayar was also the first Rabbi
+    for the Maltese Jewish community after the community was re-established in the
+    nineteenth century, following the expulsion of Jews from Malta in 1492, Although
+    these are relatives of Ondina, there is no mention of her. From what I have found
+    about her so far, I only know that she was a pharmacist. How did she become one?"
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
   nameOfStory: Jewish
+  hintOfPOI: Where did people in the 1900s used to get educated to get qualified
+    to become pharmacists?
+  solutionOfPOI: "I know that there is an old university in the next street. It\u2019s
+    near the end of St Paul Street."

@@ -14,8 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfPoint: Archbishop's Palace
   coordinatesPoint: {x: 14.512969, y: 35.900784}
-  mainInfo: "Archbishop\u2019s Palace: Where the love between a Tayar son and a Christian
-    girl became forbidden (before 1933). Also: Reference back to 1892 pamphlet. "
+  firstPartInfo: "At the Archbishop\u2019s Palace, I ask for any records of Jewish
+    families dating before 1950. As I am rummaging through the files, I also encounter
+    another conflict between Christianity and Judaism stemming from this palace.
+    Although not much information remains about this situation, I do find the remains
+    of a blood libel pamphlet accusing Jewish residents of Malta of harming Christians
+    to perform their rituals. No court cases or police reports are connected to this
+    pamphlet\u2019s accusations, just this solitary flimsy piece of paper scattered
+    amongst other records."
+  secondPartInfo: "Focusing on my research about the Tayar family, I search for the
+    Tayar name and come across a story concerning Ondina\u2019s elder brother, Oscar.
+    It so happened that he fell in love with an eighteen-year-old Christian Maltese
+    girl. This caused turmoil on both sides as they were not comfortable with mixing
+    religious beliefs to that social extent. Oscar was scolded by his mother, while
+    the young girl was taken to the Archbishop\u2019s Palace and was harshly reminded
+    of the fear of eternal damnation. This situation set up a barrier between Oscar
+    and his mother, Rachele. She would later be bedridden for a year, with the cause
+    being attributed to the emotional turmoil of the situation, while Oscar would
+    emigrate to Australia. \r\n\r\nAs I am delving through the Archbishop\u2019s
+    Palace\u2019s records, I find that a complaint had been made about two children
+    disturbing a procession further down Old Mint Street. Their resolution reminds
+    me of the Tayar siblings.\r"
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
   nameOfStory: Jewish
+  hintOfPOI: 'The Tayar family might have been living at Old Mint Street. Solution
+    (streetwise kid): My grandmother once told me about some naughty children living
+    further down Old Mint Street.'
+  solutionOfPOI: 

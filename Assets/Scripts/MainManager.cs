@@ -24,6 +24,7 @@ public class MainManager : MonoBehaviour
     public Image imgInstrument;
     public Button btnClose;
     public Button btnNext;
+    public Button btnPrev;
     public string poisFolder;
 
 
@@ -130,7 +131,7 @@ public class MainManager : MonoBehaviour
             poiMarker[i].scale = 0.5f;
 
         }
-        
+        btnPrev.gameObject.SetActive(false);
         SubscribeToButtons();
         SubscribeToEvents();
         CreateUserMarker();
@@ -186,15 +187,22 @@ public class MainManager : MonoBehaviour
                     txtName.text = pois[i].nameOfPoint;
                     imgInstrument.sprite = pois[i].imgMain;
                     txtMainInfo1.text = pois[i].firstPartInfo;
+                    txtMainInfo2.text = pois[i].secondPartInfo;
                     txtMainInfo2.gameObject.SetActive(false);                                            
-                    btnNext.onClick.AddListener(() => txtMainInfo1.gameObject.SetActive(false));
-                    btnNext.onClick.AddListener(() => txtMainInfo2.gameObject.SetActive(true));
-                    if (txtMainInfo2.gameObject.activeSelf)
+                    btnNext.onClick.AddListener(() => { 
+                        txtMainInfo1.gameObject.SetActive(false); 
+                        txtMainInfo2.gameObject.SetActive(true); 
+                        btnNext.gameObject.SetActive(false);
+                        btnPrev.gameObject.SetActive(true);
+                    });
+
+                    btnPrev.onClick.AddListener(() =>
                     {
-                        //txtMainInfo2.gameObject.SetActive(true);
-                        Changetext(pois[i].secondPartInfo);
-                    }
-                   
+                        txtMainInfo1.gameObject.SetActive(true);
+                        txtMainInfo2.gameObject.SetActive(false);
+                        btnPrev.gameObject.SetActive(false);
+                        btnNext.gameObject.SetActive(true);
+                    });
                    
 
                     //sourceCam.clip = pois[i].clip;
@@ -246,12 +254,6 @@ public class MainManager : MonoBehaviour
             }
         }
 
-    }
-
-    private void Changetext(string newText)
-    {
-        //txtMainInfo2.gameObject.SetActive(true);
-        txtMainInfo2.text = newText;
     }
 
     //to check if user is near the poi or not
