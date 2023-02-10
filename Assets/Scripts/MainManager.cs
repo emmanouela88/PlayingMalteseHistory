@@ -21,7 +21,6 @@ public class MainManager : MonoBehaviour
     public TextMeshProUGUI txtName;
     public TextMeshProUGUI txtMainInfo1;
     public TextMeshProUGUI txtMainInfo2;
-    public Image imgInstrument;
     public Button btnClose;
     public Button btnNext;
     public Button btnPrev;
@@ -185,7 +184,6 @@ public class MainManager : MonoBehaviour
                 if (marker.label == pois[i].nameOfPoint)
                 {
                     txtName.text = pois[i].nameOfPoint;
-                    imgInstrument.sprite = pois[i].imgMain;
                     txtMainInfo1.text = pois[i].firstPartInfo;
                     txtMainInfo2.text = pois[i].secondPartInfo;
                     txtMainInfo2.gameObject.SetActive(false);                                            
