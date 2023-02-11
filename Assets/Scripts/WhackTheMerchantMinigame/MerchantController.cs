@@ -10,8 +10,8 @@ public class MerchantController : MonoBehaviour
     [Header("GameManager")]
     [SerializeField] private MerchantGameManager m_gameManager;
 
-    private Vector2 m_startPosition = new Vector2(0f, -2.56f); //-2.56 because the mole/merchant sprint is 256x256
-    private Vector2 m_endPosition = Vector2.zero;
+    [SerializeField] private Vector2 m_startPosition = new Vector2(0f, -2.56f); //-2.56 because the mole/merchant sprite is 256x256
+    [SerializeField] private Vector2 m_endPosition = Vector2.zero;
     [SerializeField] private float m_showDuration = 0.5f; //how long it takes to show the mole/merchant
     [SerializeField] private float m_duration = 1f;       //how long the mole/merchant stays visible for
 
