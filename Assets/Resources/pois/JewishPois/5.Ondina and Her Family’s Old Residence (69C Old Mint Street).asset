@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ee87e681215b6147a44021cf30db039, type: 3}
-  m_Name: 5.Ondina's Residency
+  m_Name: "5.Ondina and Her Family\u2019s Old Residence (69C Old Mint Street)"
   m_EditorClassIdentifier: 
-  nameOfPoint: Ondina's Residency
+  nameOfPoint: "Ondina and Her Family\u2019s Old Residence (69C Old Mint Street)"
   coordinatesPoint: {x: 14.51144, y: 35.899647}
   firstPartInfo: "\u201CI see you\u2019ve been looking around for Ondina. My family
     has been living in this street for generations and my great grandmother told

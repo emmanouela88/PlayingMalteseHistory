@@ -41,4 +41,5 @@ MonoBehaviour:
   hintOfPOI: 'The Tayar family might have been living at Old Mint Street. Solution
     (streetwise kid): My grandmother once told me about some naughty children living
     further down Old Mint Street.'
-  solutionOfPOI: 
+  solutionOfPOI: My grandmother once told me about some naughty children living further
+    down Old Mint Street.

@@ -15,7 +15,6 @@ public class spawnCars : MonoBehaviour {
 	public float delay;
 	float timer;
 	public Transform parentRect;
-	public ShowHide showHideComponent;
 	private float timeLimitStart;
 	private float timeLimitRemain;
 

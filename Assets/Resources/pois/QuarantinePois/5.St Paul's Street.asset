@@ -40,8 +40,8 @@ MonoBehaviour:
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
   nameOfStory: Quarantine
-  hintOfPOI: "(perf) I know another place in Valletta where you can look over at
-    Fort Manoel. I tend to go there with my friends and drink Cisk with Kinnie. It\u2019s
-    very close to a canoe club."
-  solutionOfPOI: " It\u2019s a good spot to people-watch since it\u2019s right next
+  hintOfPOI: "I know another place in Valletta where you can look over at Fort Manoel.
+    I tend to go there with my friends and drink Cisk with Kinnie. It\u2019s very
+    close to a canoe club."
+  solutionOfPOI: "It\u2019s a good spot to people-watch since it\u2019s right next
     to where the Sliema Ferries dock."

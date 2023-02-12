@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ee87e681215b6147a44021cf30db039, type: 3}
-  m_Name: 2.M&S
+  m_Name: "2.St George\u2019s Square"
   m_EditorClassIdentifier: 
-  nameOfPoint: Marks and Spencer
+  nameOfPoint: "St George\u2019s Square"
   coordinatesPoint: {x: 14.513548, y: 35.898964}
   firstPartInfo: "This square is lined with shops on both ends, but none of them
     are a pharmacy.\r\nOne of these shops must have replaced it, so I look up a brief

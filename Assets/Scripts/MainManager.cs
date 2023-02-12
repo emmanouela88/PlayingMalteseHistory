@@ -17,10 +17,15 @@ public class MainManager : MonoBehaviour
 
     [Space]
     [Header("UI Elements to show Info")]
+    public GameObject pnlOnStart;
     public GameObject pnlMainInfo;
+    public GameObject pnlHintInfo;
+    public GameObject pnlSolutionInfo;
     public TextMeshProUGUI txtName;
     public TextMeshProUGUI txtMainInfo1;
     public TextMeshProUGUI txtMainInfo2;
+    public TextMeshProUGUI txtHint;
+    public TextMeshProUGUI txtSolution;
     public Button btnClose;
     public Button btnNext;
     public Button btnPrev;
@@ -37,7 +42,6 @@ public class MainManager : MonoBehaviour
     [Header("Variables")]
     public string nameOfMainLevel;
     public string nameOfARLevel;//we need to make it as a list since we are having more than one ar level to load    
-    public string nameOfARLevel2;//we need to make it as a list since we are having more than one ar level to load    
     public string nameOfMiniGameLevel; //we need to make it as a list since we are having more than one minigame level to load
     public string nameOfMiniGameLevel2; //we need to make it as a list since we are having more than one minigame level to load
     public string nameOfMiniGameLevel3; //we need to make it as a list since we are having more than one minigame level to load
@@ -49,11 +53,15 @@ public class MainManager : MonoBehaviour
     public GameObject pnlWarning;
     public TextMeshProUGUI warningText;
     public TextMeshProUGUI warningMainText;
-    public Button btnCloseWarning;
+    public Button btnCloseOnStart;
     public Button btnBackMain;
     public Button btnMiniGame;
     public Button btnMiniGame2;
     public Button btnMiniGame3;
+    public Button btnHint;
+    public Button btnSolution;
+    public Button btnPosition;
+    
     
     
 
@@ -67,7 +75,6 @@ public class MainManager : MonoBehaviour
     [Space]
     [Header("AR Elements")]
     public Button btnARScene;
-    public Button btnARScene2;
 
     //Private member variables
     private string saveFile;
@@ -118,8 +125,11 @@ public class MainManager : MonoBehaviour
 
         pnlMainInfo.SetActive(false);
         poiMarker = new OnlineMapsMarker[pois.Length]; //we want same length when creating markers same as the array of our instruments
-        
+        pnlHintInfo.SetActive(false);
+        pnlSolutionInfo.SetActive(false);
         pnlWarning.SetActive(false);
+
+        pnlOnStart.SetActive(true);
         for (int i = 0; i < pois.Length; i++)
         {
 
@@ -149,14 +159,12 @@ public class MainManager : MonoBehaviour
     {
         btnGPS.onClick.AddListener(GameManager.Instance.androidManager.OpenNativeAndroidSettings);
         btnClose.onClick.AddListener(ClosePanels);
-        btnCloseWarning.onClick.AddListener(ClosePanels);
+        btnCloseOnStart.onClick.AddListener(ClosePanels);
         btnBackMain.onClick.AddListener(() => OpenScene(nameOfMainLevel));
-        btnARScene.onClick.AddListener(() => OpenScene(nameOfARLevel));
-        btnARScene2.onClick.AddListener(() => OpenScene(nameOfARLevel2));
+        btnARScene.onClick.AddListener(() => OpenScene(nameOfARLevel));        
         btnMiniGame.onClick.AddListener(() => OpenScene(nameOfMiniGameLevel));
         btnMiniGame2.onClick.AddListener(() => OpenScene(nameOfMiniGameLevel2));
         btnMiniGame3.onClick.AddListener(() => OpenScene(nameOfMiniGameLevel3));
-        
     }
     void SubscribeToEvents()
     {
@@ -186,7 +194,10 @@ public class MainManager : MonoBehaviour
                     txtName.text = pois[i].nameOfPoint;
                     txtMainInfo1.text = pois[i].firstPartInfo;
                     txtMainInfo2.text = pois[i].secondPartInfo;
-                    txtMainInfo2.gameObject.SetActive(false);                                            
+                    txtMainInfo1.gameObject.SetActive(true);
+                    btnPrev.gameObject.SetActive(false);
+                    txtMainInfo2.gameObject.SetActive(false);
+                    btnNext.gameObject.SetActive(true);
                     btnNext.onClick.AddListener(() => { 
                         txtMainInfo1.gameObject.SetActive(false); 
                         txtMainInfo2.gameObject.SetActive(true); 
@@ -201,25 +212,23 @@ public class MainManager : MonoBehaviour
                         btnPrev.gameObject.SetActive(false);
                         btnNext.gameObject.SetActive(true);
                     });
-                   
 
+                    txtHint.text = pois[i].hintOfPOI;
+                    txtSolution.text = pois[i].solutionOfPOI;
+                    btnHint.onClick.AddListener(() => pnlHintInfo.SetActive(!pnlHintInfo.activeSelf));
+                    btnSolution.onClick.AddListener(() => pnlSolutionInfo.SetActive(!pnlSolutionInfo.activeSelf));
+
+                    
                     //sourceCam.clip = pois[i].clip;
                     /*btnPlaySound.onClick.AddListener(() => PlaySound(sourceCam.clip));
                     btnPauseSound.onClick.AddListener(PauseSound);*/
-                    if (pois[i].nameOfPoint == "City Gate" || pois[i].nameOfPoint== "Marsamxett" || pois[i].nameOfPoint == "Archbishop's Palace")
+                    if (pois[i].nameOfPoint == "City Gate" || pois[i].nameOfPoint== "Marsamxett" || pois[i].nameOfPoint == "Ondina's Residency")
                     {
                         btnARScene.gameObject.SetActive(true);
-                        btnARScene2.gameObject.SetActive(false);
-                    }
-                    else if(pois[i].nameOfPoint == "Ondina's Residency")
-                    {
-                        btnARScene.gameObject.SetActive(false);
-                        btnARScene2.gameObject.SetActive(true);
-                    }
+                    }                    
                     else
                     {
                         btnARScene.gameObject.SetActive(false);
-                        btnARScene2.gameObject.SetActive(false);
                     }
 
                     if (pois[i].nameOfPoint == "Nix Mangiare steps" || pois[i].nameOfPoint == "Hastings Garden"
@@ -255,7 +264,7 @@ public class MainManager : MonoBehaviour
     }
 
     //to check if user is near the poi or not
-    public void CheckUserPosition()
+   /* public void CheckUserPosition()
     {
         if (!IsWithinConstraints())
         {
@@ -267,7 +276,7 @@ public class MainManager : MonoBehaviour
             pnlWarning.SetActive(false);
 
         }
-    }
+    }*/
     public bool IsWithinConstraints()
     {
         
@@ -297,7 +306,7 @@ public class MainManager : MonoBehaviour
         
         SetMarkerOnUserPosition(position);
         OnlineMaps.instance.SetPositionAndZoom(position.x, position.y, OnlineMaps.MAXZOOM);
-        CheckUserPosition();
+        //CheckUserPosition();
 
         
         //DisableAll();
@@ -309,12 +318,13 @@ public class MainManager : MonoBehaviour
             bool isUnlocked = i < /*UnlockNextPart.partsUnlocked*/currentStorySavedPoints.Count || i == 0;
 
             poiMarker[i].enabled = isUnlocked;
+            
             if (distance < 0.1f && i<= currentStorySavedPoints.Count)
             {
                 Debug.Log("first info: " + pois[i].name + " distance: " + distance + " i: " + i);
-
-                pnlWarning.SetActive(true);
-                warningMainText.text = "You need to walk " + (distance * 1000).ToString("f4") + " km, for the next clue.";
+                
+                warningMainText.text = "You need to walk " + (distance * 100).ToString("f4") + " km, for the "+pois[i].name;
+                btnPosition.onClick.AddListener(() => pnlWarning.SetActive(!pnlWarning.activeSelf));
                 UnlockNewPart(pois[i]);//if we put pois[i] will unlock all the points in-game. Is good for testing not for final development
                 poiMarker[i].enabled = true;//same as above. On 0 we only unlock the first poi
 

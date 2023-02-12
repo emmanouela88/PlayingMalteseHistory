@@ -37,7 +37,7 @@ MonoBehaviour:
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
   nameOfStory: Quarantine
-  hintOfPOI: "(professor) Orefice you say? It means jeweller. There is a street perpendicular
+  hintOfPOI: "Orefice you say? It means jeweller. There is a street perpendicular
     to Merchant Street that is full of those. It\u2019s a street that\u2019s bright
     like gold - and this brightness is reflected in its name!"
   solutionOfPOI: The street is Santa Lucia. So the location you are looking for should

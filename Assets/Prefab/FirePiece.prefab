@@ -93,7 +93,8 @@ GameObject:
   - component: {fileID: 7477275757631479855}
   - component: {fileID: 701998573071246858}
   - component: {fileID: 2890141765805195402}
-  - component: {fileID: 590170072403536475}
+  - component: {fileID: 7448122488127818616}
+  - component: {fileID: 7448122488127818615}
   m_Layer: 5
   m_Name: FirePiece
   m_TagString: Untagged
@@ -242,7 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeOut: 5
   detachChildren: 0
---- !u!111 &590170072403536475
+--- !u!111 &7448122488127818616
 Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -251,9 +252,28 @@ Animation:
   m_GameObject: {fileID: 6225345759541768206}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b1edfa9a3c6ffd141b7f6d2b49e40232, type: 2}
+  m_Animation: {fileID: 7400000, guid: c8d43e48daeb8c34d9a301bc337c6630, type: 2}
   m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!95 &7448122488127818615
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6225345759541768206}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ca4da7dece79c5648ab51f54774e87b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

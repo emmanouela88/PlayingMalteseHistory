@@ -45,4 +45,5 @@ MonoBehaviour:
   nameOfStory: Poverty
   hintOfPOI: "It\u2019s easy! Just follow the lawyers with their suits and briefcases
     as they rush in for a day\u2019s work."
-  solutionOfPOI: 
+  solutionOfPOI: 'The building might have changed, but the location is still the
+    same: I need to go to the Courts of Justice.'

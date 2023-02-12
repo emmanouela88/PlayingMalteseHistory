@@ -31,8 +31,8 @@ MonoBehaviour:
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
   nameOfStory: Quarantine
-  hintOfPOI: "(cat) I love lying around this place when it\u2019s sunny. I pick a
-    vantage point overlooking the sea and let visitors pet me - only if their hands
-    are clean, of course. When it sometimes rains, I visit the stone man reclining
-    on a bed at the centre of the gardens."
+  hintOfPOI: "I love lying around this place when it\u2019s sunny. I pick a vantage
+    point overlooking the sea and let visitors pet me - only if their hands are clean,
+    of course. When it sometimes rains, I visit the stone man reclining on a bed
+    at the centre of the gardens."
   solutionOfPOI: "I\u2019ve heard humans call this stone man Lord Hastings."

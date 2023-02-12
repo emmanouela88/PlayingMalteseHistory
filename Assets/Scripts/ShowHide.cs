@@ -8,6 +8,7 @@ public class ShowHide : MonoBehaviour
 {
 
     public Image imgFather;
+    private Color c;
     public float delay;
     float timer;
 
@@ -16,7 +17,8 @@ public class ShowHide : MonoBehaviour
     void Start()
     {
         timer = delay;
-        imgFather.color= Color.blue;
+        c = imgFather.color;
+        //imgFather.color= Color.blue;
     }
 
     // Update is called once per frame
@@ -26,12 +28,12 @@ public class ShowHide : MonoBehaviour
 
         if (timer <= 0)
         {
-            imgFather.color = Color.Lerp(Color.blue,Color.white,timer);
+            c.a = Mathf.Lerp(255,0,timer);
             timer = delay;
         }
         else
         {
-            imgFather.color = Color.Lerp(Color.white, Color.blue, delay);
+            c.a = Mathf.Lerp(0, 255, delay);
         }
         
     }
