@@ -16,8 +16,9 @@ MonoBehaviour:
   coordinatesPoint: {x: 14.513548, y: 35.898964}
   firstPartInfo: "This square is lined with shops on both ends, but none of them
     are a pharmacy.\r\nOne of these shops must have replaced it, so I look up a brief
-    description of each of their histories until I find a connection with Marks and
-    Spencer to the Tayar name\r."
+    description of each of their histories until I find a connection with <link=Image_3><u><color=blue>
+    Marks and Spencer</link></u></color> to the <link=Image_4><u><color=blue>Tayar</link></u></color>
+    name\r."
   secondPartInfo: "Looking further into the history of this business, I discover
     that a Tayar family member, Joseph Tayar, owned a leather goods business in St
     George\u2019s Square. It was later handed down to his son, Jacob Tayar, who converted
