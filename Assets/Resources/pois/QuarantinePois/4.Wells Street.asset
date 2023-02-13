@@ -24,12 +24,17 @@ MonoBehaviour:
     toll as it did on this narrow street. The Government Gazette reports that, on
     the 31st of May, five people fell ill on this street alone - the next day, two
     of them were already dead. No wonder the newspaper referred to it as a \u201Cwretched\u201D
-    street at the time.  "
-  secondPartInfo: Yet a question remains. How did the plague get to Malta in the
+    street at the time.   <link=Additional_2><u><color=blue>Additional Information.</link></u></color>"
+  secondPartInfo: 'Yet a question remains. How did the plague get to Malta in the
     first place, in 1813? The outbreak began a year earlier, far from these shores
     - in Constantinople, to be precise. From there it spread to other ports in the
     Ottoman Empire, including Alexandria in Egypt - but how did it make the leap
     from there, to this corner of Valletta?
+
+    The archive yields the solution
+    once again. In the Government Gazette of the time, one can read the names and
+    addresses of the plague victims. If I trace them in reverse chronological order,
+    I can find the starting point.'
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
   nameOfStory: Quarantine

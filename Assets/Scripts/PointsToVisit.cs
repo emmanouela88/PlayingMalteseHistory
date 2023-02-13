@@ -10,11 +10,11 @@ public class PointsToVisit : ScriptableObject
     public Vector2 coordinatesPoint;
 
     [Tooltip("1/2 Info of POI")]
-    [TextArea(10, 20)]
+    [TextArea(25, 30)]
     public string firstPartInfo;
 
     [Tooltip("2/2 Info of POI")]
-    [TextArea(10, 20)]
+    [TextArea(25, 30)]
     public string secondPartInfo;
 
     [Tooltip("Image for Marker of POI")]
