@@ -10,9 +10,11 @@ public class Gallerymanager : MonoBehaviour
     [SerializeField] private Image imgShow;
     [SerializeField] private Button btnNext;
     [SerializeField] private Button btnPrev;
+    [SerializeField] private Button btnClose;
     [Space(10)]
     [SerializeField] private List<Sprite> imagesForShow;
     private int indexImagesForShow;
+    [SerializeField] private GameObject pnlObj;
     #endregion
     #region METHODS_MONOBEHAVIOUR  
     private void Start()
@@ -20,6 +22,7 @@ public class Gallerymanager : MonoBehaviour
         imgShow.sprite = imagesForShow[0];
         btnPrev.onClick.AddListener(OnButtonPrevClicked);
         btnNext.onClick.AddListener(OnButtonNextClicked);
+        btnClose.onClick.AddListener(() => pnlObj.SetActive(false));
     }
     #endregion
     #region METHODS_PRIVATE  

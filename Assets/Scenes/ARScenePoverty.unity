@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -395,7 +395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &158607176
 Transform:
   m_ObjectHideFlags: 0
@@ -771,6 +771,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 158607176}
+  - {fileID: 465731396}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1113,6 +1114,68 @@ Transform:
   m_Father: {fileID: 192293115}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &465731395
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 358074867}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+      propertyPath: m_Name
+      value: Gate2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+--- !u!4 &465731396 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+  m_PrefabInstance: {fileID: 465731395}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &580570585
 GameObject:
   m_ObjectHideFlags: 0
@@ -1420,7 +1483,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 707152253}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3cbc4231fbb3b1844a8e5b775e45edf0, type: 3}
   m_Name: 
@@ -2340,12 +2403,12 @@ MonoBehaviour:
         Altitude: 0
         AltitudeMode: 0
   HotspotSettings:
-    Prefab: {fileID: 5977191019510964819, guid: cb9f1b1afb5b45644a695b961c989123, type: 3}
-    PositionMode: 1
+    Prefab: {fileID: 919132149155446097, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+    PositionMode: 0
     AlignToCamera: 1
     DistanceFromCamera: 3
     ActivationRadius: 4
-    UseRawLocation: 0
+    UseRawLocation: 1
     DeactivateOnLeave: 1
     Reactivate: 0
     DeactivationRadius: 4

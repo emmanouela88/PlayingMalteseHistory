@@ -54,13 +54,15 @@ public class MainManager : MonoBehaviour
     public TextMeshProUGUI warningText;
     public TextMeshProUGUI warningMainText;
     public Button btnCloseOnStart;
+    public Button btnCloseSolution;
+    public Button btnCloseHint;
     public Button btnBackMain;
     public Button btnMiniGame;
     public Button btnMiniGame2;
     public Button btnMiniGame3;
     public Button btnHint;
     public Button btnSolution;
-    public Button btnPosition;
+    //public Button btnPosition;
     
     
     
@@ -129,6 +131,7 @@ public class MainManager : MonoBehaviour
         pnlSolutionInfo.SetActive(false);
         pnlWarning.SetActive(false);
 
+        
         pnlOnStart.SetActive(true);
         for (int i = 0; i < pois.Length; i++)
         {
@@ -159,6 +162,8 @@ public class MainManager : MonoBehaviour
     {
         btnGPS.onClick.AddListener(GameManager.Instance.androidManager.OpenNativeAndroidSettings);
         btnClose.onClick.AddListener(ClosePanels);
+        btnCloseSolution.onClick.AddListener(ClosePanels);
+        btnCloseHint.onClick.AddListener(ClosePanels);
         btnCloseOnStart.onClick.AddListener(ClosePanels);
         btnBackMain.onClick.AddListener(() => OpenScene(nameOfMainLevel));
         btnARScene.onClick.AddListener(() => OpenScene(nameOfARLevel));        
@@ -198,11 +203,14 @@ public class MainManager : MonoBehaviour
                     btnPrev.gameObject.SetActive(false);
                     txtMainInfo2.gameObject.SetActive(false);
                     btnNext.gameObject.SetActive(true);
+                    btnHint.gameObject.SetActive(false);
+
                     btnNext.onClick.AddListener(() => { 
                         txtMainInfo1.gameObject.SetActive(false); 
                         txtMainInfo2.gameObject.SetActive(true); 
                         btnNext.gameObject.SetActive(false);
                         btnPrev.gameObject.SetActive(true);
+                        btnHint.gameObject.SetActive(true);
                     });
 
                     btnPrev.onClick.AddListener(() =>
@@ -211,12 +219,20 @@ public class MainManager : MonoBehaviour
                         txtMainInfo2.gameObject.SetActive(false);
                         btnPrev.gameObject.SetActive(false);
                         btnNext.gameObject.SetActive(true);
+                        btnHint.gameObject.SetActive(false);
                     });
 
                     txtHint.text = pois[i].hintOfPOI;
                     txtSolution.text = pois[i].solutionOfPOI;
-                    btnHint.onClick.AddListener(() => pnlHintInfo.SetActive(!pnlHintInfo.activeSelf));
-                    btnSolution.onClick.AddListener(() => pnlSolutionInfo.SetActive(!pnlSolutionInfo.activeSelf));
+                    btnHint.onClick.AddListener(() =>
+                    {
+                        pnlHintInfo.SetActive(true);
+                        pnlMainInfo.SetActive(false);
+                    });
+                    btnSolution.onClick.AddListener(() => {
+                        pnlSolutionInfo.SetActive(true);
+                        pnlHintInfo.SetActive(false);
+                    });
 
                     
                     //sourceCam.clip = pois[i].clip;
@@ -324,7 +340,7 @@ public class MainManager : MonoBehaviour
                 Debug.Log("first info: " + pois[i].name + " distance: " + distance + " i: " + i);
                 
                 warningMainText.text = "You need to walk " + (distance * 100).ToString("f4") + " km, for the "+pois[i].name;
-                btnPosition.onClick.AddListener(() => pnlWarning.SetActive(!pnlWarning.activeSelf));
+                //btnPosition.onClick.AddListener(() => pnlWarning.SetActive(!pnlWarning.activeSelf));
                 UnlockNewPart(pois[i]);//if we put pois[i] will unlock all the points in-game. Is good for testing not for final development
                 poiMarker[i].enabled = true;//same as above. On 0 we only unlock the first poi
 
@@ -431,7 +447,16 @@ public class MainManager : MonoBehaviour
         }
         pm.PlayTheMusic();
 
-
+        if (pnlSolutionInfo.activeSelf)
+        {
+            EaseInPanel(pnlSolutionInfo, new Vector3(0, 0, 0), 1f);
+            Invoke("IsFinished", 1.5f);
+        }
+        if (pnlHintInfo.activeSelf)
+        {
+            EaseInPanel(pnlHintInfo, new Vector3(0, 0, 0), 1f);
+            Invoke("IsFinished", 1.5f);
+        }
     }
 
     void IsFinished()

@@ -1379,37 +1379,35 @@ MonoBehaviour:
     Cutajar
 
 
-    <u>Special thanks to</u>:
+    <u>The team would like to thank</u>:
 
 
-    Malta Arts Council (ACM)
+    Arts Council Malta;
+    Judge Emeritus Dr Giovanni Bonello
 
-    Giovanni
-    Bonello
+    Dr Joan Abela (Notarial Archives; Department
+    of History)
 
-    Joan Abela (Notarial Archives)
+    Mr Noel D''Anastas (National Archives)
 
-    Noel D''Anastas (National Archives)
+    Mr Louis Cini (Bibliotheca)
 
-    Louis
-    Cini (Bibliotheca)
+    Mr
+    Vince Peresso, the Santo Spirito staff, Ms Chanelle Briffa (Notarial Archives)
 
-    Vince Peresso
+    Dr
+    Sarah Azzopardi-Ljubibratic (Tayar Foundation for Jewish Heritage in Malta)
 
-    Santo Spirito staff
-
-    Chanelle
-    Briffa (Notarial Archives)
-
-    Sarah Azzopardi-Ljubibratic (Tayar Foundation
-    for Jewish Heritage in Malta)
-
+    Mr
     Gabriel Farrugia (Mdina Metropolitan Archives)
 
-    Evelyn
-    Pullicino (Curia Archives)
+    Dr Evelyn Pullicino (Diocesan
+    Archives)
 
-    Aline P''Nina Tayar.
+    Professor Yosanne Vella (Faculty of Education).
+
+    Aline P''Nina
+    Tayar.
 
 
     Sound effects:
@@ -1443,7 +1441,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19
+  m_fontSize: 18.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
