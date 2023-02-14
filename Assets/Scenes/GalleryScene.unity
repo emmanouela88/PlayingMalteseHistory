@@ -2531,10 +2531,15 @@ MonoBehaviour:
   btnPrev: {fileID: 1366422345}
   btnClose: {fileID: 773939538}
   imagesForShow:
-  - {fileID: 21300000, guid: 8f9da7d73eca3594b8a018269fcb1d34, type: 3}
+  - {fileID: 21300000, guid: b3b24f869db03c94a8e32855222f52cb, type: 3}
   - {fileID: 21300000, guid: b1269e52c83adea488756595d3810a16, type: 3}
-  - {fileID: 21300000, guid: e7692406e124bed41b9ec5fb832677b8, type: 3}
-  - {fileID: 21300000, guid: 368f24a69d97a32439e1781fa05702a8, type: 3}
+  - {fileID: 3683546619278797491, guid: e7692406e124bed41b9ec5fb832677b8, type: 3}
+  - {fileID: 21300000, guid: d49065f9b43ece743a73acd287e9ca39, type: 3}
+  - {fileID: 21300000, guid: 0ba304346d8de554ab36aa0ad7bdb628, type: 3}
+  - {fileID: 21300000, guid: dc0f42abdb5ae674994a8c0d335b1d5f, type: 3}
+  - {fileID: 21300000, guid: 6b22ef3966969874bbbd709a140a0648, type: 3}
+  - {fileID: 21300000, guid: f912d9c65bfa7aa4286ff7beca389922, type: 3}
+  - {fileID: 21300000, guid: 2d1a3718e6dd64045b3dc58ffc4b85e8, type: 3}
   pnlObj: {fileID: 913843034}
 --- !u!1 &936548301
 GameObject:
@@ -4414,7 +4419,7 @@ MonoBehaviour:
   imagesForShow:
   - {fileID: 21300000, guid: a0931718d6291ec4e8149ab8ee3e2dcf, type: 3}
   - {fileID: 21300000, guid: 15aa84eb8f2de3d48a941f7fc77b5495, type: 3}
-  - {fileID: 21300000, guid: 775e6efb33662b646bf55f247c193031, type: 3}
+  - {fileID: 8935094519757870733, guid: 775e6efb33662b646bf55f247c193031, type: 3}
   - {fileID: 21300000, guid: 82021a138edcbdc4d98b39a71eeba184, type: 3}
   - {fileID: 21300000, guid: 267b30ba51a26e24f8fc3ae616c2a874, type: 3}
   - {fileID: 21300000, guid: 12cb521edb565124e898ad057f73b4e3, type: 3}
