@@ -218,7 +218,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1304246024}
+      - m_Target: {fileID: 57383296}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -8879,13 +8879,14 @@ MonoBehaviour:
   warningText: {fileID: 505887772}
   warningMainText: {fileID: 257192736}
   btnCloseOnStart: {fileID: 489613319}
+  btnCloseSolution: {fileID: 634525471}
+  btnCloseHint: {fileID: 912083377}
   btnBackMain: {fileID: 1413970943}
   btnMiniGame: {fileID: 250779236}
   btnMiniGame2: {fileID: 230549671}
   btnMiniGame3: {fileID: 181872562}
   btnHint: {fileID: 1638993414}
   btnSolution: {fileID: 1401702355}
-  btnPosition: {fileID: 1888898962}
   poiMarker: []
   userMarker:
     label: 

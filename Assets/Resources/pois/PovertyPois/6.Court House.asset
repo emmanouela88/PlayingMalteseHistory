@@ -14,13 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfPoint: Court House
   coordinatesPoint: {x: 14.51214, y: 35.89923}
-  firstPartInfo: "The police found that there was enough material to charge Isidoro
-    Mifsud before the court. [link to doc: Img 6a-c]   When it was time for his case
-    to be heard before a judge, he would have been brought here. In the 1850s, the
-    criminal court was moved to the Auberge d\u2019Auvergne, which used to stand
-    in this location.  During the Second World War, the building was hit and the
-    courts were moved, till 1971, when they were re-housed in the building you see
-    before you. "
+  firstPartInfo: "The police found that there was enough <link=Image_6a><u><color=blue>material</link></u></color>to
+    charge Isidoro Mifsud before the court. When it was time for his case to be heard
+    before a judge, he would have been brought here. In the 1850s, the criminal court
+    was moved to the Auberge d\u2019Auvergne, which used to stand in this location. 
+    During the Second World War, the building was hit and the courts were moved,
+    till 1971, when they were re-housed in the building you see before you. "
   secondPartInfo: "The jury (8 out of 9) delivered a verdict of \u2018guilty\u2019.
     They recommended that his previous good conduct and his young age be taken into
     account. The sentence was 18 months\u2019 hard labour. Unfortunately, the archive
