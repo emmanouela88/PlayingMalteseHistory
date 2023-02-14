@@ -613,10 +613,10 @@ RectTransform:
   m_Father: {fileID: 1937900328}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1097.8, y: -824}
-  m_SizeDelta: {x: 204.051, y: 95.71}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 102.099976, y: 299}
+  m_SizeDelta: {x: 204.05103, y: 95.71002}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &336261918
 MonoBehaviour:
@@ -1097,7 +1097,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 1.6559982}
+  m_AnchoredPosition: {x: 0, y: 1.6560059}
   m_SizeDelta: {x: 0, y: -22.165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &393511791
@@ -1232,8 +1232,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000024855, y: 0.000018835}
-  m_SizeDelta: {x: 663.752, y: 401.989}
+  m_AnchoredPosition: {x: 1.813, y: -2.719}
+  m_SizeDelta: {x: 787.049, y: 527.099}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &418164961
 MonoBehaviour:
@@ -1255,7 +1255,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1a5d8785d80a4ee42a2a4c8632436dc0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc274db115b12a949b0dde9ca558beb9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1307,10 +1307,10 @@ RectTransform:
   m_Father: {fileID: 1180467456}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1079.5, y: -603}
-  m_SizeDelta: {x: 238.533, y: 80}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 119.30005, y: 426}
+  m_SizeDelta: {x: 238.53302, y: 80}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &462160688
 MonoBehaviour:
@@ -1388,7 +1388,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: efee20b64d1e73942a29ba61ce3379c3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 568de494fd16e9149b92fda3e808d0c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1440,8 +1440,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.8859863, y: 50.275}
-  m_SizeDelta: {x: -111.793, y: -203.47}
+  m_AnchoredPosition: {x: 0, y: 46.649002}
+  m_SizeDelta: {x: -271.354, y: -312.261}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &551257150
 MonoBehaviour:
@@ -1472,8 +1472,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283190605
+  m_fontColor: {r: 0.3019608, g: 0.3019608, b: 0.29803923, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1490,7 +1490,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 62.15
+  m_fontSize: 58.05
   m_fontSizeBase: 37.64
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2014,8 +2014,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278253055
-  m_fontColor: {r: 1, g: 0.9607843, b: 0, a: 1}
+    rgba: 4283190605
+  m_fontColor: {r: 0.3019608, g: 0.3019608, b: 0.29803923, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4088,8 +4088,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000024855, y: 6.448}
-  m_SizeDelta: {x: 663.752, y: 452.137}
+  m_AnchoredPosition: {x: 0.15046, y: 0.0000095367}
+  m_SizeDelta: {x: 826.533, y: 546.189}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1565261196
 MonoBehaviour:
@@ -4111,7 +4111,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1a5d8785d80a4ee42a2a4c8632436dc0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc274db115b12a949b0dde9ca558beb9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4726,8 +4726,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.8859863, y: 61.065}
-  m_SizeDelta: {x: -111.793, y: -225.051}
+  m_AnchoredPosition: {x: -17.246, y: 37.493}
+  m_SizeDelta: {x: -209.705, y: -272.194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925094130
 MonoBehaviour:
@@ -4758,8 +4758,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283190605
+  m_fontColor: {r: 0.3019608, g: 0.3019608, b: 0.29803923, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4776,7 +4776,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55.2
+  m_fontSize: 66.6
   m_fontSizeBase: 37.64
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4937,10 +4937,10 @@ RectTransform:
   m_Father: {fileID: 794912502}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1079.5, y: -586}
-  m_SizeDelta: {x: 238.533, y: 80}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 119.5, y: 494}
+  m_SizeDelta: {x: 238.53302, y: 80}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1938856223
 MonoBehaviour:
@@ -4986,9 +4986,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 820871309}
-        m_TargetAssemblyTypeName: SceneManagerScript, Assembly-CSharp
-        m_MethodName: ChangeToPreviousScene
+      - m_Target: {fileID: 820871310}
+        m_TargetAssemblyTypeName: PlagueMinigameManager, Assembly-CSharp
+        m_MethodName: RestoreOrientationAndChangeToPreviousScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5018,7 +5018,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: efee20b64d1e73942a29ba61ce3379c3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 568de494fd16e9149b92fda3e808d0c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5162,8 +5162,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278253055
-  m_fontColor: {r: 1, g: 0.9607843, b: 0, a: 1}
+    rgba: 4283190605
+  m_fontColor: {r: 0.3019608, g: 0.3019608, b: 0.29803923, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5398,9 +5398,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 820871309}
-        m_TargetAssemblyTypeName: SceneManagerScript, Assembly-CSharp
-        m_MethodName: ChangeToPreviousScene
+      - m_Target: {fileID: 820871310}
+        m_TargetAssemblyTypeName: PlagueMinigameManager, Assembly-CSharp
+        m_MethodName: RestoreOrientationAndChangeToPreviousScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
