@@ -18,6 +18,7 @@ public class MovePlate : MonoBehaviour
 
 	void Update()
 	{
+#if UNITY_EDITOR
         if (CreateObjects.m_playing)
         {
             if (Input.GetKey(KeyCode.LeftArrow))
@@ -29,7 +30,8 @@ public class MovePlate : MonoBehaviour
                 if (gameObject.transform.position.x < 1.9f) gameObject.transform.position += new Vector3(plateSpeed * 0.1f, 0f, 0f);
             }
         }
-	}
+#endif
+    }
 
 	void OnTriggerEnter2D(Collider2D collision)
     {
