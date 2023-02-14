@@ -29,11 +29,11 @@ MonoBehaviour:
   secondPartInfo: The avviso does not specify where Borg was captured or the details
     of his arrest and execution. From another source, I find out that he was caught
     conducting a cart from which bread was being distributed in Merchant Street near
-    the fountain "<link=Image_2><u><color=blue>altrevolte detta de Orefice.</link></u></color>".
-    Thus it was decreed and pronounced and Borg was executed on the following day,
-    the 17th of August, in Merchant Street at the same place where he had been caught
-    and arrested for breaking the regulations. This Orefice still stands at the corner
-    with the street that houses all the famous filigree shops of Valletta.
+    the fountain "altrevolte detta de Orefice."[Peresso, p. 30]. Thus it was decreed
+    and pronounced and Borg was executed on the following day, the 17th of August,
+    in Merchant Street at the same place where he had been caught and arrested for
+    breaking the regulations. This Orefice still stands at the corner with the street
+    that houses all the famous filigree shops of Valletta.
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
   nameOfStory: Quarantine

@@ -12,11 +12,11 @@ public class HyperlinkClicker : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         int linkIndex = TMP_TextUtilities.FindIntersectingLink(txtMainInfo, Input.mousePosition, null);
-        Debug.Log(linkIndex);
+        //Debug.Log(linkIndex);
         if (linkIndex > -1)
         {
             string linkID = txtMainInfo.textInfo.linkInfo[linkIndex].GetLinkID();
-            Debug.Log(linkID);
+            //Debug.Log(linkID);
 
             GameObject linkedObject = GameObject.Find(linkID);
 
