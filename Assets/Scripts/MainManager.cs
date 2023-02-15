@@ -468,7 +468,7 @@ public class MainManager : MonoBehaviour
     }
     void OpenScene(string nameL)
     {
-        SceneManager.LoadScene(nameL);
+        GetComponent<SceneManagerScript>().ChangeScene(nameL);
     }
 
     private void DisableAll()

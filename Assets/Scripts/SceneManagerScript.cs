@@ -30,10 +30,10 @@ public class SceneManagerScript : MonoBehaviour
         
     }
 
-    public void ChangeScene(int sceneNum)
+    public void ChangeScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneNum);
-        PreviousSceneSaver.instance.m_prevScene = sceneNum;
+        PreviousSceneSaver.instance.m_prevScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(sceneName);
     }
 
     public void ChangeSceneAfterDelay(int sceneNum, int delay)
@@ -57,7 +57,7 @@ public class SceneManagerScript : MonoBehaviour
     {
         yield return new WaitForSeconds(seconds);
 
-        ChangeScene(sceneNum);
+        ChangeScene(SceneManager.GetSceneByBuildIndex(sceneNum).name);
     }
 
 }
