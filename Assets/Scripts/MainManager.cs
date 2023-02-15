@@ -191,7 +191,7 @@ public class MainManager : MonoBehaviour
         if (!pnlMainInfo.activeSelf)
         {
             EaseInPanel(pnlMainInfo, new Vector3(1, 1, 1), 1f);
-
+            pm.PlayOnInfo();
             for (int i = 0; i < pois.Length; i++)
             {
                 if (marker.label == pois[i].nameOfPoint)
@@ -427,7 +427,7 @@ public class MainManager : MonoBehaviour
     {
         target.SetActive(true);
         iTween.ScaleTo(target, scale, time);
-        pm.PlayOnInfo();
+        
     }
 
     
@@ -445,7 +445,7 @@ public class MainManager : MonoBehaviour
             EaseInPanel(pnlWarning, new Vector3(0, 0, 0), 1f);
             Invoke("IsFinished", 1.5f);
         }
-        pm.PlayTheMusic();
+       
 
         if (pnlSolutionInfo.activeSelf)
         {
@@ -457,6 +457,8 @@ public class MainManager : MonoBehaviour
             EaseInPanel(pnlHintInfo, new Vector3(0, 0, 0), 1f);
             Invoke("IsFinished", 1.5f);
         }
+        StopAllCoroutines();
+        //pm.PlayTheMusic();
     }
 
     void IsFinished()

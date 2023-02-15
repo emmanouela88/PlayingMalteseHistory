@@ -38,9 +38,9 @@ MonoBehaviour:
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
   nameOfStory: Quarantine
-  hintOfPOI: "(cat)  Oh the street you\u2019re looking for is named after a saint
-    the people love here in Valletta. His feast day is the 10th of February, and
-    I end up spending the day hiding under parked cars - those loud fireworks and
-    marching bands scare my nine lives out of me! "
+  hintOfPOI: "Oh the street you\u2019re looking for is named after a saint the people
+    love here in Valletta. His feast day is the 10th of February, and I end up spending
+    the day hiding under parked cars - those loud fireworks and marching bands scare
+    my nine lives out of me! "
   solutionOfPOI: "St. Paul\u2019s street is what you\u2019re looking for. It\u2019s
     named in honour of the church of St. Paul\u2019s Shipwreck - make your way there. "

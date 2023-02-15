@@ -48,7 +48,7 @@ public class UnlockNextPart : MonoBehaviour
 
 
         // set UI text
-        setUIText();
+        //setUIText();
 
         // enable interactivity
         enableButtons();
@@ -78,14 +78,14 @@ public class UnlockNextPart : MonoBehaviour
             File.WriteAllText(saveFile, jsonString);
 
             // show user updated
-            setUIText();
+            //setUIText();
 
             // enable interactivity
             enableButtons();
         }
     }
 
-    void setUIText()
+    /*void setUIText()
     {
         numOfPartsText.text = partsUnlocked.ToString() + " / " + totalParts;
 
@@ -94,7 +94,7 @@ public class UnlockNextPart : MonoBehaviour
             numOfPartsText.text = 1.ToString() + " / " + totalParts;
 
         }
-    }
+    }*/
 
     void enableButtons()
     {
@@ -109,26 +109,6 @@ public class UnlockNextPart : MonoBehaviour
         }
     }
 
-    public void Reset()
-    {
-        File.Delete(saveFile);
-
-        setUIText();
-
-
-        // using parts unlocked to see which to enable 
-        for (int i = 1; i < totalParts; i++) // all parts except part 1
-        {
-            buttonStoryParts[i].interactable = false;
-
-            // set text to gray
-            bookTitlesText[i].color = new Color32(144,144,144,255);
-
-        }
-
-
-
-
-    }
+    
 
 }
