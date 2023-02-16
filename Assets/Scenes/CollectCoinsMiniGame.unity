@@ -1869,6 +1869,7 @@ MonoBehaviour:
   m_defeatMessage: {fileID: 1199391753}
   m_FTUEMessage: {fileID: 699360235}
   m_coinInfoMessage: {fileID: 1645464258}
+  m_shadowsController: {fileID: 534716098}
   m_coinGameObjects:
   - {fileID: 3599739507839339302, guid: b58c824eb9a8adb45889faf3a063784d, type: 3}
   - {fileID: 3599739507839339302, guid: d3948fbf2f620e042bb7d9703299bfa3, type: 3}
@@ -1915,6 +1916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 914e9e9c805891840ad6fe98d2545e26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_gameManager: {fileID: 534716095}
   m_animator1: {fileID: 656863439}
   m_animator2: {fileID: 1143565075}
   m_animator3: {fileID: 220961937}
@@ -3933,7 +3935,6 @@ GameObject:
   - component: {fileID: 1381904498}
   - component: {fileID: 1381904503}
   - component: {fileID: 1381904500}
-  - component: {fileID: 1381904502}
   m_Layer: 0
   m_Name: PlayerToMove (Bowl)
   m_TagString: Player
@@ -3953,6 +3954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b8a12994bc3e124e9bb26a44241858b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_gameManager: {fileID: 534716095}
   plateSpeed: 1
   m_scoreText: {fileID: 1031189825}
 --- !u!114 &1381904499
@@ -3967,6 +3969,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdec7b4d359689d4d9617baa402cd14b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_speed: 1000
+  m_gameManager: {fileID: 534716095}
 --- !u!50 &1381904500
 Rigidbody2D:
   serializedVersion: 4
@@ -4039,14 +4043,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!222 &1381904502
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381904497}
-  m_CullTransparentMesh: 1
 --- !u!61 &1381904503
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4081,7 +4077,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381904497}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2067, y: -4.2489, z: 0}
+  m_LocalPosition: {x: 0, y: -4.2489, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

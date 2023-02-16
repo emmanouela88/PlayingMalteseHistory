@@ -12,14 +12,16 @@ public class CreateObjects : MonoBehaviour
     [SerializeField] private RectTransform m_defeatMessage;
     [SerializeField] private RectTransform m_FTUEMessage;
     [SerializeField] private RectTransform m_coinInfoMessage;
+    [SerializeField] private Shadows m_shadowsController;
 
     public GameObject[] m_coinGameObjects;
     public Text m_timerText;
-    public static float m_timer = 30f;
+    public const float Duration = 30f;
     public int m_targetScore = 10;
 
-    public static int m_currentScore = 0;
-    public static bool m_playing = false;
+    private int m_currentScore = 0;
+    private bool m_playing = false;
+    private float m_timer;
 
     private SceneManagerScript m_sceneManager;
 
@@ -30,8 +32,8 @@ public class CreateObjects : MonoBehaviour
         m_FTUEMessage.gameObject.SetActive(true);
         m_coinInfoMessage.gameObject.SetActive(false);
         m_sceneManager = GetComponent<SceneManagerScript>();
-        m_playing = true; // If this is false the shadows were not working
         m_currentScore = 0;
+        m_timer = Duration;
         Time.timeScale = 0f;
     }
 
@@ -39,7 +41,8 @@ public class CreateObjects : MonoBehaviour
     {
         Time.timeScale = 1f;
         m_FTUEMessage.gameObject.SetActive(false);
-       // m_playing = true;
+        m_playing = true; // If this is false the shadows were not working
+        m_shadowsController.StartAnimating();
         InstantiateCoin();
     }
     public void ResetMinigame()
@@ -56,6 +59,25 @@ public class CreateObjects : MonoBehaviour
     {
         m_coinInfoMessage.gameObject.SetActive(false);
     }
+
+    public float GetRemainingTime()
+	{
+        return m_timer;
+	}
+
+    public bool IsPlaying()
+	{
+        return m_playing;
+	}
+
+    public void IncreaseScore(int amount)
+	{
+        m_currentScore += amount;
+	}
+    public int GetCurrentScore()
+	{
+        return m_currentScore;
+	}
 
     void Update()
     {

@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class MovePlate : MonoBehaviour
 {
+    [SerializeField] private CreateObjects m_gameManager;
+
     Rigidbody rb;
 
     public float plateSpeed = 1f;
@@ -14,23 +16,6 @@ public class MovePlate : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-    }
-
-	void Update()
-	{
-#if UNITY_EDITOR
-        if (CreateObjects.m_playing)
-        {
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                if (gameObject.transform.position.x > -1.9f) gameObject.transform.position -= new Vector3(plateSpeed * 0.1f, 0f, 0f);
-            }
-            else if (Input.GetKey(KeyCode.RightArrow))
-            {
-                if (gameObject.transform.position.x < 1.9f) gameObject.transform.position += new Vector3(plateSpeed * 0.1f, 0f, 0f);
-            }
-        }
-#endif
     }
 
 	void OnTriggerEnter2D(Collider2D collision)
@@ -50,8 +35,8 @@ public class MovePlate : MonoBehaviour
 
             // Debug.LogError("SCORE " + CreateObjects.m_currentScore);
 
-            CreateObjects.m_currentScore += value;
-            m_scoreText.text = CreateObjects.m_currentScore.ToString();
+            m_gameManager.IncreaseScore(value);
+            m_scoreText.text = m_gameManager.GetCurrentScore().ToString();
 
         }
 

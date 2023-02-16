@@ -4,70 +4,28 @@ using UnityEngine;
 
 public class BoxScript : MonoBehaviour // Used to move the plate on device
 {
-    private float dist;
-    private bool dragging = false;
-    private Vector3 offset;
-    private Transform toDrag;
+	private Vector3 m_dragOffset;
+	private Camera m_camera;
+	[SerializeField] private float m_speed;
+	[SerializeField] private CreateObjects m_gameManager;
 
-    float startPosX;
-    float startPosY;
+	private void OnMouseDown()
+	{
+		m_dragOffset = transform.position - GetMousePos();
+	}
+	private void OnMouseDrag()
+	{
+		if (m_gameManager.IsPlaying())
+		{
+			transform.position = Vector3.MoveTowards(transform.position, GetMousePos() + m_dragOffset, m_speed * Time.deltaTime);
+		}
+	}
 
-    private Vector3 position;
-    private float width;
-    private float height;
-
-    void Awake()
-    {
-        width = (float)Screen.width / 2.0f;
-        height = (float)Screen.height / 2.0f;
-    }
-
-    void Update()
-    {
-#if !UNITY_EDITOR
-        if (CreateObjects.m_playing)
-        {
-            Vector3 v3;
-
-            if (Input.touchCount != 1)
-            {
-                dragging = false;
-                return;
-            }
-            Touch touch = Input.GetTouch(0);
-            Vector3 pos = touch.position;
-
-            if (touch.phase == TouchPhase.Began)
-            {
-                Ray ray = Camera.main.ScreenPointToRay(pos);
-                RaycastHit hit;
-
-                if (Physics.Raycast(ray, out hit))
-                {
-                    if (hit.collider.tag == "Player")
-                    {
-                        toDrag = hit.transform;
-                        dist = hit.transform.position.z - Camera.main.transform.position.z;
-                        v3 = new Vector3(pos.x, pos.y, dist);
-                        v3 = Camera.main.ScreenToWorldPoint(v3);
-                        offset = toDrag.position - v3;
-                        dragging = true;
-                    }
-                }
-            }
-
-            if (dragging && touch.phase == TouchPhase.Moved)
-            {
-                v3 = new Vector3(Input.mousePosition.x, Input.mousePosition.y, dist);
-                v3 = Camera.main.ScreenToWorldPoint(v3);
-                toDrag.position = v3 + offset;
-            }
-
-            if (dragging && (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled))
-            {
-                dragging = false;
-            }
-        }
-#endif
-    }
+	private Vector3 GetMousePos()
+	{
+		Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		mousePos.z = 0;
+		mousePos.y = 0;
+		return mousePos;
+	}
 }

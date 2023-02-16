@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Shadows : MonoBehaviour
 {
+    public CreateObjects m_gameManager;
+
     public Animator m_animator1;
     public Animator m_animator2;
     public Animator m_animator3;
@@ -18,7 +20,7 @@ public class Shadows : MonoBehaviour
     private float m_waitTime = 2f;
     private bool m_once = true;
 
-    void Start()
+    public void StartAnimating()
     {
         ChooseNextShadow();
         StartCoroutine(ChooseNextShadowCoroutine());
@@ -26,7 +28,7 @@ public class Shadows : MonoBehaviour
 
     void Update()
     {
-        if (CreateObjects.m_timer < 1 && m_once)
+        if (m_gameManager.GetRemainingTime() < 1 && m_once)
         {
             Shadow1();
             Shadow2();
@@ -34,22 +36,22 @@ public class Shadows : MonoBehaviour
             Shadow4();
             m_once = false;
         }
-        else if (CreateObjects.m_timer < 5)
+        else if (m_gameManager.GetRemainingTime() < 5)
         {
             m_waitTime = 0.25f;
             ChangeAnimatorsSpeed(3f);
         }
-        else if (CreateObjects.m_timer < 10)
+        else if (m_gameManager.GetRemainingTime() < 10)
         {
             m_waitTime = 0.5f;
             ChangeAnimatorsSpeed(2.5f);
         }
-        else if (CreateObjects.m_timer < 20)
+        else if (m_gameManager.GetRemainingTime() < 20)
         {
             m_waitTime = 1f;
             ChangeAnimatorsSpeed(1.75f);
         }
-        else if (CreateObjects.m_timer < 25)
+        else if (m_gameManager.GetRemainingTime() < 25)
         {
             m_waitTime = 1.5f;
             ChangeAnimatorsSpeed(1.25f);
@@ -58,7 +60,7 @@ public class Shadows : MonoBehaviour
 
     void ChooseNextShadow()
     {
-        if (CreateObjects.m_playing)
+        if (m_gameManager.IsPlaying())
         {
             int randomNum = Random.Range(0, 5);
 
@@ -117,7 +119,7 @@ public class Shadows : MonoBehaviour
 
     private IEnumerator ChooseNextShadowCoroutine()
     {
-        while (CreateObjects.m_playing)
+        while (m_gameManager.IsPlaying())
         {
             yield return new WaitForSeconds(m_waitTime);
             ChooseNextShadow();
