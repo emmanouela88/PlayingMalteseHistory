@@ -8,8 +8,10 @@ public class ShowHide : MonoBehaviour
 {
 
     public Image imgFather;
-    private Color c;
+    public Image imgDoor;
+    //private Color c;
     public float delay;
+    public bool coolingDown;
     float timer;
 
 
@@ -17,23 +19,27 @@ public class ShowHide : MonoBehaviour
     void Start()
     {
         timer = delay;
-        c = imgFather.color;
-        //imgFather.color= Color.blue;
+        imgDoor.fillAmount = 1.0f;
+        imgFather.fillAmount = 1.0f;
+        coolingDown = true;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        timer -= Time.deltaTime;
 
-        if (timer <= 0)
+        if (coolingDown == true)
         {
-            c.a = Mathf.Lerp(255,0,timer);
-            timer = delay;
-        }
-        else
-        {
-            c.a = Mathf.Lerp(0, 255, delay);
+            timer -= Time.deltaTime;
+            if (timer <= 0.0f)
+            {
+                coolingDown = false;
+                timer = 0.0f;
+            }
+            float normalizeValue = Mathf.Lerp(timer / delay, 1.0f, 0.0f);
+            imgDoor.fillAmount = normalizeValue;
+            imgFather.fillAmount = normalizeValue;
+           
         }
         
     }

@@ -58,7 +58,7 @@ public class spawnCars : MonoBehaviour {
 				//spawnedObject.transform.parent = gameObject.transform;
 				spawnedObject.transform.SetParent(parentRect, false);
 				timer = delay;
-				Debug.Log("Position: " + car[objectToSpawn].transform.position.x + " maxPos: " + maxPos);
+				
 
 				if (timeLimitRemain <= 0)
 				{
