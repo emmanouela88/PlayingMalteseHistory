@@ -1454,7 +1454,6 @@ GameObject:
   - component: {fileID: 707152254}
   - component: {fileID: 707152257}
   - component: {fileID: 707152256}
-  - component: {fileID: 707152255}
   m_Layer: 0
   m_Name: ARLocationRoot
   m_TagString: Untagged
@@ -1476,39 +1475,6 @@ Transform:
   m_Father: {fileID: 192293115}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &707152255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707152253}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cbc4231fbb3b1844a8e5b775e45edf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LocationProviderSettings:
-    TimeBetweenUpdates: 10
-    MinDistanceBetweenUpdates: 0
-    AccuracyRadius: 25
-    MaxNumberOfUpdates: 0
-  MockLocationData: {fileID: 11400000, guid: 02ee5e625347ced43aa5f15f5d957c68, type: 2}
-  MaxWaitTime: 200
-  StartUpDelay: 0
-  DebugMode: 0
-  OnEnabled:
-    m_PersistentCalls:
-      m_Calls: []
-  OnLocationUpdated:
-    m_PersistentCalls:
-      m_Calls: []
-  OnRawLocationUpdated:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCompassUpdated:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &707152256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2319,7 +2285,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1138323873}
-  - component: {fileID: 1138323872}
   - component: {fileID: 1138323874}
   m_Layer: 0
   m_Name: GameObject
@@ -2328,40 +2293,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1138323872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138323871}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c56c9eb6d14e4854b316f59e1296fb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Locations:
-  - LocationInput:
-      LocationInputType: 0
-      LocationData: {fileID: 0}
-      Location:
-        Latitude: 35.89612
-        Longitude: 14.509054
-        Altitude: 0
-        AltitudeMode: 0
-        Label: 
-      OverrideAltitudeData:
-        OverrideAltitude: 0
-        Altitude: 0
-        AltitudeMode: 0
-  PlacementOptions:
-    MovementSmoothing: 0.05
-    MaxNumberOfLocationUpdates: 4
-    UseMovingAverage: 0
-    HideObjectUntilItIsPlaced: 1
-    ShowObjectAfterThisManyUpdates: 1
-  Prefab: {fileID: 5977191019510964819, guid: cb9f1b1afb5b45644a695b961c989123, type: 3}
-  DebugMode: 0
 --- !u!4 &1138323873
 Transform:
   m_ObjectHideFlags: 0
@@ -2394,9 +2325,9 @@ MonoBehaviour:
       LocationData: {fileID: 0}
       Location:
         Latitude: 38.059713
-        Longitude: 23.527723
+        Longitude: 14.509054
         Altitude: 0
-        AltitudeMode: 1
+        AltitudeMode: 2
         Label: 
       OverrideAltitudeData:
         OverrideAltitude: 0

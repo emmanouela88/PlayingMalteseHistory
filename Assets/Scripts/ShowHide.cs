@@ -6,41 +6,71 @@ using UnityEngine.UI;
 
 public class ShowHide : MonoBehaviour
 {
-
-    public Image imgFather;
+    
     public Image imgDoor;
-    //private Color c;
     public float delay;
-    public bool coolingDown;
-    float timer;
+    public float cooldownTime;
+    private bool coolingDown;
+    private float fillAmount;
+    private float fillTimer;
+    private float cooldownTimer;
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        timer = delay;
-        imgDoor.fillAmount = 1.0f;
-        imgFather.fillAmount = 1.0f;
+        imgDoor.fillAmount = 0.0f;
+        
         coolingDown = true;
+        fillAmount = 0.0f;
+        fillTimer = 0.0f;
+        cooldownTimer = cooldownTime;
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-
-        if (coolingDown == true)
+        if (coolingDown)
         {
-            timer -= Time.deltaTime;
-            if (timer <= 0.0f)
+            if (cooldownTimer > 0)
             {
-                coolingDown = false;
-                timer = 0.0f;
+                cooldownTimer -= Time.deltaTime;
             }
-            float normalizeValue = Mathf.Lerp(timer / delay, 1.0f, 0.0f);
-            imgDoor.fillAmount = normalizeValue;
-            imgFather.fillAmount = normalizeValue;
-           
+            else
+            {
+                fillTimer += Time.deltaTime;
+                fillAmount = Mathf.Clamp(fillTimer / delay, 0.0f, 1.0f);
+                imgDoor.fillAmount = fillAmount;
+                
+
+                if (fillAmount >= 1.0f)
+                {
+                    fillAmount = 1.0f;
+                    coolingDown = false;
+                    cooldownTimer = cooldownTime;
+                }
+            }
         }
-        
+        else
+        {
+            if (cooldownTimer > 0)
+            {
+                cooldownTimer -= Time.deltaTime;
+            }
+            else
+            {
+                fillTimer -= Time.deltaTime;
+                fillAmount = Mathf.Clamp(fillTimer / delay, 0.0f, 1.0f);
+                imgDoor.fillAmount = fillAmount;
+                
+
+                if (fillAmount <= 0.0f)
+                {
+                    fillAmount = 0.0f;
+                    coolingDown = true;
+                    cooldownTimer = cooldownTime;
+                }
+            }
+        }//if cooldown
+
+
     }
 }
+

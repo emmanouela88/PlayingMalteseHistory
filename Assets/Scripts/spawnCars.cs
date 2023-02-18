@@ -23,19 +23,27 @@ public class spawnCars : MonoBehaviour {
 
 	bool isStarted = false;
 
+	public Image imgFather;
+	public GameObject pnlInform;
+	public float showDuration = 2f;
+
+	private bool canTap;
+	private int scoreAmount;
 	// Use this for initialization
 	void Start () 
 	{
 		m_victoryMessage.gameObject.SetActive(false);
 		m_defeatMessage.gameObject.SetActive(false);
 		m_FTUEMessage.gameObject.SetActive(true);
-
+		pnlInform.SetActive(false);
 		Time.timeScale = 0f;
 		timer = delay;
 		
 		infoTxt.text = "Blow as many torches as you can without the father seeing you!";
 		timeLimitStart = 20.0f;
 		timeLimitRemain = timeLimitStart;
+		canTap = true;
+		scoreAmount = 0;
 	}
 	
 	// Update is called once per frame
@@ -57,15 +65,27 @@ public class spawnCars : MonoBehaviour {
 				// make the parent the spawner so hierarchy doesn't get super messy
 				//spawnedObject.transform.parent = gameObject.transform;
 				spawnedObject.transform.SetParent(parentRect, false);
+				Button buttonToClickOnSpawned = spawnedObject.GetComponent<Button>();
+
+				if(buttonToClickOnSpawned != null)
+                {
+					buttonToClickOnSpawned.onClick.AddListener(OnButtonClick);
+                }
 				timer = delay;
 				
 
 				if (timeLimitRemain <= 0)
 				{
 					GameOver(true);
+					pnlInform.SetActive(false);
+					if (spawnedObject.activeSelf) spawnedObject.gameObject.SetActive(false);
+					imgFather.gameObject.SetActive(false);
 				}
+
 			}
+			
 		}
+		
 		
 	}
 
@@ -88,7 +108,7 @@ public class spawnCars : MonoBehaviour {
 		else
 		{
 			//TODO: Show the actual score here
-			infoTxt.text = "Time is up! You managed to blow " + 10 + " torche(s)";
+			infoTxt.text = "Time is up! You managed to blow " + scoreAmount + " torche(s)";
 			m_victoryMessage.gameObject.SetActive(true);
 		}
 	}
@@ -96,5 +116,24 @@ public class spawnCars : MonoBehaviour {
 	public void ResetMinigame()
 	{
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+	}
+
+	void OnButtonClick()
+	{
+		if (canTap && imgFather.fillAmount > 0.5f)
+		{
+			pnlInform.SetActive(true);
+			StartCoroutine(HideGameObject());
+        }
+        else
+        {
+			scoreAmount += 1;
+        }
+	}
+
+	IEnumerator HideGameObject()
+	{
+		yield return new WaitForSeconds(showDuration);
+		pnlInform.SetActive(false);
 	}
 }
