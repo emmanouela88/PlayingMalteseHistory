@@ -32,7 +32,10 @@ public class SceneManagerScript : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
-        PreviousSceneSaver.instance.m_prevScene = SceneManager.GetActiveScene().buildIndex;
+        if (PreviousSceneSaver.instance != null)
+        {
+            PreviousSceneSaver.instance.m_prevScene = SceneManager.GetActiveScene().buildIndex;
+        }
         SceneManager.LoadScene(sceneName);
     }
 

@@ -34,7 +34,8 @@ MonoBehaviour:
     The archive yields the solution
     once again. In the Government Gazette of the time, one can read the names and
     addresses of the plague victims. If I trace them in reverse chronological order,
-    I can find the starting point.'
+    I can find the starting point. (In order to progress with the story, you need
+    to find and select the plague cases, through the mini game.)'
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
   nameOfStory: Quarantine
