@@ -18,6 +18,10 @@ public class PlagueMinigameGuard : MonoBehaviour
 
     private IEnumerator MoveFromPointToPoint(Vector3 pointA, Vector3 pointB)
 	{
+		Vector3 vectorToTarget = pointB - transform.position;
+		float angle = (Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg) - 90;
+		Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+
 		Vector3 startPos = pointA;
 		Vector3 endPos = pointB;
 		float elapsedTime = 0;
@@ -25,6 +29,7 @@ public class PlagueMinigameGuard : MonoBehaviour
 		while (elapsedTime < m_lerpTime)
 		{
 			transform.position = Vector3.Lerp(pointA, pointB, (elapsedTime / m_lerpTime));
+			transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * 10);
 			elapsedTime += Time.deltaTime;
 			yield return null;
 		}
