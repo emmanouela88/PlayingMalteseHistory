@@ -46,7 +46,7 @@ public class MainManager : MonoBehaviour
     public string nameOfMiniGameLevel2; //we need to make it as a list since we are having more than one minigame level to load
     public string nameOfMiniGameLevel3; //we need to make it as a list since we are having more than one minigame level to load
     public LOCATIONSCENES currentLocationScene;
-    
+
 
     [Space]
     [Header("UI Elements general")]
@@ -62,10 +62,12 @@ public class MainManager : MonoBehaviour
     public Button btnMiniGame3;
     public Button btnHint;
     public Button btnSolution;
+    public Button btnEnlarge;
+    public Image imgPoint;
     //public Button btnPosition;
-    
-    
-    
+
+
+
 
     [Space]
     [Header("Map Elements")]
@@ -84,12 +86,13 @@ public class MainManager : MonoBehaviour
 
     private List<PointsToVisit> currentStorySavedPoints = new List<PointsToVisit>();
 
-    private int counter=0;
+    private int counter = 0;
+    private bool isEnlarged=false;
     #region UnityMethods
 
 
     public void Awake()
-    {                
+    {
         LoadFiles(poisFolder);
         saveFile = Application.persistentDataPath + "/save.json";
 
@@ -131,7 +134,7 @@ public class MainManager : MonoBehaviour
         pnlSolutionInfo.SetActive(false);
         pnlWarning.SetActive(false);
 
-        
+
         pnlOnStart.SetActive(true);
         for (int i = 0; i < pois.Length; i++)
         {
@@ -140,14 +143,14 @@ public class MainManager : MonoBehaviour
 
             poiMarker[i].label = pois[i].nameOfPoint;
             poiMarker[i].texture = pois[i].imgMarker.texture;
-            poiMarker[i].scale = 0.5f;
+            poiMarker[i].scale = 0.1f;
 
         }
         btnPrev.gameObject.SetActive(false);
         SubscribeToButtons();
         SubscribeToEvents();
         CreateUserMarker();
-        
+
         DisableAll();
     }
 
@@ -166,10 +169,11 @@ public class MainManager : MonoBehaviour
         btnCloseHint.onClick.AddListener(ClosePanels);
         btnCloseOnStart.onClick.AddListener(ClosePanels);
         btnBackMain.onClick.AddListener(() => OpenScene(nameOfMainLevel));
-        btnARScene.onClick.AddListener(() => OpenScene(nameOfARLevel));        
+        btnARScene.onClick.AddListener(() => OpenScene(nameOfARLevel));
         btnMiniGame.onClick.AddListener(() => OpenScene(nameOfMiniGameLevel));
         btnMiniGame2.onClick.AddListener(() => OpenScene(nameOfMiniGameLevel2));
         btnMiniGame3.onClick.AddListener(() => OpenScene(nameOfMiniGameLevel3));
+        btnEnlarge.onClick.AddListener(EnlargeImage);
     }
     void SubscribeToEvents()
     {
@@ -187,7 +191,7 @@ public class MainManager : MonoBehaviour
     #region MapMethods
     void ShowInformation(OnlineMapsMarkerBase marker)
     {
-        
+
         if (!pnlMainInfo.activeSelf)
         {
             EaseInPanel(pnlMainInfo, new Vector3(1, 1, 1), 1f);
@@ -205,9 +209,10 @@ public class MainManager : MonoBehaviour
                     btnNext.gameObject.SetActive(true);
                     btnHint.gameObject.SetActive(false);
 
-                    btnNext.onClick.AddListener(() => { 
-                        txtMainInfo1.gameObject.SetActive(false); 
-                        txtMainInfo2.gameObject.SetActive(true); 
+                    btnNext.onClick.AddListener(() =>
+                    {
+                        txtMainInfo1.gameObject.SetActive(false);
+                        txtMainInfo2.gameObject.SetActive(true);
                         btnNext.gameObject.SetActive(false);
                         btnPrev.gameObject.SetActive(true);
                         btnHint.gameObject.SetActive(true);
@@ -229,19 +234,20 @@ public class MainManager : MonoBehaviour
                         pnlHintInfo.SetActive(true);
                         pnlMainInfo.SetActive(false);
                     });
-                    btnSolution.onClick.AddListener(() => {
+                    btnSolution.onClick.AddListener(() =>
+                    {
                         pnlSolutionInfo.SetActive(true);
                         pnlHintInfo.SetActive(false);
                     });
 
-                    
+
                     //sourceCam.clip = pois[i].clip;
                     /*btnPlaySound.onClick.AddListener(() => PlaySound(sourceCam.clip));
                     btnPauseSound.onClick.AddListener(PauseSound);*/
-                    if (pois[i].nameOfPoint == "City Gate" || pois[i].nameOfPoint== "Marsamxett" || pois[i].nameOfPoint == "Ondina's Residency")
+                    if (pois[i].nameOfPoint == "City Gate" || pois[i].nameOfPoint == "Marsamxett" || pois[i].nameOfPoint == "Ondina's Residency")
                     {
                         btnARScene.gameObject.SetActive(true);
-                    }                    
+                    }
                     else
                     {
                         btnARScene.gameObject.SetActive(false);
@@ -280,26 +286,26 @@ public class MainManager : MonoBehaviour
     }
 
     //to check if user is near the poi or not
-   /* public void CheckUserPosition()
-    {
-        if (!IsWithinConstraints())
-        {
-            pnlWarning.SetActive(true);
+    /* public void CheckUserPosition()
+     {
+         if (!IsWithinConstraints())
+         {
+             pnlWarning.SetActive(true);
 
-        }
-        else
-        {
-            pnlWarning.SetActive(false);
+         }
+         else
+         {
+             pnlWarning.SetActive(false);
 
-        }
-    }*/
+         }
+     }*/
     public bool IsWithinConstraints()
     {
-        
+
         for (int i = 0; i < pois.Length; i++)
         {
             float distance = OnlineMapsUtils.DistanceBetweenPoints(pois[i].coordinatesPoint, OnlineMapsLocationService.instance.position).magnitude;
-         
+
             if (distance < 0.005f)
             {
                 Debug.Log("first info: " + pois[i].name + " distance: " + distance + " i: " + i);
@@ -308,38 +314,38 @@ public class MainManager : MonoBehaviour
             }
         }
 
-        
+
         Debug.Log("Is not within constraints");
         return false;
     }
     private void SetMarkerOnUserPosition(Vector2 position)
-    {        
+    {
         userMarker.position = position;
         OnlineMaps.instance.Redraw();
     }
     public void OnLocationChanged(Vector2 position)
     {
-        
+
         SetMarkerOnUserPosition(position);
         OnlineMaps.instance.SetPositionAndZoom(position.x, position.y, OnlineMaps.MAXZOOM);
         //CheckUserPosition();
 
-        
+
         //DisableAll();
         for (int i = 0; i < pois.Length; i++)
         {
             float distance = OnlineMapsUtils.DistanceBetweenPoints(pois[i].coordinatesPoint, OnlineMapsLocationService.instance.position).magnitude;
-            
-            
+
+
             bool isUnlocked = i < /*UnlockNextPart.partsUnlocked*/currentStorySavedPoints.Count || i == 0;
 
             poiMarker[i].enabled = isUnlocked;
-            
-            if (distance < 0.1f && i<= currentStorySavedPoints.Count)
+
+            if (distance < 0.1f && i <= currentStorySavedPoints.Count)
             {
                 Debug.Log("first info: " + pois[i].name + " distance: " + distance + " i: " + i);
-                
-                warningMainText.text = "You need to walk " + (distance * 100).ToString("f4") + " km, for the "+pois[i].name;
+
+                warningMainText.text = "You need to walk " + (distance * 100).ToString("f4") + " km, for the " + pois[i].name;
                 //btnPosition.onClick.AddListener(() => pnlWarning.SetActive(!pnlWarning.activeSelf));
                 UnlockNewPart(pois[i]);//if we put pois[i] will unlock all the points in-game. Is good for testing not for final development
                 poiMarker[i].enabled = true;//same as above. On 0 we only unlock the first poi
@@ -397,7 +403,7 @@ public class MainManager : MonoBehaviour
 
     }
 
-  
+
     public void UnlockNewPart(PointsToVisit newPart)
     {
         if (currentStorySavedPoints.Count < pois.Length && !currentStorySavedPoints.Contains(newPart))
@@ -407,10 +413,10 @@ public class MainManager : MonoBehaviour
 
             string jsonString = JsonUtility.ToJson(saveData);
             File.WriteAllText(saveFile, jsonString);
-                      
+
         }
     }
-    private void CreateUserMarker() 
+    private void CreateUserMarker()
     {
         // Remove Marker
         if (userMarker != null)
@@ -427,10 +433,10 @@ public class MainManager : MonoBehaviour
     {
         target.SetActive(true);
         iTween.ScaleTo(target, scale, time);
-        
+
     }
 
-    
+
     void ClosePanels()
     {
         if (pnlMainInfo.activeSelf)
@@ -445,7 +451,7 @@ public class MainManager : MonoBehaviour
             EaseInPanel(pnlWarning, new Vector3(0, 0, 0), 1f);
             Invoke("IsFinished", 1.5f);
         }
-       
+
 
         if (pnlSolutionInfo.activeSelf)
         {
@@ -480,6 +486,19 @@ public class MainManager : MonoBehaviour
             // note that I only write [ i] with a space in plain text since it otherwise makes text italic on the forum. The space is not needed
         }
     }
+
+    public void EnlargeImage()
+    {
+        if (!isEnlarged)
+        {
+            isEnlarged = true;
+            imgPoint.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        }
+        
+
+    }
+
+    
     #endregion
 
 
