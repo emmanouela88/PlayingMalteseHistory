@@ -254,7 +254,7 @@ public class MainManager : MonoBehaviour
                     }
 
                     if (pois[i].nameOfPoint == "Nix Mangiare steps" || pois[i].nameOfPoint == "Hastings Garden"
-                        || pois[i].nameOfPoint == "Ondina's Residency")
+                        || pois[i].nameOfPoint == "Ondina and Her Family’s Old Residence (69C Old Mint Street)")
                     {
                         btnMiniGame.gameObject.SetActive(true);
                         btnMiniGame3.gameObject.SetActive(false);

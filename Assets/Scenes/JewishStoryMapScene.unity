@@ -813,7 +813,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca56ab392655da042978212b37cc216d, type: 2}
   m_sharedMaterial: {fileID: 5366484808827389454, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -877,7 +877,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &89840156
@@ -1852,7 +1852,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: You need to be near the point in order to unlock it!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca56ab392655da042978212b37cc216d, type: 2}
   m_sharedMaterial: {fileID: -5798611287592534813, guid: 3dab4aaee5eb57b49bb411e395a45278, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2840,7 +2840,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Beware!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca56ab392655da042978212b37cc216d, type: 2}
   m_sharedMaterial: {fileID: 5611675687574581459, guid: 893c3c9b3bd6d2f47852e446fb992d92, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3104,7 +3104,7 @@ MonoBehaviour:
     so the stray <u>cat</u> will help you with the exact position since cats know
     everything. \n\nEnjoy the History in the streets of Valletta!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca56ab392655da042978212b37cc216d, type: 2}
   m_sharedMaterial: {fileID: 5366484808827389454, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3168,7 +3168,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &608492559
@@ -5546,7 +5546,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hint
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca56ab392655da042978212b37cc216d, type: 2}
   m_sharedMaterial: {fileID: 5366484808827389454, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5610,7 +5610,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1297753575
@@ -6376,7 +6376,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: You need to be near the point in order to unlock it!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca56ab392655da042978212b37cc216d, type: 2}
   m_sharedMaterial: {fileID: 5366484808827389454, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6440,7 +6440,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1504061836
@@ -7155,6 +7155,8 @@ MonoBehaviour:
   btnMiniGame3: {fileID: 1884565020}
   btnHint: {fileID: 1173013202}
   btnSolution: {fileID: 54976813}
+  btnEnlarge: {fileID: 0}
+  imgPoint: {fileID: 0}
   poiMarker: []
   userMarker:
     label: 
@@ -7557,7 +7559,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: You need to be near the point in order to unlock it!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca56ab392655da042978212b37cc216d, type: 2}
   m_sharedMaterial: {fileID: 5366484808827389454, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -7621,7 +7623,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1806397233
@@ -7900,7 +7902,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca56ab392655da042978212b37cc216d, type: 2}
   m_sharedMaterial: {fileID: 5366484808827389454, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -7964,7 +7966,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1832347853
@@ -8742,7 +8744,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Solution
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca56ab392655da042978212b37cc216d, type: 2}
   m_sharedMaterial: {fileID: 5366484808827389454, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -8806,7 +8808,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1940252300
@@ -9198,7 +9200,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Make sure...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca56ab392655da042978212b37cc216d, type: 2}
   m_sharedMaterial: {fileID: 5366484808827389454, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -9742,7 +9744,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca56ab392655da042978212b37cc216d, type: 2}
   m_sharedMaterial: {fileID: 5366484808827389454, guid: b61e9963be7a5634385e0be0327cdfcd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -9806,7 +9808,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2050848875
