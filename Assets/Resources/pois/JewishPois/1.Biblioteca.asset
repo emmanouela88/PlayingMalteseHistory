@@ -25,7 +25,7 @@ MonoBehaviour:
   secondPartInfo: "I look through the rest of the box to find a hand-written <link=Image_2><u><color=blue>receipt</link></u></color>
     receipt for pharmaceutical goods.\r"
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
-  imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
+  imgMain: {fileID: 21300000, guid: ba966144744fe1c419ce21fef2c69212, type: 3}
   nameOfStory: Jewish
   hintOfPOI: "Maybe Kingsway Pharmacy is still standing in St George\u2019s Square
     and might have some information on past pharmacists."

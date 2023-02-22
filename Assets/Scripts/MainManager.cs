@@ -87,7 +87,7 @@ public class MainManager : MonoBehaviour
     private List<PointsToVisit> currentStorySavedPoints = new List<PointsToVisit>();
 
     private int counter = 0;
-    private bool isEnlarged=false;
+    private bool isEnlarged=true;
     #region UnityMethods
 
 
@@ -173,7 +173,7 @@ public class MainManager : MonoBehaviour
         btnMiniGame.onClick.AddListener(() => OpenScene(nameOfMiniGameLevel));
         btnMiniGame2.onClick.AddListener(() => OpenScene(nameOfMiniGameLevel2));
         btnMiniGame3.onClick.AddListener(() => OpenScene(nameOfMiniGameLevel3));
-        btnEnlarge.onClick.AddListener(EnlargeImage);
+        btnEnlarge.onClick.AddListener(EnlargeImage); 
     }
     void SubscribeToEvents()
     {
@@ -203,6 +203,7 @@ public class MainManager : MonoBehaviour
                     txtName.text = pois[i].nameOfPoint;
                     txtMainInfo1.text = pois[i].firstPartInfo;
                     txtMainInfo2.text = pois[i].secondPartInfo;
+                    imgPoint.sprite = pois[i].imgMain;
                     txtMainInfo1.gameObject.SetActive(true);
                     btnPrev.gameObject.SetActive(false);
                     txtMainInfo2.gameObject.SetActive(false);
@@ -489,13 +490,18 @@ public class MainManager : MonoBehaviour
 
     public void EnlargeImage()
     {
-        if (!isEnlarged)
+        if (isEnlarged)
+        {
+            imgPoint.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            isEnlarged = false;
+        }
+        else
         {
             isEnlarged = true;
-            imgPoint.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            imgPoint.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+            Debug.Log("Minimize" + " bool: " + isEnlarged);
         }
-        
-
+       
     }
 
     

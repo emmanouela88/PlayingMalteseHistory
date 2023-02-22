@@ -29,7 +29,7 @@ MonoBehaviour:
     symbolic for the Jewish community in Malta: small and overshadowed. Still, like
     Ondina, they managed to hold their own through the hardship.\r"
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
-  imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
+  imgMain: {fileID: 21300000, guid: 1ea8ae7c972f18f4f9d5d9f4d3a99c1b, type: 3}
   nameOfStory: Jewish
   hintOfPOI: This is the final point of the story, you made it!
   solutionOfPOI: You are purrfect!

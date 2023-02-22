@@ -36,7 +36,7 @@ MonoBehaviour:
     to worsening (sometimes even criminalising) the conditions of those who were
     under-privileged. Law protects, but not always equally."
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
-  imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
+  imgMain: {fileID: 21300000, guid: 4380d9cae9f20104ab53660fd16b6572, type: 3}
   nameOfStory: Poverty
   hintOfPOI: This is the final point of the story, you made it!
   solutionOfPOI: You are purrfect!

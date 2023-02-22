@@ -35,7 +35,7 @@ MonoBehaviour:
     breaking the regulations. This Orefice still stands at the corner with the street
     that houses all the famous filigree shops of Valletta.
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
-  imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
+  imgMain: {fileID: 21300000, guid: ba966144744fe1c419ce21fef2c69212, type: 3}
   nameOfStory: Quarantine
   hintOfPOI: "Orefice you say? It means jeweller. There is a street perpendicular
     to Merchant Street that is full of those. It\u2019s a street that\u2019s bright

@@ -30,7 +30,7 @@ MonoBehaviour:
     - actually, you can even see it from its walls. <link=Additional_1><u><color=blue>Additional
     Information.</link></u></color>"
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
-  imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
+  imgMain: {fileID: 21300000, guid: c331097516910a54db7571bfe5090a0b, type: 3}
   nameOfStory: Quarantine
   hintOfPOI: "I love lying around this place when it\u2019s sunny. I pick a vantage
     point overlooking the sea and let visitors pet me - only if their hands are clean,

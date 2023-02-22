@@ -31,7 +31,7 @@ MonoBehaviour:
     these are relatives of Ondina, there is no mention of her. From what I have found
     about her so far, I only know that she was a pharmacist. How did she become one?"
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
-  imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
+  imgMain: {fileID: 21300000, guid: 01b0b9289c1ded64e9930e0222f828a9, type: 3}
   nameOfStory: Jewish
   hintOfPOI: Where did people in the 1900s used to get educated to get qualified
     to become pharmacists?

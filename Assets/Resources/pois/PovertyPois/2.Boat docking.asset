@@ -36,7 +36,7 @@ MonoBehaviour:
     of steps right between the towering city walls and the backs of the old warehouses.
     That is the path I should take to return to the city. '
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
-  imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
+  imgMain: {fileID: 21300000, guid: 9067cab6e1c1d6445ab90db20ca91c4b, type: 3}
   nameOfStory: Poverty
   hintOfPOI: "Oh yes, those steps\u2026that was one of the main paths that new arrivals
     fresh off a ship would walk to go up into the city. If you\u2019re still standing

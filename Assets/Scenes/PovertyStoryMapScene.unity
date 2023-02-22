@@ -3861,7 +3861,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -16.307}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 8.012573, y: -24.071228}
+  m_AnchoredPosition: {x: 8.012573, y: -24.07129}
   m_SizeDelta: {x: 187.804, y: 161.802}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &541665473
@@ -12088,19 +12088,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2002165375}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1753935655}
-        m_TargetAssemblyTypeName: MainManager, Assembly-CSharp
-        m_MethodName: EnlargeImage
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &2016785970
 GameObject:
   m_ObjectHideFlags: 0

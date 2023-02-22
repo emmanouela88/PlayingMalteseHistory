@@ -37,7 +37,7 @@ MonoBehaviour:
     I can find the starting point. (In order to progress with the story, you need
     to find and select the plague cases, through the mini game.)'
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
-  imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
+  imgMain: {fileID: 21300000, guid: 6521ca7bd8e9a8440a0fdfe64762839c, type: 3}
   nameOfStory: Quarantine
   hintOfPOI: "Oh the street you\u2019re looking for is named after a saint the people
     love here in Valletta. His feast day is the 10th of February, and I end up spending

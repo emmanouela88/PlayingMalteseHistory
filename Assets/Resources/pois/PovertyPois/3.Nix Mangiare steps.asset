@@ -34,7 +34,7 @@ MonoBehaviour:
     must head to the heart of the city - to the palace from where its rulers wielded
     their power. "
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
-  imgMain: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
+  imgMain: {fileID: 21300000, guid: f21b5f3134649544eaed7766740e414c, type: 3}
   nameOfStory: Poverty
   hintOfPOI: "The city of Valletta carries the name of Jean Parisot de la Vallette,
     the Grandmaster of the Knights of St John who had ordered the city\u2019s construction.
