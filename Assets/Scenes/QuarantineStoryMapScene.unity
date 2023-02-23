@@ -1876,7 +1876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -16.307}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 8.012634, y: -24.071167}
+  m_AnchoredPosition: {x: 8.012695, y: -24.071167}
   m_SizeDelta: {x: 187.804, y: 161.802}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &251937605
@@ -2742,7 +2742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.435}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 62.08177, y: 95.4552}
+  m_AnchoredPosition: {x: 142, y: 71}
   m_SizeDelta: {x: 536.37, y: 434.153}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &362834630
@@ -9568,8 +9568,8 @@ MonoBehaviour:
   btnMiniGame3: {fileID: 6315898}
   btnHint: {fileID: 1715356021}
   btnSolution: {fileID: 1700579804}
-  btnEnlarge: {fileID: 0}
-  imgPoint: {fileID: 0}
+  btnEnlarge: {fileID: 362834630}
+  imgPoint: {fileID: 362834631}
   poiMarker: []
   userMarker:
     label: 

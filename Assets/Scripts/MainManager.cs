@@ -143,7 +143,7 @@ public class MainManager : MonoBehaviour
 
             poiMarker[i].label = pois[i].nameOfPoint;
             poiMarker[i].texture = pois[i].imgMarker.texture;
-            poiMarker[i].scale = 0.1f;
+            poiMarker[i].scale = 0.5f;
 
         }
         btnPrev.gameObject.SetActive(false);
