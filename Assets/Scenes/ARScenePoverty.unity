@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -484,6 +484,7 @@ GameObject:
   - component: {fileID: 192293115}
   - component: {fileID: 192293114}
   - component: {fileID: 192293113}
+  - component: {fileID: 192293116}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -534,6 +535,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &192293116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192293112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728ad7fae8e460a4ba41265c7308d757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AnchorPrefab: {fileID: 465731397}
 --- !u!1 &276666572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,6 +1140,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1174,6 +1200,11 @@ PrefabInstance:
 --- !u!4 &465731396 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
+  m_PrefabInstance: {fileID: 465731395}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &465731397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
   m_PrefabInstance: {fileID: 465731395}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &580570585
@@ -2327,7 +2358,7 @@ MonoBehaviour:
         Latitude: 38.059713
         Longitude: 14.509054
         Altitude: 0
-        AltitudeMode: 2
+        AltitudeMode: 0
         Label: 
       OverrideAltitudeData:
         OverrideAltitude: 0
@@ -2335,7 +2366,7 @@ MonoBehaviour:
         AltitudeMode: 0
   HotspotSettings:
     Prefab: {fileID: 919132149155446097, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
-    PositionMode: 0
+    PositionMode: 1
     AlignToCamera: 1
     DistanceFromCamera: 3
     ActivationRadius: 4
