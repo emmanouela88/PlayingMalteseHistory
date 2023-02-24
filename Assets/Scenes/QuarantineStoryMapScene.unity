@@ -2608,7 +2608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ac0fb8b3a598a4d884d84d1b0b5e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.1
+  delay: 0.015
   fullText: {fileID: 361563216}
 --- !u!114 &361563216
 MonoBehaviour:
@@ -4488,7 +4488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ac0fb8b3a598a4d884d84d1b0b5e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.1
+  delay: 0.015
   fullText: {fileID: 827072942}
 --- !u!114 &827072942
 MonoBehaviour:

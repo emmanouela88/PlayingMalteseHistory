@@ -8,7 +8,7 @@ public class TypeWriterEffect : MonoBehaviour
     public float delay = 0.01f;
     public TextMeshProUGUI fullText;
     private string currentText;
-    float delayBeforeStart = 0.5f;
+    float delayBeforeStart = 0.2f;
     void Start()
     {
         //fullText = GetComponent<TextMeshProUGUI>();
