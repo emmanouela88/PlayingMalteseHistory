@@ -245,7 +245,7 @@ public class MainManager : MonoBehaviour
                     //sourceCam.clip = pois[i].clip;
                     /*btnPlaySound.onClick.AddListener(() => PlaySound(sourceCam.clip));
                     btnPauseSound.onClick.AddListener(PauseSound);*/
-                    if (pois[i].nameOfPoint == "City Gate" || pois[i].nameOfPoint == "Marsamxett" || pois[i].nameOfPoint == "Ondina's Residency")
+                    if (pois[i].nameOfPoint == "City Gate" || pois[i].nameOfPoint == "Marsamxett" || pois[i].nameOfPoint == "St George’s Square")
                     {
                         btnARScene.gameObject.SetActive(true);
                     }
