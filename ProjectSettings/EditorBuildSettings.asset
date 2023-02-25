@@ -5,15 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/TestScene/ARMenuForTest.unity
-    guid: e13d57a96889d9b47aa2ecfd0da9d0c1
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 6ca8c2530bce9134cb27dd34c914584d
-  - enabled: 0
-    path: Assets/Scenes/MainMenuWithIntro.unity
-    guid: a114e1c9e011bbf48a1a992dbbcfa3eb
   - enabled: 1
     path: Assets/Scenes/OverviewBibliotecaScene.unity
     guid: 74ee96e1e4605624f9163b7cb5f58271
@@ -59,12 +53,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 31c3c01deeb39e24bb3c42867ce206a9
-  - enabled: 0
-    path: Assets/Scenes/ARScenePoverty 1.unity
-    guid: 4be264c538dd193418942b1bc71d766b
-  - enabled: 0
-    path: Assets/Scenes/ARScenePoverty 2.unity
-    guid: 33d6f0a78569b3a41852069065588ec8
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 0c664cb2fa6045840bc0feb356117bc0, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 46b98b5f280a8cb4ea7e7ca64612d4f9, type: 2}

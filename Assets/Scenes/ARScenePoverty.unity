@@ -484,7 +484,6 @@ GameObject:
   - component: {fileID: 192293115}
   - component: {fileID: 192293114}
   - component: {fileID: 192293113}
-  - component: {fileID: 192293116}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -535,19 +534,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &192293116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192293112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 728ad7fae8e460a4ba41265c7308d757, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AnchorPrefab: {fileID: 465731397}
 --- !u!1 &276666572
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +752,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 358074867}
+  - component: {fileID: 358074868}
+  - component: {fileID: 358074866}
   m_Layer: 0
   m_Name: GPS Stage Object
   m_TagString: Untagged
@@ -773,6 +761,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &358074866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358074865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728ad7fae8e460a4ba41265c7308d757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AnchorPrefab: {fileID: 465731397}
 --- !u!4 &358074867
 Transform:
   m_ObjectHideFlags: 0
@@ -789,6 +790,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &358074868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358074865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 520bb47c46cf8624fafb307b7d1b862a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Camera: {fileID: 457771941}
 --- !u!1 &359202381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,15 +1167,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 14.63
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -14.78
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 70.37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f94d2aa6b2e43a649a670bab7aa4034b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2355,7 +2369,7 @@ MonoBehaviour:
       LocationInputType: 0
       LocationData: {fileID: 0}
       Location:
-        Latitude: 38.059713
+        Latitude: 35.89612
         Longitude: 14.509054
         Altitude: 0
         AltitudeMode: 0

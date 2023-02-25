@@ -2309,7 +2309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ac0fb8b3a598a4d884d84d1b0b5e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.015
+  delay: 0.025
   fullText: {fileID: 297929448}
 --- !u!1 &350064609
 GameObject:
@@ -7649,7 +7649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ac0fb8b3a598a4d884d84d1b0b5e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.015
+  delay: 0.025
   fullText: {fileID: 1241769592}
 --- !u!1 &1246584198
 GameObject:
@@ -10441,7 +10441,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8c71962c351efc749bcaa86145db16a8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4fc449010f5d434bab0ea3df0a86836, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
