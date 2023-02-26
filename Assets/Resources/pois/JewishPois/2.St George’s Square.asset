@@ -15,9 +15,9 @@ MonoBehaviour:
   nameOfPoint: "St George\u2019s Square"
   coordinatesPoint: {x: 14.513548, y: 35.898964}
   firstPartInfo: "This square is lined with shops on both ends, but none of them
-    are a pharmacy.\r\nOne of these shops must have replaced it, so I look up a brief
-    description of each of their histories until I find a connection with <link=Image_3><u><color=blue>
-    Marks and Spencer</link></u></color> to the <link=Image_4><u><color=blue>Tayar</link></u></color>
+    is a pharmacy.\r\nOne of these shops must have replaced it, so I look up a brief
+    description of each of their histories until I find a connection between <link=Image_3><u><color=blue>
+    Marks and Spencer</link></u></color> and the <link=Image_4><u><color=blue>Tayar</link></u></color>
     name\r."
   secondPartInfo: "Looking further into the history of this business, I discover
     that a Tayar family member, Joseph Tayar, owned a leather goods business in St
@@ -33,7 +33,7 @@ MonoBehaviour:
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: 01b0b9289c1ded64e9930e0222f828a9, type: 3}
   nameOfStory: Jewish
-  hintOfPOI: Where did people in the 1900s used to get educated to get qualified
-    to become pharmacists?
+  hintOfPOI: Where did people in the early 1900s go to be educated and become qualified
+    pharmacists?
   solutionOfPOI: "I know that there is an old university in the next street. It\u2019s
     near the end of St Paul Street."

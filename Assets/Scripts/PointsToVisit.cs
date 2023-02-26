@@ -27,8 +27,10 @@ public class PointsToVisit : ScriptableObject
     public string nameOfStory;
 
     [Tooltip("Hint of POI")]
+    [TextArea(5, 15)]
     public string hintOfPOI;
 
     [Tooltip("Solution of POI")]
+    [TextArea(5, 15)]
     public string solutionOfPOI;
 }

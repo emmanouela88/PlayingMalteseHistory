@@ -16,16 +16,16 @@ MonoBehaviour:
   coordinatesPoint: {x: 14.515757, y: 35.8986}
   firstPartInfo: "Going through the <link=Image_5><u><color=blue>records</link></u></color>,
     I find Ondina\u2019s name in a class register from the 1930s."
-  secondPartInfo: "Seeing this, I dig deeper to find more about her. In 1933, Ondina
-    Tayar graduated with a Pharmaceutical Chemist [Ph.C.] diploma from the University
-    of Malta. At that time, the University of Malta\u2019s main campus was in Valletta,
-    before it was moved to Msida in 1964. Her graduation was significant because
-    she was one of the first women to obtain this specific degree from the University
-    of Malta.\r\n\r\nLooking through the university\u2019s library, I find a book
-    written by a descendant of the Tayar family, Aline P\u2019Nina Tayar. I ask to
-    borrow it and sift through the pages to find Ondina\u2019s name. It is written
-    that although her graduation was a great achievement in the eyes of her father
-    Banino, her mother Rachele was opposed to it, fearing that her daughter\u2019s
+  secondPartInfo: "Seeing this, I dig deeper to find out more about her. In 1933,
+    Ondina Tayar graduated with a Pharmaceutical Chemist [Ph.C.] diploma from the
+    University of Malta. At that time, the University of Malta\u2019s main campus
+    was in Valletta, before it was moved to Msida in 1964. Her graduation was significant
+    because she was one of the first women to obtain this specific degree from the
+    University of Malta.\r\n\r\nLooking through the university\u2019s library, I
+    find a book written by a descendant of the Tayar family, Aline P\u2019Nina Tayar.
+    I ask to borrow it and sift through the pages to find Ondina\u2019s name. It
+    is written that although her graduation was a great achievement in the eyes of
+    her father Banino, her mother Rachele was opposed to it, fearing that her daughter\u2019s
     independence would lead to an incident like that in the Archbishop\u2019s Palace."
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: c983d07e6602bf144a5cc058a20228eb, type: 3}

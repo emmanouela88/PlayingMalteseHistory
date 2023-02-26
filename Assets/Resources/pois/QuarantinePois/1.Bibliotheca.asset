@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ee87e681215b6147a44021cf30db039, type: 3}
-  m_Name: 1.Biblioteca
+  m_Name: 1.Bibliotheca
   m_EditorClassIdentifier: 
-  nameOfPoint: Biblioteca
+  nameOfPoint: Bibliotheca
   coordinatesPoint: {x: 14.51364, y: 35.89837}
   firstPartInfo: "I start my journey at the hub of all things research: the National
     Library. Rows of shelves from floor to ceiling full of precariously preserved
