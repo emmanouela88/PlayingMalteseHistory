@@ -1513,12 +1513,14 @@ MonoBehaviour:
 
     Ioannis Brellas
 
+    Lara Caruana Montaldo
+
     Naomi Cutajar
 
-    Emmanuela Marla
+    Emmanuela
+    Marla
 
-    Renata
-    Ntelia
+    Renata Ntelia
 
     Daniel Vella
 
@@ -1554,11 +1556,6 @@ MonoBehaviour:
     Aline P''Nina Tayar.
 
 
-    Special Thanks to:
-
-    Lara Caruana
-    Montaldo
-
     Sound effects:
 
     https://pixabay.com/sound-effects/search/theme/nature/
@@ -1590,7 +1587,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.15
+  m_fontSize: 28.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
