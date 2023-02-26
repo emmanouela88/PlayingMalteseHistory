@@ -21,6 +21,7 @@ public class MoveScript : MonoBehaviour // Move Coin
 
     void MoveDown()
     {
-        gameObject.transform.position -= new Vector3(0f, speed * 0.05f, 0f);
+        transform.Translate(new Vector3(0, -1f, 0) * speed * Time.deltaTime);
+        //gameObject.transform.position -= new Vector3(0f, speed * Time.timeScale, 0f);
     }
 }
