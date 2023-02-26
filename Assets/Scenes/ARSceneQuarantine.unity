@@ -2359,7 +2359,7 @@ MonoBehaviour:
         Latitude: 35.9004976065773
         Longitude: 14.5100676400004
         Altitude: 0
-        AltitudeMode: 0
+        AltitudeMode: 1
         Label: 
       OverrideAltitudeData:
         OverrideAltitude: 0
@@ -3146,7 +3146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af3d61c1661f87642abb257dd08af76e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.53
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af3d61c1661f87642abb257dd08af76e, type: 3}
       propertyPath: m_LocalRotation.w
