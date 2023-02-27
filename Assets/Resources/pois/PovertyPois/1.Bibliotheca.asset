@@ -23,15 +23,14 @@ MonoBehaviour:
     to pursue another side of Valletta, a side that this newfound extravagance has
     tried its best to conceal - a history of poverty and hardship whose legacy lingers
     behind the glitzy facades '
-  secondPartInfo: "In an article by Evelyn Pullicino [<link=https://www.um.edu.mt/library/oar/handle/123456789/18107><u><color=blue>Link</link></u></color>
-    ], I learn about a young thief who pleaded that poverty had led him to crime.
-    The article suggests that the law\u2019s attitude to poverty was, at best, ambivalent:
-    \u2018Poverty might have been perceived as a reasonable motivation for stealing
-    but it was not considered a redeeming excuse in the Maltese Criminal Court.\u2019
-    I am curious to learn the outcome of the case. The boy would have travelled from
-    Vittoriosa to Valletta by boat, where he would be formally questioned and charged.  
-    I need to go outside the city walls, through a gate that carries a queen\u2019s
-    name, and walk down to a quay overlooked by a church. "
+  secondPartInfo: "In an [<link=https://www.um.edu.mt/library/oar/handle/123456789/18107><u><color=blue>article</link></u></color>
+    ] by Dr. Evelyn Pullicino, I learn about a young thief who pleaded that poverty
+    had led him to crime. The article suggests that the law\u2019s attitude to poverty
+    was, at best, ambivalent. I am curious to learn the outcome of the case. The
+    boy would have travelled from Vittoriosa to Valletta by boat, where he would
+    be formally questioned and charged.   I need to go outside the city walls, through
+    a gate that carries a queen\u2019s name, and walk down to a quay overlooked by
+    a church. "
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: ba966144744fe1c419ce21fef2c69212, type: 3}
   nameOfStory: Poverty

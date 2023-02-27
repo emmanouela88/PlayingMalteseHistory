@@ -3220,8 +3220,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Follow the execution of Antonio Borg, who was killed because he broke quarantine
-    rules. Uncover clues to understand how the 1813 plague spread in Malta and root
-    out a whole network of illegal activities in the streets of Valletta.
+    rules. Uncover clues to understand how the plague of 1813 spread through the
+    streets of Valletta.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ca56ab392655da042978212b37cc216d, type: 2}
   m_sharedMaterial: {fileID: 7740920288453101596, guid: ca56ab392655da042978212b37cc216d, type: 2}

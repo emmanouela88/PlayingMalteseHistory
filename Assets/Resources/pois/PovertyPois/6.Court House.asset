@@ -20,21 +20,17 @@ MonoBehaviour:
     court was moved to the Auberge d\u2019Auvergne, which used to stand in this location.
     During the Second World War, the building was hit and the courts were moved,
     till 1971, when they were re-housed in the building you see before you. "
-  secondPartInfo: "The jury (8 out of 9) delivered a verdict of \u2018guilty\u2019.
-    They recommended that his previous good conduct and his young age be taken into
-    account. The sentence was 18 months\u2019 hard labour. Unfortunately, the archive
-    trail ends here, and we do not know the outcome of the case or the punishment
-    meted out. The volume that would have contained the court case files for that
-    year is missing. This is not uncommon: when doing archival work, people and their
-    stories often disappear into gaps in the record. In following the trails of Isidoro
-    Mifsud and Teresa Dimech, I have caught a glimpse of the terrible poverty that
-    much of the Maltese population suffered at the time - a poverty whose widespread
-    extent and visibility may be difficult to imagine now, but one that still haunts
-    our history. I have also seen a relationship between poverty and the law, where
-    the desperation of poverty might have pushed some to crime out of necessity;
+  secondPartInfo: "The jury delivered a verdict of \u2018guilty\u2019. They recommended
+    that his previous good conduct and his young age be taken into account. The sentence
+    was 18 months\u2019 hard labour.\r\n\r\nIn following the trails of Isidoro Mifsud
+    and Teresa Dimech, I have caught a glimpse of the terrible poverty that much
+    of the Maltese population suffered at the time - a poverty whose widespread extent
+    and visibility may be difficult to imagine now, but one that still haunts our
+    history.  \r\n\r\nI have also seen a relationship between poverty and the law,
+    where the desperation of poverty might have pushed some to crime out of necessity;
     yet in its zeal to look out for property rights, the law also sometimes contributed
-    to worsening (sometimes even criminalising) the conditions of those who were
-    under-privileged. Law protects, but not always equally."
+    to worsening the conditions of those who were under-privileged. Law protects,
+    but not always equally.\r\n"
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: 4380d9cae9f20104ab53660fd16b6572, type: 3}
   nameOfStory: Poverty
