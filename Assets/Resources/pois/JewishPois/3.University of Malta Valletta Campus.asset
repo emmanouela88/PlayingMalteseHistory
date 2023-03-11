@@ -30,7 +30,6 @@ MonoBehaviour:
   imgMarker: {fileID: 21300000, guid: c98feaebd40d8df449e6d3855ac84352, type: 3}
   imgMain: {fileID: 21300000, guid: c983d07e6602bf144a5cc058a20228eb, type: 3}
   nameOfStory: Jewish
-  hintOfPOI: "The book\u2019s story seems to be leading me to the Archbishop\u2019s
-    Palace."
+  hintOfPOI: Whatever happened at the Archbishop's Palace must have been serious...
   solutionOfPOI: "The Archbishop\u2019s Palace does keep  its own records. They could
     have something more about this."
